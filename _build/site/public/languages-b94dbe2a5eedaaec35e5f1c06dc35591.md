@@ -1,0 +1,152 @@
+# Languages
+
+**Author:** Jeremy Koch
+
+Despite what you may have heard, this is not "a MATLAB course" -- I would describe it as "an applied math course". In previous iterations of this course, we have insisted that students use MATLAB, with the largest reason being to streamline the student and grader experience. There are indeed reasons to use MATLAB, most notably it is easiest to get set up and it is used in other mechanical engineering courses. If those reasons are compelling to you, use MATLAB. However, some folks might be looking ahead to a career where MATLAB is not the standard and would like to get experience now with a language that aligns with their career goals. Or they already have some experience in a different language and would like to keep using it. 
+
+:::{topic}
+I am giving you that opportunity this semester: you may choose which language you use, and will have thousands of lines of coding experience in that language by the end of the semester.
+Hi
+:::
+
+For all of these languages, I have provided a [a page that includes nearly all necessary coding elements](../1_fundamentals/coding-elements.md) that you may reference as you complete your homework. We additionally have the "AI green light" on homework assignments, which you should not [misuse](), but it helps to enable this "polyglot" approach to the course. No matter what language you choose, you should be prepared to KNOW things like: whether indexing starts with 0 or 1, how to find the ```length``` of an array, how to write a ```for``` loop, the character used for comments ```# %``` ..., etc. On the exams, forgetting that Python indexes from ```0``` or that MATLAB requires you to ```end``` loops will lose you points -- do not ask for leniency if you make these mistakes. I am empowering you to learn and use whatever language you want, so learn it!
+
+
+
+
+## TL;DR:
+
+- Choose MATLAB if you want the easiest installation, or if you just want some direct, explicit, no fuss experience with the language that is (probably going to be) used in MCEN 3047: Data Analysis and MCEN 4043: System Dynamics.
+- Choose Python if you care to use something that is open-source but still popular... probably even more popular than MATLAB.
+- Choose Julia if you are a adventurous and want to try a "real" programming language that was developed for scientists and engineers (MATLAB ). Especially if you have experience with the other languages and want to see if this new language is worth the hype. (See "More Reading" below.)
+- Choose C++ if already have some experience with it and enjoy it. I don't think any language will prohibit you from working with robots in the future, but C++ is probably the one most associated with robotics.
+- Other: let's talk. Don't do assembly or FORTRAN. Java is probably not appropriate. C might be OK.
+
+See a more detailed list of pros and cons below, and talk to me if you want to talk about your options. I would guess 60% of the class will choose MATLAB, 35% will choose Python, and 5% will choose Julia/C++/other. (Talk to me about "other".)
+
+Note that you are responsible for setting up and maintaining your programming environment, which is trivial for MATLAB and a bit more involved for the other languages. I have also created [a page that has recommendations about how to get these set up](). 
+
+
+
+
+
+
+
+
+Included at the bottom of each of these tabs is an example bit of code that would compute
+\begin{equation}
+    \sum\limits_{n=1}^N \frac{1}{n^k}
+\end{equation}
+to give you a feel for what some basic code looks like. If you are curious, I would encourage you to look around online for other examples of what the code looks like. You can also see the page with some basics.
+
+## Pros/Cons
+::::{tab-set}
+:::{tab-item} MATLAB
+Reasons to choose MATLAB:
+- For students it is free.
+- No package management: you can either download MATLAB and run it on your machine, or use MATLAB online.
+- MATLAB has an excellent built-in debug mode.
+- MATLAB has traditionally been used in MCEN 3047: Data Analysis and MCEN 4043: System Dynamics. Maybe you don't want to be distracted with another language.
+- It is a language for scientists and engineers. Matrix math is just: ```A*x```.
+- Indexing starts with 1.
+
+Reasons to NOT choose MATLAB:
+- While it is 100% free for students, it is not free in the real world: a yearly license for an individual costs $1015.
+- Related: some companies do use MATLAB and surely are getting a discount from that per-person price tag, but most companies are not going to want to pay thousands of dollars when there are many free options that can do all the same tasks.
+- MATLAB allows you to be "sloppy" in ways that make serious programmers shake their head. It is VERY easy to accidentally redefine a variable that stores a 1xN array into a single scalar value, and MATLAB's flexibility will often let you do math with it still without error or warning, leading to mysterious results.
+- It is not lean or fast in comparison to the other languages.
+- I find it annoying that the default is to print every line and a ```;``` must be added to prevent that. Maybe it would have been cooler if ```;``` printed the line -- what a succinct bit of code! But they didn't ask me.
+
+Example code:
+```matlab
+k=2;
+N=50;
+S=0;        % initialize the sum at zero
+for n=1:N
+    S=S+1/n^k;
+end
+print(S)
+```
+:::
+
+
+:::{tab-item} python
+
+Reasons to choose Python:
+- For everyone it is free (open source).
+- I find Python code to be clean and intuitive in comparison to MATLAB. Indenting/whitespace is used instead of end statements. (However, see the note below about numpy.)
+- Python is the most common language for machine learning, though MATLAB and Julia seem like they are capable.
+- Related: we will do a machine learning project in this course. You can (probably) use any language for that project, and you can also use MATLAB/Julia/C++ for everything besides the ML project and then use Python for the ML project. But maybe you'd just want to do the whole course in Python.
+
+
+
+Reasons to NOT choose Python:
+- Indexing starts with 0, which might annoy you enough to look elsewhere.
+- The install process, including package management, may not be fun to you. It probably will involve the command window/terminal, which might make you uncomfortable.
+- Base Python was not invented for engineers. NumPy/SciPy/matplotlib have been thoroughly developed, but it just less appealing to have to deal with ```np.sin(x)``` instead of just ```sin(x)```. (Yes, I know you can ```from numpy import sin``` or even ```from numpy import *``` but that is rarely done.)
+
+Example code:
+```python
+import numpy as np
+
+k=2;
+N=50;
+S=0;            # initialize the sum at zero
+for n=1:N
+    S+=1/n**k;  # yes, python annoyingly uses ** for ^
+
+print(S)
+```
+
+
+
+
+:::
+
+
+:::{tab-item} Julia
+Reasons to choose Julia:
+- For everyone it is free (open source).
+- It is a language developed for scientists and engineers.
+- It allows the use of unicode characters. Thus, if you want to write an equation that has an $α$ in it, you can use ```α```. (In other languages we'd probably use ```a``` or ```alpha```, which is just not as satisfying.)
+- Indexing starts with 1.
+
+Reasons to NOT choose Julia:
+- Julia is a compiled language. This means the first time you run a new program, it may be slow. It also may still be fast enough to not bother you.
+- It is the least well-developed of the languages in this list, meaning there are fewer tutorials, fewer third-party programs, and fewer users to help. I think there are plenty for our purposes though.
+- It is not clear if Julia will continue to grow or if it will fade away -- you might become an expert in something that no one cares about in 10 years.
+- We will likely not have need to use the truly powerful aspects of Julia, e.g. multiple dispatch.
+- It seems that Julia sometimes goes out of its way to name things differently than MATLAB/Python. In MATLAB: ```linspace(0,10,101)``` makes an array with 101 elements. In Python+NumPy it is ```np.linspace(0,10,101)```. In Julia it is ```LinRange(0,10,101)```... OK Julia. This is not a reason not to choose Julia on its own, but if you are talking to MATLAB/Python people it is a little annoyance.
+:::
+
+
+:::{tab-item} C++
+Reasons to choose C++:
+- For everyone it is free (open source).
+- You may have taken CSCI 1300, which uses C++, and want to continue with that.
+- It has arguably been the language of "serious engineers" for the past 30 years. Robotics has a strong preference towards C++, and the biggest open-source computational fluid dynamics (CFD) code, [OpenFOAM](https://www.openfoam.com), is/was based in C++. Arduino is basically specialized C++.
+
+Reasons to NOT choose C++:
+- C++ is a compiled language. This means the first time you run a new program, it may be slow. It also may still be fast enough to not bother you.
+- I think it is the ugliest and least-readable language of the four in the list.
+- Not that it matters because I am not going to debug your code for you, but I have nearly zero experience with C++. (I do have some experience in C, and I kinda like it, but it has been a while.)
+:::
+
+
+:::{tab-item} Other languages
+Contact me. Don't do assembly, machine learning, or FORTRAN (shudders). Java is not really good for applied math. 
+:::
+::::
+
+## More Reading
+
+[MATLAB vs. Julia vs. Python](https://tobydriscoll.net/post/matlab-vs.-julia-vs.-python/)
+
+[Why numbering should start at zero](https://www.cs.utexas.edu/~EWD/transcriptions/EWD08xx/EWD831.html) (not sure I agree but, here is a reading)
+
+
+https://forem.julialang.org/vinodv/julia-vectors-and-matrices-n2l
+
+
+
+

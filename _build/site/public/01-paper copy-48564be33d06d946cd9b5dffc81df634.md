@@ -1,0 +1,41 @@
+# Taylor Series Refresher
+
+A tutorial to evolve markdown documents and notebooks into structured data
+
+**Author:** Jeremy Koch<sup>1,2</sup> \
+
+## Background
+
+Suppose we have a complicated function $f(x)$, made of natural logs and arctangents or whatever. Not friendly to deal with. We could reasonably ask the question: if there is another function $\hat{f}(x)$ that has the same value as $f(x)$ at $x=x_0$, and the same value of the first derivative (so the value of $\hat{f}(x)$ is changing just as rapidly as $f(x)$ at $x=x_0$), and the same value of the second derivative (so the rate of change of the rate of change of $\hat{f}(x)$ matches that of $f(x)$), and the same value of the third derivative, and the same value of the fourth derivative, etc., onwards to the infinitieth derivative... well, that sounds like we effectively have the same functional behavior for both $f(x)$ and $\hat{f}(x)$. So what do we think of
+
+$\hat{f}(x) = f(x_0)+ f'(x_0)(x-x_0) + \frac{1}{2!}f''(x_0)(x-x_0)^2 + \frac{1}{3!}f''(x_0)(x-x_0)^3 + \dots + \frac{1}{N!}f^{(N)}(x_0)(x-x_0)^N$?
+
+At $x=x_0$, the above function matches the value $f(x_0)$. Take the first derivative and evaluate at $x=x_0$: $\hat{f}'(x_0)=f'(x_0)$. On and on for all derivatives. This polynomial 
+
+$\hat{f}'(x) = f'(x_0)(x-x_0) + \frac{1}{2!}f''(x_0)(x-x_0)^2 + \frac{1}{3!}f''(x_0)(x-x_0)^3 + \dots + \frac{1}{N!}f^{(N)}(x_0)(x-x_0)^N$?
+
+
+
+
+This will render **exactly like your screenshot** with clickable tabs.
+
+---
+
+## ✅ Shorter Markdown-Only Syntax (Newer Myst)
+
+If your Myst version is recent:
+
+```markdown
+```{tab-set}
+
+```{}
+```yaml
+---
+title: My Article
+authors:
+  - name: Marissa Myst
+    affiliation: ubc
+  - name: Miles Mysterson
+    affiliations: ubc; stanford
+---
+My article text begins here...

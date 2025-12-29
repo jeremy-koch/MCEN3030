@@ -1,0 +1,43 @@
+# Representation of Numbers
+
+
+
+**Author:** Jeremy Koch<sup>1,2</sup> \
+
+## Motivation
+
+A number like $\pi = 3.141592653589793238462643383279502884197169399375105820974944592307816406286 ...$ has infinitely many digits. In practice, it only takes about 40 digits to compute the radius of the universe to within a hydrogen atom, so the last 60 digits of the above are basically a waste.
+
+
+
+
+
+
+
+
+## Linearization
+
+Text
+
+
+
+
+
+<!-- ::::{tab-set}
+:::{tab-item} MATLAB
+```MATLAB
+f=@(x) x^2
+```
+:::
+:::{tab-item} python
+```python
+f=lambda x: x**2
+```
+:::
+:::{tab-item} julia
+```julia
+f=lambda x: x**2
+```
+:::
+
+:::: -->

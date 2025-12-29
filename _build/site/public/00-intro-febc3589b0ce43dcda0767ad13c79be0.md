@@ -1,0 +1,31 @@
+# Intro
+
+**Author:** Jeremy Koch<sup>1,2</sup> \
+
+
+
+
+
+## Some policy highlights
+
+- Class periods will be for discussion and collaboration. Watch a couple short videos before class, read the associated sections in the little book I am putting together. Then during class time, you will work through a problem in groups by hand, and then get started on putting the algorithms into computer code. Ask your neighbors for help, ask me, ask the TA.
+
+- You have a green light to use AI in many course aspects.
+:::{aside}
+AI = artificial intelligence
+
+LLM = large language model
+:::
+This is going to allow for many possibilities in this course that I am really excited about, and, I think, could be an authentic experience for you -- doesn't seem like these tools are going anywhere, so we'll use them. However, a strong warning: the exams in this course make up most of the grade, and they are pencil and paper. Overuse of AI
+
+- You can choose what language you use (perhaps with some limits). If you really enjoy C++, you can use it. If you want to go with a language you will (probably) see in Data Analysis and System Dynamics, think about MATLAB. If you are a bit adventurous, try this new language called Julia. AI will help you get your feet underneath you!
+
+
+## Some content highlights
+
+- We will spend the first week setting up GitHub. GitHub "repositories" are a very standard way to share code, and this will force us to think carefully about how to manage and organize files -- maybe one of the most important lessons of the semester.
+
+- We will do a machine learning project
+
+
+

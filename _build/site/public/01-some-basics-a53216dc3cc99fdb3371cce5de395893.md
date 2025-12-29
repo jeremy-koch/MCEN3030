@@ -1,0 +1,107 @@
+# Some Coding Basics
+
+**Author:** Jeremy Koch<sup>1,2</sup> \
+
+## Binary
+
+
+The code contained on this page is, to a large extent, all that will be needed for the core assignments in this course.
+:::{aside}
+The machine learning project will, of course, require a ton more code, though that project will be more practical. There is an entire course devoted to it.
+:::
+Remember that, in general, we are not using built-in packages! Yes, there is an ODE solver built-in to MATLAB and scipy and julia. No, you may not use them when writing your Runge-Kutta code
+
+## Creating vectors/matrices/arrays
+
+::::{tab-set}
+:::{tab-item} MATLAB
+```matlab
+x1=0:0.1:2;                 % start:step:stop
+x2=linspace(0,10,500);      % 500 points between 0 and 10
+x3=logspace(4,7,500);       % 500 log-spaced points between 10^4 and 10^7
+A=[[1,2,3];[4,5,6]];        % a matrix is an array of arrays, rows separated by ;
+
+y=zeros(1,length(x2));      % a row vector full of zeros with the same length as x2
+z=ones(1,length(x2));       % same, but full of ones
+A=zeros(4,4);               % a 4x4 matrix of zeros
+B=eye(4);                   % diagonal is full of ones, rest zero
+D=diag([5,3,1]);            % diagonal is 5,3,1, rest zero
+D2=diag([5,3,1],1);         % the first diagonal above the main is [5,3,1]... so this is a 4x4 matrix
+
+r=rand(1,5);                % a row vector with 5 random numbers, uniformly spaced between 0 and 1
+R=rand(4,4);                % same, but a 4x4 matrix
+```
+:::
+<!-- :::{tab-item} python
+```python
+f=lambda x: x**2
+```
+:::
+:::{tab-item} julia
+```julia
+f=lambda x: x**2
+```
+:::
+:::{tab-item} C++
+```cpp
+f=lambda x: x**2
+```
+::: -->
+::::
+## Indexing -- Accessing and Modifying Elements
+::::{tab-set}
+:::{tab-item} MATLAB
+```matlab
+
+x(i)
+A(4,1)
+A(:,5)
+A(4,:)
+
+x(3)=4;                     % resets the value of the third element in x to 4
+A(1,4)=0;                   % resets the value of the fourth element in row 1 to 0
+A(4,1)=0;                   % resets the value of the fourth element in col 1 to 0
+A(:,1)=0;
+```
+:::
+<!-- :::{tab-item} python
+```python
+f=lambda x: x**2
+```
+:::
+:::{tab-item} julia
+```julia
+f=lambda x: x**2
+```
+::: -->
+
+::::
+
+## Doing math with them
+
+
+
+
+<!-- :::{aside}
+https://en.wikipedia.org/wiki/Magnetic-core_memory
+::: -->
+
+
+<!-- ::::{tab-set}
+:::{tab-item} MATLAB
+```matlab
+f=@(x) x^2
+```
+:::
+:::{tab-item} python
+```python
+f=lambda x: x**2
+```
+:::
+:::{tab-item} julia
+```julia
+f=lambda x: x**2
+```
+:::
+
+:::: -->

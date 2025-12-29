@@ -1,0 +1,33 @@
+# MCEN 3030: Computational Methods
+
+[![Made with MyST](https://img.shields.io/badge/made%20with-myst-orange)](https://myst.tools)
+
+Welcome to MCEN 3030: Computational Methods!
+
+You are currently in a "textbook" I have created which is, at least for now, a sparse summary of the course content. This book and the lecture videos on Canvas will serve as your "theory", though you will see some code embedded here as well.
+
+
+::::{tab-set}
+:::{tab-item} MATLAB
+```MATLAB
+f=@(x) x^2
+```
+:::
+:::{tab-item} python
+```python
+f=lambda x: x**2
+```
+:::
+:::{tab-item} julia
+```julia
+f=lambda x: x**2
+```
+:::
+
+::::
+
+We are going to try a few new things this semester.
+
+
+
+## How to navigate the course
