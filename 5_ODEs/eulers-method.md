@@ -1,6 +1,6 @@
 # Euler's Method
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+
 
 ## Background
 

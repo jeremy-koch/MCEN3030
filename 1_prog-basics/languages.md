@@ -1,6 +1,6 @@
 # Languages
 
-<!-- **Author:** Jeremy Koch -->
+
 
 Despite what you may have heard, this is not "a MATLAB course" -- I would describe it as "an applied math course". Indeed, many of the algorithms we will describe were invented long before computers. In previous iterations of this course we have insisted that students use MATLAB with the largest reason being to streamline the student, grader, and instructor experience. 
 

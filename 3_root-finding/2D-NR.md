@@ -1,6 +1,6 @@
 # Newton-Raphson Method (2+D)
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+<!-- **Author:** Jeremy Koch<sup>1,2</sup> \ -->
 
 ## Motivation
 

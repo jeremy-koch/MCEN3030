@@ -1,6 +1,6 @@
 # Debugging Strategies
 
-**Author:** Jeremy Koch
+<!-- **Author:** Jeremy Koch -->
 
 ## Motivation
 

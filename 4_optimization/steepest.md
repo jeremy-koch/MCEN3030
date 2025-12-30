@@ -1,6 +1,4 @@
-# DFDF
-
-**Author:** Jeremy Koch<sup>1,2</sup> \
+# The Method of Steepest Ascent
 
 ## Motivation
 

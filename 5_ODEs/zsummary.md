@@ -1,6 +1,6 @@
 # Template
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+
 
 ## Binary
 

@@ -1,6 +1,6 @@
 # Explore your setup possibilities
 
-**Author:** Jeremy Koch
+<!-- **Author:** Jeremy Koch -->
 
 ## 
 

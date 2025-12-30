@@ -1,6 +1,6 @@
 # Checking your code
-
-**Author:** Jeremy Koch
+<!-- 
+**Author:** Jeremy Koch -->
 
 
 

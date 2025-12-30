@@ -1,11 +1,7 @@
 # GitHub
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
 
-## Binary
-
-
-"Computers are just a bunch of 1's and 0's" is absolutely true -- 
+## Intro
 
 
 

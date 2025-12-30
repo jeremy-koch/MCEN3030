@@ -1,6 +1,6 @@
 # Newton-Raphson Method (1D)
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+
 
 ## Motivation
 

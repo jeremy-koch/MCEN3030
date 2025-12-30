@@ -1,6 +1,6 @@
 # Necessary Coding Elements
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+<!-- **Author:** Jeremy Koch<sup>1,2</sup> \ -->
 
 This course is less about using built-in functions like ```fsolve``` and more about understanding the algorithms. Truthfully, nearly all of the necessary coding elements to write all the functions in this course appear on this page -- indexing, ```if```, ```for```, ```while```. You'll need to do some space preallocation, maybe with something built-in called ```zeros```; might need to use the modulus function to determine if a number is odd or even... not much else.
 

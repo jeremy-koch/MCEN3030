@@ -1,6 +1,6 @@
 # Root-Finding Methods Intro
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+
 
 ## Motivation
 

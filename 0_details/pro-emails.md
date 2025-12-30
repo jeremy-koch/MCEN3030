@@ -1,6 +1,6 @@
 # "Professional" Emails
 
-**Author:** Jeremy Koch
+<!-- **Author:** Jeremy Koch -->
 
 ## Motivation
 

@@ -1,6 +1,6 @@
 # Getting going in your language
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+
 
 A few recommendations, if you want them. MATLAB has some special steps because we have a license through the school, though overall the installation process is probably the easiest. 
 

@@ -1,6 +1,5 @@
 # Summary
 
-**Author:** Jeremy Koch
 
 
 

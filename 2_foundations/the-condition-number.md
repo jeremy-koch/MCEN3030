@@ -1,6 +1,5 @@
 # The Condition Number
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
 
 ## Motivation
 

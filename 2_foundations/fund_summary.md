@@ -1,6 +1,6 @@
 # Summary and some things to think about
 
-**Author:** Jeremy Koch<sup>1,2</sup> \
+<!-- **Author:** Jeremy Koch<sup>1,2</sup> \ -->
 
 
 ## How would you...

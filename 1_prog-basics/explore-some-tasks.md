@@ -1,6 +1,6 @@
 # Explore your language in some basic tasks
 
-**Author:** Jeremy Koch
+<!-- **Author:** Jeremy Koch -->
 
 ## Figure out how to write a function
 
