@@ -11,7 +11,7 @@ Something to think about: understanding an answer is very different from being a
 :::{attention}
 A moment of blunt honesty: Misuse of AI is THE reason why homework is weighted relatively low in the final grade calculation in this class (and likely will be low in all of my classes going forward). I would strongly prefer a teaching environment where final grades were not so dependent on performance during three time-limited exams -- I do not believe that working quickly makes one a good engineer, at all. However, I also do not want to have a class where a hard-working but imperfect student receives a lower grade than a student who puts in nearly zero effort.
 
-The department might be going back to the old model of engineering education, where homework is not worth many points but it is certainly worth doing to prepare for exams. 
+The department might be going back to the old model of engineering education, where homework is not worth many points. But it is certainly worth doing to prepare for exams!
 :::
 
 At the same time...
