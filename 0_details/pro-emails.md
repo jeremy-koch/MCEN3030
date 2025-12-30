@@ -1,4 +1,4 @@
-# "Professional" Emails
+# Professional Emails
 
 
 ## Motivation

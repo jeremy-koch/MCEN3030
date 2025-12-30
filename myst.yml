@@ -23,35 +23,35 @@ project:
           - file: 1_prog-basics/github.md
       - title: Some Foundational Concepts
         children:
-          - file: 2_foundations/floats.md
-          - file: 2_foundations/error.md
-          - file: 2_foundations/the-condition-number.md
-          - file: 2_foundations/zsummary.md
+          # - file: 2_foundations/floats.md
+          # - file: 2_foundations/error.md
+          # - file: 2_foundations/the-condition-number.md
+          # - file: 2_foundations/zsummary.md
       - title: Root-Finding Methods
         children:
-          - file: 3_root-finding/_root-finding-intro.md
-          - file: 3_root-finding/Taylor-Series.md
-          - file: 3_root-finding/1D-NR.md
-          - file: 3_root-finding/2D-NR.md
-          - file: 3_root-finding/zsummary.md
+          # - file: 3_root-finding/_root-finding-intro.md
+          # - file: 3_root-finding/Taylor-Series.md
+          # - file: 3_root-finding/1D-NR.md
+          # - file: 3_root-finding/2D-NR.md
+          # - file: 3_root-finding/zsummary.md
       - title: Matrix Methods
         children:
           - file:
       - title: Optimization
         children:
-          - file: 4_optimization/opt-intro.md
-          - file: 4_optimization/golden.md
-          - file: 4_optimization/steepest.md
-          - file: 4_optimization/zsummary.md
+          # - file: 4_optimization/opt-intro.md
+          # - file: 4_optimization/golden.md
+          # - file: 4_optimization/steepest.md
+          # - file: 4_optimization/zsummary.md
       - title: Differential Equations
         children:
-          - file: 5_ODEs/ODE-intro.md
-          - file: 5_ODEs/eulers-method.md
-          - file: 5_ODEs/runge-kutta.md
-          - file: 5_ODEs/coupled.md
-          - file: 5_ODEs/PDE-intro.md
-          - file: 5_ODEs/the-heat-equation.md
-          - file: 5_ODEs/zsummary.md
+          # - file: 5_ODEs/ODE-intro.md
+          # - file: 5_ODEs/eulers-method.md
+          # - file: 5_ODEs/runge-kutta.md
+          # - file: 5_ODEs/coupled.md
+          # - file: 5_ODEs/PDE-intro.md
+          # - file: 5_ODEs/the-heat-equation.md
+          # - file: 5_ODEs/zsummary.md
       - title: Appendix/Some More Readings
         children: 
           - file: 9_readings/Taylor-Series.md
