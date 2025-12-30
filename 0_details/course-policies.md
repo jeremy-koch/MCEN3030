@@ -19,9 +19,6 @@ Keep in mind, your success is my success, and so you should have nothing to worr
 20% midterm 1  
 20% midterm 2  
 30% final exam  
-0.5% email professionalism (bonus points)  
-  
-=100.5%
 
 ---
 
@@ -71,27 +68,28 @@ Exam questions will likely be something like: achieve a task by doing the necess
 The final exam will be cumulative.
 
 
----
 
-**email professionalism:**
 
-In the past year, have observed an uptick in emails that suggest students are not paying attention to course policies. I am glad to receive emails from you in general, don't be discouraged to send them to me, but I would like you to think twice before:
+## Professionalism
+
+In the past year, have observed an uptick in emails that indicate students are not paying attention to course policies and/or that students believe that course policies should not apply to them. Policies are only policies if they apply to the entire class.
+
+I am glad to receive emails from you in general, don't be discouraged to send them to me, but I would like you to think twice before:
 - ... sending an email with just "question" (or something similar) in the subject line. See [how to write emails for this class](pro-emails.md).
 - ... asking me to move deadlines/exams because you have a project or exam in another class.
-- ... asking me to accept a late submission without penalty, including if you "forgot" or "thought you had already submitted it".
+- ... asking me to accept a late submission without penalty, including if you "forgot", "thought you had already submitted it", or had internet issues on the due date.
 - ... asking me for extra credit or to curve exams.
 - ... asking me when the final is. [It has been scheduled already](https://www.colorado.edu/registrar/students/calendar/finals), and it takes place in the classroom unless you hear otherwise.
 - ... asking me to round up your grade.
-... or similar requests. This has become a big enough concern that I am implementing the following policy: everyone currently has 0.5% bonus points in the class, but if you send any of the above types of emails, or similar, you lose it. This may not seem like a lot, but FYI I do not round an 89.9% to an A-... I might round an 89.99% but no promises. (There has to be a cutoff somewhere!) Send only succinct, organized emails all semester without attempting to circumvent course policy, and you've got the 0.5%.
 
-If you have an acute medical situation or travel associated with a university-sanctioned team (e.g., CU lacrosse or the Wind Energy Team), please do send the email without hesitation.
+... or similar requests. Please do not try to circumvent course policies, the answer is no.
 
 
 ## Class Disruption
 
-This is a "flipped classroom" that involves discussion between students and computer use. The classroom will be lively -- it is imperative that we remain focused. If you are seen to be checking social media/the news/sports scores, playing games, watching non-course-related videos, listening to music, etc. ... basically if you are using class time for things not related to class ... you will be asked to leave the classroom and your in-class score for the day will be a non-droppable zero. This includes phone use.
+This is a [flipped classroom](flipped-classroom.md) that involves discussion between students and computer use. The classroom will be lively -- it is imperative that we remain focused. If you are seen to be checking social media/the news/sports scores, playing games, watching non-course-related videos, listening to music, etc. ... basically if you are using class time for things not related to class ... you will be asked to leave the classroom and your in-class score for the day will be a non-droppable zero. This includes phone use.
 :::{caution}
-A rough calculation: after dropping a few, your grade on the "in-class" portion of the class will be based on something like 20 in-class problems this semester. A zero on one will drop your overall grade by about 0.5%.
+A rough calculation: after dropping a few, your grade on the in-class portion of the class will be based on something like 20 in-class problems this semester. A zero on one will drop your overall grade by about 0.5%.
 :::
 
 ## Late Work
@@ -102,7 +100,7 @@ Computer and internet issues are not a valid excuse for submitting late work. If
 
 Forgetting to submit work does not absolve you from these penalties. You can consider the zero on the assignment to be a penalty for not confirming that your work was submitted.
 
-[Some of the best advice I can give you](../9_readings/success.md) is: get the easy stuff right. Submitting your work on time (and confirming it was submitted) is an example of "the easy stuff". If you are going to do the hard work of completing the assignment, don't mess up the easy work of submitting it on time.
+[Some of the best advice I can give you](../9_readings/success.md) is: get the easy stuff right. Submitting your work on time (and confirming it was submitted) is an example of the easy stuff. If you are going to do the hard work of completing the assignment, don't mess up the easy work of submitting it on time.
 
 
 ## AI Policy
@@ -111,7 +109,7 @@ This course allows for [responsible use of AI](../0_details/responsible-AI.md) o
 
 If we are not going to police AI use, the responsibility shifts to the student to understand what amount of AI use is too much. A good starting point: If you would be hesitant to show me your prompts, you probably went too far.
 
-The instructional staff will monitor student submissions and commit history (one commit near the deadline... a sign of AI misuse). 
+The instructional staff will monitor student submissions and commit history. This data will inform discussions with individual students or the class as a whole. For example, one commit near the deadline, with perfect code, is a strong indicator of AI misuse -- if that student proceeds to struggle on the exams, we will have a frank discussion.
 
 
 
@@ -119,9 +117,9 @@ The instructional staff will monitor student submissions and commit history (one
 
 Students are assessed based on the work that they have submitted over the course of the semester. I cannot and do not take into consideration your intended graduation date, financial aid, sports eligibility, number of courses, work schedule, desire to attend grad school, or anything else.
 
-You should assume that there is no extra credit in this class (other than the few decimal points for email professionalism).
+You should assume that there is no extra credit in this class and should not ask for extra credit opportunities. Please recognize that I am tasked with determining whether you have met the learning objectives of the course. Far too often, extra credit is not actually "extra" and instead effectively covers for missed learning.
 
-A slight curve may be applied to exam grades or the overall grade, but this is not guaranteed. This may be tied to my perception of AI misuse, namely: if I am suspicious that a large portion of the class is misusing AI, I will be more reluctant to curve the exams.
+A slight curve may be applied to exam grades or the overall grade, but this is not guaranteed. This may be tied to my perception of AI misuse, namely: if I am suspicious that a large portion of the class is misusing AI (e.g., based on commit history or incredibly perfect homework submissions), I will be more reluctant to curve the exams. Again, please do not ask about a curve.
 
 
 

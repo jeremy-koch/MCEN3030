@@ -16,7 +16,7 @@ This is an introductory course with a large amount of coding, though it is argua
 :width: 550px
 :align: center
 
-Nonlinear/chaotic differential equations can be "solved" using the numerical techniques learned in this class (Runge-Kutta Method). Here is a phase diagram, inspiration and equation from: Njah "Synchronization via active control of parametrically and externally excited Φ6 Van der Pol and Duffing oscillators and application to secure communications." Journal of Vibration and control 17.4 (2011): 493-504. Plot created with Julia's "Plots" package (after calculating the trajectories using Runge-Kutta).
+Nonlinear/chaotic differential equations can be "solved" using the numerical techniques learned in this class (Runge-Kutta Method). Here is a phase diagram, inspiration and equation from: Njah "Synchronization via active control of parametrically and externally excited Φ6 Van der Pol and Duffing oscillators and application to secure communications" Journal of Vibration and control 17.4 (2011): 493-504. Plot created with Julia's "Plots" package (after calculating the trajectories using Runge-Kutta).
 ```
 
 
@@ -54,9 +54,7 @@ It is a living document that will have things added and removed frequently. As s
 - Because this is a "{abbr}`polyglot (many languages)`" course, most of the times that code is referenced, it will be included in an environment like that below. You can choose the tab for your language, then see the code. In the top-right corner of each coding environment, you can choose an icon to copy that code block, and then you can paste it into your working environment and run it. Please confirm the code does what you think it does! Maybe I made a mistake!
 - In the top-right corner of this site is a search bar. So, if you are looking for references to _Taylor Series_ within this site, you can search for it up there.
 - At the end of each unit (the topics on the left) is a "Summary" page. As part of this, questions like "how would you do this?" are included... this is your study guide for the exams! Exam questions will be about using the functions we write this semester: you will need to create the inputs, understand and call the functions, and handle the outputs.
-<!-- :::{caution}
-Overuse of AI might keep you from understanding the inputs/outputs of the functions, and you might struggle with the auxiliary tasks, e.g.: creating an input array of evenly spaced numbers, preallocating space for the output array, defining a function. You need to figure out how to use AI responsibly. [I give recommendations here](responsible-AI.md).
-::: -->
+
 
 ::::{tab-set}
 :::{tab-item} MATLAB
@@ -76,12 +74,29 @@ f=(x,a) -> sin(x)+a
 :::
 ::::
 
+## Motivation
+
+My biggest goal for this semester is get students to be more active in their own education, which I think will have far-reaching consequences beyond MCEN 3030.
+
+
+I want to clarify that being "passive" (which we are trying to avoid) is not the opposite of being "perfect". 
+A passive student:
+-  ... 
+
+
+0 might even just plug the problems into an LLM (gasp)
+
+An earnest student:
+- ... is not afraid to ask questions. Asking questions takes courage!
+- ... is not afraid to be wrong. In fact, maybe the best way to learn is to be wrong and figure out why you are wrong.
+- ... 
+
+Don't think I am abandoning you by giving these resources and encouraging you to figure it out. I think that is going to be a good approach, for the most part, but if you want to schedule a meeting so that you can get a bit more confident about MATLAB's interface, let's schedule it. If you want to talk after class  -->
 
 
 
-
-
-## A brief comment
+<!-- 
+## A brief comment on the depth of this book
 
 This webpage is hardly a book, more like a pamphlet, and it alone is not going to get you to succeed in this course. We additionally have lecture videos, and more importantly, in-class work and homework that is going to go much further towards getting you to understand the content.
 
@@ -91,9 +106,9 @@ That being said, this webpage is hopefully going to be a resource for you, and y
 Note that, in my [tips for success](../9_readings/success.md) page, I comment that:
 - Your ability to focus is correlated with your career success. So: settle in and focus as you read for a few minutes. Develop that "muscle".
 - AI is depriving students of their ability to focus and take in the details, instead providing quick and easy "summaries". Every page on this site is basically already summary, don't be summarizing a summary!
-- Passivity is getting you nowhere. Think about the material after you read a section, get a pencil out and derive something yourself, get curious ("why doesn't this work?"), do some digging, connect the dots.
+- Passivity is getting you nowhere. Think about the material after you read a section, get a pencil out and derive something yourself, get curious ("why doesn't this work?"), do some digging, connect the dots. -->
 
-One of my big goals this semester is to empower students.
+
 
 
 

@@ -2,13 +2,13 @@
 
 <!-- **Author:** Jeremy Koch<sup>1,2</sup> \ -->
 
-This course is less about using built-in functions like ```fsolve``` and more about understanding the algorithms. Truthfully, nearly all of the necessary coding elements to write all the functions in this course appear on this page -- indexing, ```if```, ```for```, ```while```. You'll need to do some space preallocation, maybe with something built-in called ```zeros```; might need to use the modulus function to determine if a number is odd or even... not much else.
+This course is less about using built-in functions like ```fsolve``` and more about understanding the algorithms. Truthfully, nearly all of the necessary coding elements to write all the functions in this course appear on this page -- indexing, ```if```, ```for```, ```while```. You'll need to do some space preallocation, maybe with something built-in called ```zeros```; might need to use the modulus function to determine if a number is odd or even, maybe a little random-number generation... not much else.
 
 :::{caution}
-I think staring at this list in hopes of memorizing it is a terrible use of your time. Instead, treat this as a reference list early in the semester. It is perfectly reasonable to recognize that you will need a list of 500 numbers between 100 and 200, and you open this page to figure it out. Before long many of these will will become second nature to you.
-
-Big picture: the best way to learn is to do it. No amount of reading my code is going to make you a skilled programmer.
+Don't stare at this list in hopes of memorizing it. Instead, treat this as a reference list early in the semester, and after putting these commands into action a few times you will find that you indeed memorized a lot of them.
 :::
+
+See also: [functions](functions.md).
 
 ## Creating vectors/matrices/arrays
 
@@ -18,7 +18,7 @@ Big picture: the best way to learn is to do it. No amount of reading my code is 
 x1=0:0.1:2;                 % start:step:stop
 x2=linspace(0,10,500);      % 500 points between 0 and 10
 x3=logspace(4,7,500);       % 500 log-spaced points between 10^4 and 10^7
-A=[[1,2,3];[4,5,6]];        % a matrix is an array of arrays, rows separated by ;
+A=[[1,2,3];[4,5,6]];        % a matrix is an array of arrays with rows separated by ;
 
 y=zeros(1,length(x2));      % a row vector full of zeros with the same length as x2
 z=ones(1,length(x2));       % same, but full of ones
@@ -41,10 +41,7 @@ f=lambda x: x**2
 f=lambda x: x**2
 ```
 :::
-:::{tab-item} C++
-```cpp
-f=lambda x: x**2
-```
+
 ::: -->
 ::::
 
@@ -153,7 +150,7 @@ f=lambda x: x**2
 ::: -->
 ::::
 
-To calculation a summation
+To calculation a summation, initialize the sum at zero:
 ::::{tab-set}
 :::{tab-item} MATLAB
 ```matlab
@@ -176,33 +173,4 @@ f=lambda x: x**2
 ::: -->
 ::::
 
-<!-- :::{aside}
-https://en.wikipedia.org/wiki/Magnetic-core_memory
-::: -->
-
-## Functions
-::::{tab-set}
-:::{tab-item} MATLAB
-MATLAB has a lot of restrictive rules about functions. Function files must be named the same as the top function in the file. Local functions must appear at the bottom of the main function file or script, and are not "known" outside the file.
-```matlab
-function [out1,out2]=my_fxn(in1,in2)
-
-
-```
-"Anonymous" functions (I don't know why they are called that), are written like
-```matlab
-f=@(x) x^2
-```
-:::
-:::{tab-item} python
-```python
-f=lambda x: x**2
-```
-:::
-:::{tab-item} julia
-```julia
-f= x -> x^2
-```
-:::
-
-::::
+See also: [functions](functions.md).

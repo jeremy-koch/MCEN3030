@@ -33,7 +33,7 @@ I don't know who decided that all emails have to begin with "I hope this email f
 > 
 > Can we use MATLAB's flip(x) in our code?
 > 
-> Thanks,
+> Thanks,  
 > Student
 
 Here might be my response:
@@ -44,7 +44,7 @@ Here might be my response:
 
 However, don't be so brief that you leave out key details. I am not going to do much debugging for you this semester, but in past semesters I have gotten emails like 
 
-> I tried to use if, but it keeps giving me an error.
+> I tried to use an if, but it keeps giving me an error.
 
 No details about the error message, just "an error". So, now I have to send an email asking what the specific error message was, which requires the student to reply, then I have to reply to that. A whole ordeal! Include relevant information! But, also, don't just dump information on me and make me sort through it. Focused email content!
 :::{aside}
@@ -55,7 +55,7 @@ Emails like this are part of the reason I am not debugging for students anymore.
 
 ### Key #3: Don't ask for special treatment
 
-I receive at least a dozen emails every semester that boil down to students asking for special treatment that violates course policy. Leniency because they:
+I receive about two dozen emails every semester that boil down to students asking for special treatment that violates course policy. Leniency because they:
 - are taking 19 credit hours.
 - had to work.
 - had a project due in another class.
@@ -66,7 +66,7 @@ I receive at least a dozen emails every semester that boil down to students aski
 :::{tip}
 If you are going to "play chicken" with a deadline, you have to accept that you might lose.
 :::
-Further, in the Fall 2025 semester I received more "grade-grubbing" emails than ever before, wherein students ask, e.g., for an 89.3% to be rounded to an A-. This is technically academic misconduct!
+Further, in the Fall 2025 semester I received more "grade-grubbing" emails than ever before, wherein students ask, e.g., for a final grade of 89.3% to be rounded to an A-. This is technically academic misconduct!
 
 The answer to all of these requests is no. We, unfortunately, give grades in this school, and the course policies are the rules of the game that everyone abides by. I am not going to be the judge of who has a good excuse, and it is not a course policy if I waive it for anyone who asks. Build some more robustness in your schedule where you can -- finishing things by the deadline should not, in general, be stressful.
 :::{aside}
