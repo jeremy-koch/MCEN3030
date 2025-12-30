@@ -14,14 +14,14 @@ Keep in mind, your success is my success, and so you should have nothing to worr
 ## Grade Breakdown
 
 10% in-class problems  
-20% homework repository  
+15% homework repository  
  5% ML project  
 20% midterm 1  
 20% midterm 2  
-25% final exam  
-0.2% email professionalism (bonus points)  
+30% final exam  
+0.5% email professionalism (bonus points)  
   
-=100.2%
+=100.5%
 
 ---
 
@@ -29,10 +29,7 @@ Keep in mind, your success is my success, and so you should have nothing to worr
 
 These will be completed in groups of three towards the beginning of each class period and will be mostly tech-free. An example problem is: compute the first two iterations of an algorithm by hand. The goal is for you to get a feel for how the algorithm works, which will allow you to better understand how to translate it to code. Further, it will give you a check to see if your code is working: in the above case, an ```if iteration==2, print x``` within your loop might be a good thing to check out.
 
-Bigger picture: These points represent your active participation in discussions with your colleagues, which I believe is the most productive way to learn the course material. Submission will occur before the end of the class period. There will be no option to submit these late -- if you missed the class discussion, you missed the learning opportunity and will not receive credit for it. However, we will drop a small number of these assignments, likely 4, in the final grade calculation, and so you will not be penalized if you miss a small number of classes due to illness, travel, or a need to temporarily prioritize another course. Note that you are not excused from the content if you miss class -- it won't affect your grade to miss a few classes, but you are still expected to get information from a classmate.
-:::{caution}
-I do not approve of prioritizing another course, by the way, but you are adults and can make that call. I also do not recommend trying to be strategic with these absences -- save them for when you are sick. If you miss our class early in the semester to study for another class, then are sick late in the semester, that stinks. If you are sick for more than two weeks of the semester, please contact the Dean of Students.
-:::
+Bigger picture: These points represent your active participation in discussions with your colleagues, which I believe is the most productive way to learn the course material. Submission will occur before the end of the class period. There will be no option to submit these late -- if you missed the class discussion, you missed the learning opportunity and will not receive credit for it. However, we will drop a small number of these assignments, likely 4, in the final grade calculation, and so you will not be penalized if you miss a small number of classes due to illness, travel, or a need to temporarily prioritize another course (which I don't approve of, but it's your call). I do not recommend trying to be strategic with these absences -- save them for when you are sick.
 
 
 ---
@@ -43,7 +40,7 @@ Over the course of the semester we will learn 25-30 computational ideas. Impleme
 
 We will usually have the opportunity to begin this work in the classroom where your colleagues, a TA, or myself will be around to help you talk through your ideas. However...
 :::{warning}
-The instructional staff will monitor GitHub commits that occur Tu/Th at ~12:15 and ~1:45PM, i.e., at the end of class periods. If we see that the two sections are not making use of the in-class time, as evidenced by a low percentage of students committing something by the end of class, we will eliminate this working opportunity and replace it with additional in-class problems or lecture content. 
+The instructional staff can see when GitHub commits occur, and will pay attention to the number that are occurring at the end of class periods. If we see that the two sections are not making use of the in-class time, as evidenced by a low percentage of students committing something by the end of class, we will eliminate this working opportunity and replace it with additional in-class problems or lecture content. 
 :::
 
 <!-- We will additionally monitor the commit history over the course of the semester. A student who consistently submits one (perfect) version of the code shortly before the deadline is almost certainly misusing AI -->
@@ -54,7 +51,7 @@ The instructional staff will monitor GitHub commits that occur Tu/Th at ~12:15 a
 
 **machine learning project:**
 
-We will get some authentic experience in doing a machine learning calculation. We will briefly introduce the field, describing some of the strategies but not necessarily diving deeply into the math. MATLAB has a machine learning toolbox, Python has several packages and has the most robust machine learning community (Scikit-learn is my recommendation, but PyTorch and TensorFlow are out there too), Julia has Lux and Flux.
+We will get some authentic experience in doing a machine learning calculation. We will briefly introduce the topic, describing some of the strategies but not necessarily diving deeply into the math. MATLAB has a machine learning toolbox, Python has several packages and has the most robust machine learning community (Scikit-learn is my recommendation, but PyTorch and TensorFlow are out there too), Julia has Lux and Flux.
 
 AI use is encouraged, tutorial use is encouraged, but plagiarism is not. An example of plagiarism in this context is: taking someone's completed analysis published in a blog somewhere and submitting it as your own work. Plagiarism in this course is completely unacceptable and will lead to immediate failing grade for the course and submission to the honor council, regardless of your grade in the other aspects of the course.
 
@@ -65,16 +62,14 @@ ___
 
 **exams:**
 
-This course will have three exams -- two midterms that will occur during class, and a final exam scheduled by the university. The midterms are [tentatively scheduled](course-schedule.md), the [final exam time](https://www.colorado.edu/registrar/students/calendar/finals) is cemented by the university before the academic year even begins.
+This course will have three exams -- two midterms that will occur during class, and a final exam scheduled by the university. The midterms are [tentatively scheduled](course-schedule.md) and the [final exam time](https://www.colorado.edu/registrar/students/calendar/finals) is cemented by the university before the academic year even begins.
 
 The exams will be entirely pencil-and-paper, no electronics (including calculators). You will be allowed a small set of notes (specifics on this added later). The most important aspect of these notes will be the inputs, outputs, and descriptions of the functions you have written this semester.
 
-Exam questions will likely be something like: Achieve a task by do the necessary setup work (e.g., defining an array), "calling" a function, and post-processing the results. It will not be made explicit what function to call -- you will make that judgment based on your understanding of the function inputs, outputs, and limitations. There may be some additional types of questions which I may describe the spirit of in the future.
+Exam questions will likely be something like: achieve a task by doing the necessary setup work (e.g., defining an array of equally spaced values), calling a function, and post-processing the results. It will not be made explicit what function to call -- you will make that judgment based on your understanding of the function inputs, outputs, and limitations. There may be some additional types of questions, I might add some details later.
 
 The final exam will be cumulative.
-:::{caution}
-AI misuse throughout the semester will be detrimental to your exam performance. You will need to understand the functions and will need to produce code that prepares inputs and handles the outputs of the functions. 
-:::
+
 
 ---
 
@@ -87,9 +82,9 @@ In the past year, have observed an uptick in emails that suggest students are no
 - ... asking me for extra credit or to curve exams.
 - ... asking me when the final is. [It has been scheduled already](https://www.colorado.edu/registrar/students/calendar/finals), and it takes place in the classroom unless you hear otherwise.
 - ... asking me to round up your grade.
-... or similar requests. This has become a big enough concern that I am implementing the following policy: everyone currently has 0.2% bonus points in the class, but if you send any of the above types of emails, or similar, you lose it. This may not seem like a lot, but FYI I do not round an 89.9% to an A-... I might round an 89.99% but no promises. There has to be a cutoff somewhere, and for a person who has sent only succinct, organized emails all semester, without attempting to circumvent course policy, that cutoff is effectively no higher than 89.8% (once this bonus is added).
+... or similar requests. This has become a big enough concern that I am implementing the following policy: everyone currently has 0.5% bonus points in the class, but if you send any of the above types of emails, or similar, you lose it. This may not seem like a lot, but FYI I do not round an 89.9% to an A-... I might round an 89.99% but no promises. (There has to be a cutoff somewhere!) Send only succinct, organized emails all semester without attempting to circumvent course policy, and you've got the 0.5%.
 
-If you have an acute medical situation or travel associated with a university-sanctioned team (e.g., CU lacrosse or the Wind Energy Team), please do send the email, promptly.
+If you have an acute medical situation or travel associated with a university-sanctioned team (e.g., CU lacrosse or the Wind Energy Team), please do send the email without hesitation.
 
 
 ## Class Disruption
@@ -105,30 +100,28 @@ Work submitted after the deadline will be subject to a 50% penalty.
 
 Computer and internet issues are not a valid excuse for submitting late work. If you would like to "play chicken" with the deadline, then you must accept that might lose. My recommendation is to plan to submit early which will give you a buffer in case you run into trouble. 
 
-Forgetting to submit work does not absolve you from these penalties. "I thought I submitted it" is not going to sway me. Please do not submit timestamps "proving you did it on time" or email me your work after the submission portal is closed in hopes of receiving some credit. You can consider the zero on the assignment to be a penalty for not confirming that your work was submitted.
+Forgetting to submit work does not absolve you from these penalties. You can consider the zero on the assignment to be a penalty for not confirming that your work was submitted.
 
-[Some of the best advice I can give you](../9_readings/success.md) is: get the easy stuff right. Submitting your work on time (and confirming it was submitted) is an example of "the easy stuff". If you are going to do the hard work of completing the assignment, don't mess up the easy work of submitting on time.
+[Some of the best advice I can give you](../9_readings/success.md) is: get the easy stuff right. Submitting your work on time (and confirming it was submitted) is an example of "the easy stuff". If you are going to do the hard work of completing the assignment, don't mess up the easy work of submitting it on time.
 
 
 ## AI Policy
 
 This course allows for [responsible use of AI](../0_details/responsible-AI.md) on homework and projects. AI is prohibited on in-class activities (unless explicitly stated for a specific assignment) and on exams.
 
-The purpose of this policy is to 
+If we are not going to police AI use, the responsibility shifts to the student to understand what amount of AI use is too much. A good starting point: If you would be hesitant to show me your prompts, you probably went too far.
 
-"[Responsible use](../0_details/responsible-AI.md)" is a judgment made by the instructional staff and is described in the linked page. Students who are suspected of irresponsible use may be asked to schedule a meeting wherein they will explain their code.
+The instructional staff will monitor student submissions and commit history (one commit near the deadline... a sign of AI misuse). 
 
-The penalty for AI misuse may include a zero on the assignment, failure of the course, and/or a report to the honor council.
+
 
 ## Final Grades, Extra Credit, and Curving
 
-Students are assessed based on the work that they have submitted over the course of the semester. I cannot and do not take into consideration your intended graduation date, financial aid, sports eligibility, number of courses, work schedule, desire to attend grad school, or anything besides the work you submit to this class.
+Students are assessed based on the work that they have submitted over the course of the semester. I cannot and do not take into consideration your intended graduation date, financial aid, sports eligibility, number of courses, work schedule, desire to attend grad school, or anything else.
 
-You should assume that there is no extra credit in this class (other than the few decimal points for email professionalism). If any is made available, it will be small (think: an extra question on an exam) and will be made available to the entire class. Do not ask about extra credit.
+You should assume that there is no extra credit in this class (other than the few decimal points for email professionalism).
 
-A slight curve may be applied to exam grades or the overall grade, but this is not guaranteed. Again: should a curve be applied to any aspect of the class, it will be small (think: +2 points to an exam where the average was a 75) and will be applied to the entire class. And, again: do not ask. I have not applied a curve to my 3000-level classes in a while. 
-
-
+A slight curve may be applied to exam grades or the overall grade, but this is not guaranteed. This may be tied to my perception of AI misuse, namely: if I am suspicious that a large portion of the class is misusing AI, I will be more reluctant to curve the exams.
 
 
 

@@ -97,13 +97,4 @@ I am hearing stories about students in tech electives/senior design who are runn
 
 ... the responsibility shifts to the students to understand what amount is too much. A good starting point: If you would be hesitant to show me your prompts, you probably went too far.
 
-:::{warning}
-Someone will use AI to complete every homework problem in this class and will pass the exams. Presumably, this person will have a good computer science foundation and/or they responsibly used AI.
-
-Someone will use AI to complete every homework problem in this class and will fail the exams.
-
-Another someone will claim that they "only" used AI to debug, or to "get started", or that they used AI but really tried to understand the output, yet they too will fail the exams. I will be a bit sympathetic, but won't change the grades. Understanding a solution is a VERY different mental process than being able to produce a solution -- you do not want to be the one to learn this the hard way. 
-
-There will be no test re-dos, no extra credit, and probably won't be much of a curve. Don't ask.
-:::
 
