@@ -26,6 +26,7 @@ Secondly, you should include specific details about the email contents, and the 
 ### Key #2: Focused email content
 
 I don't know who decided that all emails have to begin with "I hope this email finds you well", but I hate it. In this class, we don't need that. Here is a GREAT email:
+
 > Subject: [MCEN 3030] use built-in flip(x)?
 > 
 > Hey Professor,
@@ -34,12 +35,17 @@ I don't know who decided that all emails have to begin with "I hope this email f
 > 
 > Thanks,
 > Student
+
 Here might be my response:
+
 > yep
+
 ... hopefully you appreciate that I was able to respond quicker than I might have had I written a fluffier email. If you want to be equally brief, go ahead. Other professors might get annoyed by the brevity, not me. Just do a good subject line and I will interpret that as you being polite!
 
 However, don't be so brief that you leave out key details. I am not going to do much debugging for you this semester, but in past semesters I have gotten emails like 
+
 > I tried to use if, but it keeps giving me an error.
+
 No details about the error message, just "an error". So, now I have to send an email asking what the specific error message was, which requires the student to reply, then I have to reply to that. A whole ordeal! Include relevant information! But, also, don't just dump information on me and make me sort through it. Focused email content!
 :::{aside}
 Emails like this are part of the reason I am not debugging for students anymore. I was "bailing out" too many students who weren't even reading and processing the error messages. Deciphering error messages -- develop this skill!
