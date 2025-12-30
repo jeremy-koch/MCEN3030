@@ -3,39 +3,47 @@
 <!-- **Author:** Jeremy Koch -->
 
 
-1. I speculate that your career success will be correlated with your ability to focus for long periods of time.
+1. I speculate that your career success will be correlated with your ability to focus and persevere when stuck.
 
-Being an engineer is not about "trivia", memorizing terms . It is about being able to carry out a careful analysis that may take hours or days or weeks to assemble.
-:::{aside}
-I am guilty of this too -- I'll scroll on instagram for an hour, and probably see 200+ short videos in that time. 
-:::
+Being an engineer means being able to carry out a careful analysis that may take hours or days or weeks to assemble. When we get stuck, we find our way out by learning a new topic, finding connections, reconsidering the assumptions, trying a new approach, etc. Having the wisdom, patience, and organization skills to put that all together is why we are trusted with exciting and meaningful projects (and why we make decent money). 
 
-2. Passivity is getting you nowhere.
+2. Passivity is easier, but it gets you nowhere.
 
-Part of the reason I implemented a "flipped" classroom" in 3030 is that I have watched students become increasingly passive in this course. You are not an empty vessel that is getting filled when I talk, you need to be actively doing things to learn. Think about the material and make the connections -- the point of homework is to help you do that! Don't think of homework as a task that needs to be completed as quickly as possible, it should take however long it takes for you to understand the content.
+You are not an empty vessel that is getting filled when I lecture, and reading solutions/watching others solve problems is not an effective way to learn. The best way to learn is to do! We assign homework so that you have problems in which you have to interpret, plan, make decisions, carry out an analysis, interpret the results, and more. These are what I really care about, but they are harder to assess than "did you use the right equation here and do the algebra right", so I am stuck assessing that.
 
-<!-- One thing I do in office hours, which may not be perceived well but I genuinely believe in, is to ask that students explain things to each other. If I tell you the answer, it is perceived as the absolute, inarguable truth, and you will not think about it as hard. If your friend tells you an answer, you are a bit more suspicious, or maybe you both are a little uncertain, and that leads to more thinking and more discussion. -->
-
-Also: this is a bit about AI. AI is letting students skip class and complete homework with near-zero effort. 
+Deciding whether to use approach 1 or approach 2 is uncomfortable, what if you are wrong? Well... be wrong for a second, then figure it out. Don't just ask which is the right way -- so passive, someone else makes the decision for you! Figuring it out yourself will teach you why it is the way it is, and you will be more ready the next time you see a related problem. 
 
 3. AI is a tool that amplifies your skills.
 
+I worry that there is a misconception about how AI is going to be useful in your careers. Homework problems are well-posed because they have to be -- here is the velocity and some properties, compute the pressure. This type of problem is easy for LLMs to solve, and you will probably never see it again after your fluid mechanics class.
+:::{aside}
+Not to say it is pointless. By doing the problem, you will develop intuition about how pressure and velocity are related, and maybe will think about the design opportunities.
+:::
+
+Real problems are not so nice. "The pressure in my turbocharger is 15% too high" is going to get a handful of generic comments from AI that probably won't help. Turns out the seal was erroneously manifactured 5% too thick delaying the wastegate from opening, or something... I doubt that a large-language model would figure that out. (Maybe it would, in which case I would be worried for other reasons!)
+:::{aside}
+A pretty accurate assessment of LLMs: "This is what a good answer SOUNDS like, but as a large-language model, I don't know if it is ACTUALLY a good answer!"
+:::
+
+Now, flip it around. A wise engineer might know how to get access to a bunch of data about the turbocharger's performance. Pressure, temperature, oxygen level, time from start-up, etc., maybe an overwhelming amount of data across 10 different turbochargers! But the wise engineer knows enough about the details to coach an AI into developing a machine learning model, and then is insightful enough to triangulate a solution from that data. 
+
+THAT is the power of LLMs. If you know what you are doing and know how to assess the validity of ideas, they can streamline some of the busywork, quickly delivering information to help you make a decision. If you don't have the foundation, you won't know the questions to ask and won't be able to discern a good idea from a bad one. Even if AI delivers a reasonable answer, could you support it? There's probably a lot of money involved, how confident are you?
 
 
-If you do not have a skill, it cannot be amplified. 
-
-AI is letting students 
-
-It is very unlikely you will have a successful career as an engineer if you are looking up almost everything on ChatGPT. 
 
 4. Get the easy stuff right.
 
-Attending class and office hours. Submitting your work on time. [Communicating in a professional way](). Staying off social media in class. Not watching soccer in class (yes, this happens). Showing up to exams with a pencil (yes, this too). These things are not hard. Get the easy stuff right and the hard stuff won't be as hard and/or you will actually reap the full rewards from your hard work. 
+Attending class and office hours. Submitting your work on time. [Communicating in a professional way](../0_details/pro-emails.md). Staying off social media in class. Not watching soccer in class (yes, this happens). Showing up to exams with a pencil (yes, this too). These things are not hard. Get the easy stuff right and the hard stuff won't be as hard and/or you will actually reap the full rewards from your hard work.
 
 
+5. I do a lot about your success, but have to stop myself from caring more than you do.
+
+Many facets here. 
 
 
-5. I cannot care more about your success than you do. 
+I am reading about the increasing unemployment about recent college graduates
+
+I am not trying to put pressure on you -- I know you are getting enough of that, probably mostly from yourself! But, at the same time, I have a hard time 
 
 This has at least two facets: (1) I 
 

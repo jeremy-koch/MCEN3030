@@ -124,7 +124,7 @@ The penalty for AI misuse may include a zero on the assignment, failure of the c
 
 Students are assessed based on the work that they have submitted over the course of the semester. I cannot and do not take into consideration your intended graduation date, financial aid, sports eligibility, number of courses, work schedule, desire to attend grad school, or anything besides the work you submit to this class.
 
-You should assume that there is no extra credit in this class (other than the few points for email professionalism). If any is made available, it will be small (think: an extra in-class assignment that can replace a missing one) and will be made available to the entire class. It probably will not happen. Do not ask about extra credit.
+You should assume that there is no extra credit in this class (other than the few decimal points for email professionalism). If any is made available, it will be small (think: an extra question on an exam) and will be made available to the entire class. Do not ask about extra credit.
 
 A slight curve may be applied to exam grades or the overall grade, but this is not guaranteed. Again: should a curve be applied to any aspect of the class, it will be small (think: +2 points to an exam where the average was a 75) and will be applied to the entire class. And, again: do not ask. I have not applied a curve to my 3000-level classes in a while. 
 
@@ -135,12 +135,3 @@ A slight curve may be applied to exam grades or the overall grade, but this is n
 ## Further policies...
 
 ... can be found in the full syllabus on Canvas.
-
-
-
-
-
-
-
-<!-- ## A brief word on this course structure -->
-
