@@ -17,7 +17,7 @@ The department might be going back to the old model of engineering education, wh
 At the same time...
 
 :::{tip}
-Green-lighting AI in this course opens up opportunities -- I am not TOO worried about allowing students to pick their programming language, I am looking forward to the machine learning project, and (I hope) students will get some experience in proper AI use.
+Green-lighting AI in this course opens up opportunities -- I am not too worried about allowing students to choose what programming language they use, I am looking forward to the machine learning project, and I think/hope students will get some experience in proper AI use.
 :::
 
 
