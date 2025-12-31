@@ -94,7 +94,9 @@ A rough calculation: after dropping a few, your grade on the in-class portion of
 
 ## Late Work
 
-Work submitted after the deadline will be subject to a 50% penalty.
+Homework will be due every two weeks, Friday at 11:59PM. I strongly discourage waiting until Friday night to do your homework.
+
+Late work will be subject to a penalty of 5% 
 
 Computer and internet issues are not a valid excuse for submitting late work. If you would like to "play chicken" with the deadline, then you must accept that might lose. My recommendation is to plan to submit early which will give you a buffer in case you run into trouble. 
 
@@ -117,7 +119,7 @@ The instructional staff will monitor student submissions and commit history. Thi
 
 Students are assessed based on the work that they have submitted over the course of the semester. I cannot and do not take into consideration your intended graduation date, financial aid, sports eligibility, number of courses, work schedule, desire to attend grad school, or anything else.
 
-You should assume that there is no extra credit in this class and should not ask for extra credit opportunities. Please recognize that I am tasked with determining whether you have met the learning objectives of the course. Far too often, extra credit is not actually "extra" and instead effectively covers for missed learning.
+You should assume that there is no extra credit in this class and should not ask for extra credit opportunities. Please recognize that I am tasked with determining whether you have met the learning objectives of the course. Far too often, extra credit is not actually "extra" and instead effectively covers for missed learning, thus leaving the student underprepared for ensuing classes.
 
 A slight curve may be applied to exam grades or the overall grade, but this is not guaranteed. This may be tied to my perception of AI misuse, namely: if I am suspicious that a large portion of the class is misusing AI (e.g., based on commit history or incredibly perfect homework submissions), I will be more reluctant to curve the exams. Again, please do not ask about a curve.
 

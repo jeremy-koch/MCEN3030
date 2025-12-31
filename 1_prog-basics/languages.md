@@ -1,39 +1,38 @@
-# Languages
+# Choosing Your Language
 
 
 
-Despite what you may have heard, this is not "a MATLAB course" -- I would describe it as "an applied math course". Indeed, many of the algorithms we will describe were invented long before computers. In previous iterations of this course we have insisted that students use MATLAB with the largest reason being to streamline the student, grader, and instructor experience. 
+Despite what you may have heard, this is not "a MATLAB course" -- I would describe it as "an applied math course". (Indeed, many of the algorithms we will describe were invented long before computers.) In previous iterations of this course we have insisted that students use MATLAB with the largest reason being to streamline the student, grader, and instructor experience. 
 
 
 
-There are indeed good reasons to use MATLAB, most notably it is easiest to get set up and it is used in other mechanical engineering courses. If those reasons are compelling to you, use MATLAB. However, some folks might be looking ahead to a career where MATLAB is not the standard and would like to get experience now with a language that aligns with their career goals. Or they already have some experience in a different language and would like to keep using it. 
+There are indeed good reasons to use MATLAB, most notably it is easiest to get set up and it is the most likely to be used in other mechanical engineering courses. If those reasons are compelling to you, use MATLAB. However, some folks might be looking ahead to a career where MATLAB is not the standard and would like to get experience with a language that aligns with their career goals. Or they already have some experience in a different language and would like to keep using it. 
 
 :::{important} So what I am getting at?
-I am giving you this opportunity to choose the language you use in this course: you may choose MATLAB, Python, or Julia, and will have thousands of lines of coding experience in that language by the end of the semester. (Other languages: let's talk. But they need to be "scripting" or "scripting-like".)
+I am giving you the opportunity to choose the language you use in this course: you may choose MATLAB, Python, or Julia, and will have thousands of lines of coding experience in that language by the end of the semester. (Other languages: let's talk. But they need to be "scripting" or "scripting-like".)
 :::
 
 
 For all three languages, I have provided
 - [a page that includes nearly all necessary coding elements](../1_fundamentals/coding-elements.md) that you may reference as you complete your homework. 
-- [a page that has recommendations about how to get these set up](), though, other than MATLAB, you have a lot of flexibility.  
-- and we have an ["AI green light"]() on homework assignments, which you should not [misuse](), but it will help to enable this "polyglot" approach to the course.
+- [a page that has recommendations about how to get these set up](installing.md), though, other than MATLAB, you have a lot of flexibility.  
+- and we have an ["AI green light"](../0_details/course-policies.md) on homework assignments, which you should not [misuse](../0_details/responsible-AI.md), but it will help to enable this "polyglot" approach to the course.
 
 :::{warning}
 No matter what language you choose, you should be prepared to KNOW things like: whether indexing starts with ```0``` or ```1```, how to find the ```length``` of an array, how to write a ```for``` loop, the character used for comments ```# %``` ..., etc. On the exams, forgetting that Python indexes from ```0``` or that MATLAB requires you to ```end``` loops will lose you points -- do not ask for leniency if you make these mistakes. I am empowering you to learn and use whatever language you want, so learn it!
 :::
 
 
-
-
+Once you have read through and think you are ready to commit to a language, see [the installation recommendations page](installing.md).
 
 
 ## TL;DR:
 
 - Choose MATLAB if you want the easiest installation, or if you just want some direct, explicit, no fuss experience with the language that is (probably going to be) used in MCEN 3047: Data Analysis and MCEN 4043: System Dynamics.
-- Choose Python if you want to use the widest-used language.
-- Choose Julia if you are a adventurous and want to try a "real" programming language that was developed for scientists and engineers. Especially if you have experience with the other languages and want to see if this new language is worth the hype. (See "More Reading" below.)
+- Choose Python if you want the language with widest use, and if you are not bothered by having to do some setup work.
+- Choose Julia if you are a adventurous and want to try a real programming language that was developed for scientists and engineers. Probably this will be chosen by just a few advanced users. 
 <!-- - Choose C++ if already have some experience with it and enjoy it. I don't think any language will prohibit you from working with robots in the future, but C++ is probably the one most associated with robotics. -->
-- Other: let's talk. C++ is not really a scripting language but we could maybe make it work. Java, JavaScript, Ruby, Go... not really engineering languages. Machine, Assembly, FORTRAN, no.
+- Other: let's talk.
 
 FYI you might [check out these stats](https://madnight.github.io/githut/#/pull_requests/2024/1) to get an idea of the prevalence of each language. Python is #1 on GitHub, C++ is #5, Julia is #31, MATLAB is #43 (though it has its own site for sharing code elsewhere). Languages 2-4, Java, Go, and JavaScript, are not really appropriate tools for mathematical algorithms.
 

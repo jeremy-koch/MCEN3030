@@ -14,10 +14,11 @@ project:
           # - file: 0_details/ML-project.md
       - title: Programming Basics
         children:
+          - file: 1_prog-basics/_intro.md
           - file: 1_prog-basics/languages.md
           - file: 1_prog-basics/installing.md
-          - file: 1_prog-basics/functions.md
           - file: 1_prog-basics/coding-elements.md
+          - file: 1_prog-basics/functions.md
           - file: 1_prog-basics/explore-your-setup.md
           - file: 1_prog-basics/explore-some-tasks.md
           - file: 1_prog-basics/github.md
