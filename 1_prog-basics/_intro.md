@@ -9,5 +9,7 @@ In the first week of this course, you will:
 - ... [explore some tasks](explore-some-tasks.md) using some references I have created about [basic mathematical commands](coding-elements.md) and [creating functions](functions.md).
 - ... [become familiar with GitHub](github.md). 
 
+Additionally, make sure you have read all the Course Details section, as well as [tips for success](../9_readings/success.md).
+
 
 Again, I think the best way to learn will be to dive in. Throughout the semester, my goal is to give you the resources and support to do so and succeed. But if you are feeling a bit uncomfortable, no problem -- let's schedule an office hour and we can talk about it.
