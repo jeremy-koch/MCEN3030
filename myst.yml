@@ -17,7 +17,13 @@ project:
           - file: 1_prog-basics/_intro.md
           - file: 1_prog-basics/languages.md
           - file: 1_prog-basics/installing.md
-          - file: 1_prog-basics/coding-elements.md
+          - file: 1_prog-basics/coding-elements-overview.md
+          - file: 1_prog-basics/coding-elements-MATLAB.md
+            hidden: true
+          - file: 1_prog-basics/coding-elements-python.md
+            hidden: true
+          - file: 1_prog-basics/coding-elements-julia.md
+            hidden: true
           - file: 1_prog-basics/functions.md
           - file: 1_prog-basics/explore-your-setup.md
           - file: 1_prog-basics/explore-some-tasks.md
@@ -57,7 +63,7 @@ project:
         children: 
           - file: 9_readings/Taylor-Series.md
           - file: 9_readings/success.md
-          - file: 9_readings/AI-thoughts.md
+          # - file: 9_readings/AI-thoughts.md
   # id: a48983b1-c764-4b15-8eba-7c5fd0e5f7b6
   # title:
   # description:

@@ -1,19 +1,43 @@
-# Necessary Coding Elements
+# Necessary Coding Elements -- Python
 
-<!-- **Author:** Jeremy Koch<sup>1,2</sup> \ -->
+Python has become the most popular language for scientists (and for machine learning), likely because of its ease with higher. However
 
-This course is less about using built-in functions like ```fsolve``` and more about understanding the algorithms. Truthfully, nearly all of the necessary coding elements to write all the functions in this course appear on this page -- indexing, ```if```, ```for```, ```while```. You'll need to do some space preallocation, maybe with something built-in called ```zeros```; might need to use the modulus function to determine if a number is odd or even, maybe a little random-number generation... not much else.
+We are using NumPy for everything in this class. "Native Python" lists like ```x=[1,2,3,4]``` do not cooperate well with mathematical operations -- instead, we are going to turn everything into NumPy arrays.
 
-:::{caution}
-Don't stare at this list in hopes of memorizing it. Instead, treat this as a reference list early in the semester, and after putting these commands into action a few times you will find that you indeed memorized a lot of them.
-:::
+Many of the tools we will build -- differential equation solvers, numerical integrators, ... -- are part of the SciPy package. I would recommend installing that package as well. However, remember that we are building our own tools this semester -- if you start some code with ```from scipy.optimize import curve_fit```, you are doing it wrong!
 
-See also: [functions](functions.md).
+## Functions
+
+Rules for Python functions:
+- Functions must be defined earlier than they are used -- e.g., the function definition cannot occur on lines 13-17 and be called on line 5.
+- You can include as many 
+- If your ```return``` includes more than one variable, you must have more than one variable defined in your function call line. It will complain about expecting a different-sized output.
+- 
+
+
+Here is a file with a couple functions in it:
+```python
+import numpy as np
+k=2
+m=np.sin(2)
+print(m)
+```
+
+
+### Optional Arguments
+
+```python
+def Newton_Raphson1(f,x_0,err_accept=10^-3,max_iter=1000)
+    ...
+    # NR method where the function terminates when the error reaches 10^-3 or 1000 iterations have occurred.
+    ...
+    return x_R
+```
+
 
 ## Creating vectors/matrices/arrays
 
-::::{tab-set}
-:::{tab-item} MATLAB
+
 ```matlab
 x1=0:0.1:2;                 % start:step:stop
 x2=linspace(0,10,500);      % 500 points between 0 and 10
@@ -30,27 +54,20 @@ D2=diag([5,3,1],1);         % the first diagonal above the main is [5,3,1]... so
 r=rand(1,5);                % a row vector with 5 random numbers, uniformly spaced between 0 and 1
 R=rand(4,4);                % same, but a 4x4 matrix
 ```
-:::
-<!-- :::{tab-item} python
+
+
+
 ```python
 f=lambda x: x**2
 ```
-:::
-:::{tab-item} julia
-```julia
-f=lambda x: x**2
-```
-:::
 
-::: -->
-::::
+
 
 ## Indexing: Accessing and Modifying Elements
 
 The focus on many debates: should arrays be indexed starting with zero or one? Python indexes starting with 0, MATLAB and Julia index starting with 1.
 
-::::{tab-set}
-:::{tab-item} MATLAB
+
 ```matlab
 
 x(i)                        % accesses the ith element of x
@@ -58,13 +75,9 @@ x(3:)                       % elements 3 to the end
 x(:5)                       % the first through fifth elements
 x(2:4)                      % the second, third, and fourth elements
 
-A(4,1)                      % fourth element in column 1
-A(:,5)                      % the fifth column... a vector
+A(4,1)=5;                   % change the fourth element in column 1
+A(:,5)                      % the fifth column is a vector... 
 A(4,:)                      % the fourth row
-
-% for all of the above, you can reassign values with =, e.g.
-x(3)=5;                     % changes the third element to 5
-A(:,5)=0;                   % changes the entire fifth column to 0
 ```
 :::
 <!-- :::{tab-item} python
@@ -94,6 +107,8 @@ f=lambda x: x**2
 
 ## Miscellaneous
 
+
+A very useful package in Python is "pandas".
 
 ## Some common motifs
 
@@ -174,3 +189,5 @@ f=lambda x: x**2
 ::::
 
 See also: [functions](functions.md).
+
+https://github.com/brenhinkeller/JuliaAdviceForMatlabProgrammers

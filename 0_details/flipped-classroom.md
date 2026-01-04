@@ -8,11 +8,16 @@ I am excited about this semester because we are going to use the "flipped classr
 
 My main motivation is this: I have observed an increase in student passivity in the past year or so -- less participation in class, less effort on homework (perhaps enabled by AI), less curiosity... less interest in mechanical engineering! Perhaps this cohort was already going to buck that trend, but I am putting a framework in place that is help, regardless. As much as possible, you will be less of a "spectator" in your own education and will spend more time "doing".
 
-A second motivation is this: I understand that engineering students are busy (don't forget I was once a student too!) and I would like to be as productive as we can in our time together. Traditionally this course required a larger time commitment than . AI use/misuse has made that less true, but 
+A second motivation is this: I understand that engineering students are busy (don't forget I was once a student too!) and I would like to be as productive as we can in our time together. Traditionally this course required a larger time commitment than . AI use/misuse has made that less true, but
+
+:::{tip}
+Note that, with this structure, you should see the course content in five different ways within 24 hours: video lecture, reading, summary at the start of class, pencil-and-paper in-class problem, and you will get started on implementing as code before the end of class.
+
+I recommend that you try to finish the code the same day or the next day! In my opinion settling into the class rhythm will make this class go really smoothely...
+:::
 
 
-
-My goal is to place you in a positive environment and to give you the tools to figure it out. 
+<!-- My goal is to place you in a positive environment and to give you the tools to figure it out. 
 
 
 
@@ -27,7 +32,11 @@ Perhaps the best possible outcome for this class is for everyone to be problem s
 
 active and collaborative
 
-going through the motions/spinning their wheels/being a spectator. 
+going through the motions/spinning their wheels/being a spectator.  -->
+
+
+
+
 
 
 ## Organization

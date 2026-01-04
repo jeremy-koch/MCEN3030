@@ -14,7 +14,7 @@ I am giving you the opportunity to choose the language you use in this course: y
 
 
 For all three languages, I have provided
-- [a page that includes nearly all necessary coding elements](../1_fundamentals/coding-elements.md) that you may reference as you complete your homework. 
+- [a page that includes nearly all necessary coding elements](coding-elements-overview.md) that you may reference as you complete your homework. 
 - [a page that has recommendations about how to get these set up](installing.md), though, other than MATLAB, you have a lot of flexibility.  
 - and we have an ["AI green light"](../0_details/course-policies.md) on homework assignments, which you should not [misuse](../0_details/responsible-AI.md), but it will help to enable this "polyglot" approach to the course.
 
@@ -34,17 +34,16 @@ Once you have read through and think you are ready to commit to a language, see 
 <!-- - Choose C++ if already have some experience with it and enjoy it. I don't think any language will prohibit you from working with robots in the future, but C++ is probably the one most associated with robotics. -->
 - Other: let's talk.
 
-FYI you might [check out these stats](https://madnight.github.io/githut/#/pull_requests/2024/1) to get an idea of the prevalence of each language. Python is #1 on GitHub, C++ is #5, Julia is #31, MATLAB is #43 (though it has its own site for sharing code elsewhere). Languages 2-4, Java, Go, and JavaScript, are not really appropriate tools for mathematical algorithms.
 
 
 See a more detailed list of pros and cons below, and talk to me if you want to talk about your options. I would guess 60% of the class will choose MATLAB, 35% will choose Python, and 5% will choose Julia/other. (Again: talk to me about "other".) I will let the class know what the distribution is -- I am sure you are curious!
 
 :::{tip}
-In the grand scheme of things, these languages are very similar, using ```index:slicing```, ```for```, ```while```, etc. You will be able to understand each other's code and will be pretty capable of switching between languages in the future, if needed.
+From a certain, practical level, these languages are very similar, using ```index:slicing```, ```for```, ```while```, etc. You will be able to understand each other's code and will be pretty capable of switching between languages in the future, if needed.
 :::
 
 :::{warning}
-Note that you are responsible for setting up and maintaining your programming environment, which is trivial for MATLAB and a bit more involved for the other languages. 
+Note that you are responsible for setting up and maintaining your programming environment, which is easy for MATLAB but a bit more involved for the other languages. 
 :::
 
 
