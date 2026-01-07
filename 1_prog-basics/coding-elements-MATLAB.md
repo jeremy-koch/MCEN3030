@@ -11,7 +11,7 @@ For example, having an "unsuppressed" line (without ```;``` at the end) prints t
 
 ## Functions
 
-Let's just give an example and talk about it. Here are the contents of one file:
+Let's just give an example and talk about it. Here are the contents of one file, with a "local function" included below it.
 ```matlab
 function [out1,out2]=my_fxn(in1,in2)
     out1=(in1+in2)/2;

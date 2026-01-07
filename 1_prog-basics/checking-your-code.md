@@ -4,7 +4,9 @@
 
 
 
-A relatively quick comment on how you might check your code.
+A quick comment on how you might check your code.
+
+<!-- I will likely be pretty explicit about the tasks your homework needs to achieve. For example, in the bisection method  -->
 
 ## Root-finding methods
 

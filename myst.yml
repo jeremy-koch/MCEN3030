@@ -4,11 +4,11 @@ project:
   toc:
       - file: 0_details/course-intro.md
       - file: 0_details/course-schedule.md
+      - file: 0_details/data.md
       - title: Course Details
         children:
           - file: 0_details/course-policies.md
           - file: 0_details/flipped-classroom.md
-          # - file: 0_details/AI.md
           - file: 0_details/responsible-AI.md
           - file: 0_details/pro-emails.md
           # - file: 0_details/ML-project.md
@@ -24,10 +24,8 @@ project:
             hidden: true
           - file: 1_prog-basics/coding-elements-julia.md
             hidden: true
-          - file: 1_prog-basics/functions.md
-          - file: 1_prog-basics/explore-your-setup.md
-          - file: 1_prog-basics/explore-some-tasks.md
-          - file: 1_prog-basics/github.md
+          # - file: 1_prog-basics/explore-some-tasks.md
+          # - file: 1_prog-basics/github.md
       - title: Some Foundational Concepts
         children:
           # - file: 2_foundations/floats.md

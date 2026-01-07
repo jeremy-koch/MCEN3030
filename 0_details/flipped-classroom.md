@@ -6,15 +6,11 @@
 
 I am excited about this semester because we are going to use the "flipped classroom" format for this course. 
 
-My main motivation is this: I have observed an increase in student passivity in the past year or so -- less participation in class, less effort on homework (perhaps enabled by AI), less curiosity... less interest in mechanical engineering! Perhaps this cohort was already going to buck that trend, but I am putting a framework in place that is help, regardless. As much as possible, you will be less of a "spectator" in your own education and will spend more time "doing".
+The rationale is this: I have observed an increase in student passivity in the past year or so -- less participation in class, less effort on homework (perhaps enabled by AI), less curiosity, ... less interest in mechanical engineering! Perhaps this cohort was already going to buck that trend, but I am putting a framework in place that is going to help with engagement. As much as possible, you will be less of a "spectator" in your own education and will spend more time "doing". Further, I understand that engineering students are busy (don't forget I was once a student too!) and I would like to be as productive as we can in our time together.
 
-A second motivation is this: I understand that engineering students are busy (don't forget I was once a student too!) and I would like to be as productive as we can in our time together. Traditionally this course required a larger time commitment than . AI use/misuse has made that less true, but
+I do genuinely believe this will be an excellent environment for learning. Note that, with this structure, you should see the course content in five different ways within 24 hours: video lecture, reading, summary at the start of class, pencil-and-paper in-class problem, and you will get started on implementing as code before the end of the class period. Spend a bit more time in the evening finishing up the homework problem, and you are in great shape. 
 
-:::{tip}
-Note that, with this structure, you should see the course content in five different ways within 24 hours: video lecture, reading, summary at the start of class, pencil-and-paper in-class problem, and you will get started on implementing as code before the end of class.
-
-I recommend that you try to finish the code the same day or the next day! In my opinion settling into the class rhythm will make this class go really smoothely...
-:::
+I think, for students who are earnest, this structure is going to make for an extremely positive learning experience.
 
 
 <!-- My goal is to place you in a positive environment and to give you the tools to figure it out. 
@@ -42,7 +38,7 @@ going through the motions/spinning their wheels/being a spectator.  -->
 ## Organization
 
 Here's how it will look:
-- The "lecture content" is 1-3 videos watched before class (so, by Tuesday and Thursday morning). I have gone through great efforts to streamline these videos such that they rarely will exceed 20 minutes, and often will be less than 10. Probably totalling an hour per week.
+- The "lecture content" is 1-3 videos watched before class (so, by Tuesday and Thursday morning). I have gone through great efforts to streamline these videos such that they rarely will exceed 20 minutes, and often will be less than 10. Probably totalling an hour per week. Take notes, with pencil and paper, during the videos. Going back to this theme of "passivity" -- writing down notes 
 - We will spend the first few minutes of each class with a very brief summary and questions (in case a good night's rest didn't cause the answers to materialize). The summary will not be a complete rehashing of the videos, and instead will be a reminder of the important equations such that we are all on the same page for the class that day.
 - You will be given a problem to be completed collaboratively, submitted in groups of three. An example would be to carry out an algorithm by hand through two iterations. The purpose of this is to help you understand the logic of the algorithm by going through it yourself. Then, more-or-less, you will just need to translate that process into language a computer can understand. Were you mimicking a ```for``` or ```while``` loop?
 - The remainder of class will be devoted to getting started on your code in groups -- spiritually, this is office hour time. You may collaborate with colleagues, but everyone writes their own code. You may ask me or the TAs questions. If you are not on-task, you will be asked to leave.
@@ -51,6 +47,17 @@ The same content, delivered in a traditional format, might have taken a whole cl
 :::
 
 So the trade I am offering you (and I guess you are being forced to accept) is 30 minutes of "lecture" time at home for 30 minutes of homework time in "lecture", twice a week. It is a good trade though: that time in class will be very productive because you are collaborating on the problems. I hypothesize that you will need to devote fewer hours to this course than you would if it was in a traditional format.
+
+:::{warning}
+For now, I will not attach any submission to the short lecture videos. However, if I measure or sense that the videos are not being watched or digested, I may implement one or more of the following:
+- Questions embedded within the videos
+- Nightly Canvas "quiz" to check that you understood the videos
+- Clicker questions during class
+- Notes check at the start of class
+- Eliminating the "office hour" aspect of the second half of class, bringing back a traditional lecture format.
+
+This is more work for me and more work for you, so my preference is for you to just watch the videos.
+:::
 
 
 <!-- ### Benefits
