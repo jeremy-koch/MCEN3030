@@ -27,13 +27,13 @@ Nonlinear/chaotic differential equations can be "solved" using the numerical tec
 
 - We will use the ["flipped classroom" model](flipped-classroom.md) and will cultivate a classroom environment that is highly collaborative.
 
-- [You can choose what language you use](languages.md). MATLAB, Python, or Julia (ask me about others). AI will help you get your feet underneath you, and I have built [a page that includes pretty much all the commands](../1_fundamentals/coding-elements.md) you will need this semester, in those three languages. (Again, let's talk about other languages.)
+- [You can choose what language you use](../1_prog-basics/languages.md). MATLAB, Python, or Julia (ask me about others). AI will help you get your feet underneath you, and I have built [a page that includes pretty much all the commands](../1_fundamentals/coding-elements-overview.md) you will need this semester, in those three languages. (Again, let's talk about other languages.)
 
-- "AI will help you get your feet underneath you"? Yep, you have a [green light to use AI](AI.md) on the homework and project in this course. However, make sure to [use it responsibly](responsible-AI.md) -- the exams are pencil and paper only, no electronics.
+- "AI will help you get your feet underneath you"? Yep, you have a green light to use AI on the homework and project in this course. However, make sure to [use it responsibly](responsible-AI.md) -- the exams are pencil and paper only, no electronics.
 
 ## Some content highlights
 
-- We will use GitHub Classroom. GitHub "repositories" are a very standard way to share code, and this organization step might be one of the most important lessons of the semester.
+- We will (probably) use GitHub Classroom (and will get that going together). GitHub "repositories" are a very standard way to share code, and this organization step might be one of the most important lessons of the semester.
 - We will learn how to fit models, including nonlinear ones, to experimental data.
 - We will do an introduction to machine learning, including a project.
 - We will solve coupled nonlinear differential equations, including those that describe [mathematical chaos](https://en.wikipedia.org/wiki/Lorenz_system). (Plot above is an example.)
@@ -74,6 +74,7 @@ f=(x,a) -> sin(x)+a
 ::::
 
 
+## A quick extra... because I wanted more color on this page
 
 ```{figure} forest_fire.png
 :alt: 

@@ -11,7 +11,7 @@ Being an engineer means being able to carry out a careful analysis that may take
 
 You are not an empty vessel that is getting filled when I lecture, and reading solutions/watching others solve problems is not an effective way to learn. The best way to learn is to do! We assign homework so that you have problems in which you have to interpret, plan, make decisions, carry out an analysis, interpret the results, and more. These things are what I really care about, but they are harder to assess than "did you use the right equation here and do the algebra right", so I am stuck assessing that.
 
-Facing the decision of whether to use approach 1 or approach 2 is uncomfortable. What if you are wrong? Be wrong for a second, then figure it out! Don't just ask someone else to tell you which is the right way -- so passive! Figuring it out yourself will teach you why it is the way it is, and you will be more ready the next time you see a similar problem. 
+Facing the decision of whether to use approach 1 or approach 2 is uncomfortable. What if you are wrong? Be wrong for a second, you'll figure it out! Don't just ask someone else to tell you which is the right way, or if you do, at least ask them why and judge for yourself if it makes sense. Figuring it out yourself will teach you why it is the way it is, and you will be more ready the next time you see a similar problem. 
 
 3. AI is a tool that amplifies your skills.
 
@@ -25,7 +25,7 @@ Real problems are not so nice. "The pressure in my turbocharger is 15% too high"
 A pretty accurate description of LLMs: "This is what a good answer SOUNDS like, but as a large-language model, I don't know if it is ACTUALLY a good answer!" I imagine a lot of the research happening in this field is about getting the language of problems to be more closely aligned with the physical descriptions of the problems.
 :::
 
-Meanwhile, a wise engineer might know how to get access to a bunch of data about the turbocharger's performance. Pressure, temperature, oxygen level, time from start-up, etc., maybe an overwhelming amount of data across 10 different turbochargers put through hours of testing! But the wise engineer knows enough about the details to coach an AI into developing a machine learning model, and then is insightful enough to triangulate a solution from that data. 
+Meanwhile, a wise engineer might know how to get access to a bunch of data about the turbocharger's performance. Pressure, temperature, oxygen level, all as a function of time from start-up, etc., maybe an overwhelming amount of data across 10 different turbochargers put through hours of testing! But the wise engineer knows enough about the details to coach an AI into developing a machine learning model, and then is insightful enough to triangulate a solution from that data. 
 
 THAT is the power of LLMs. If you know what you are doing and know how to assess the validity of ideas, they can streamline some of the busywork, quickly delivering information to help you make a decision. If you don't have the foundation, you won't know the questions to ask and won't be able to discern a good idea from a bad one. Even if AI delivers a reasonable answer, do you believe it? Could you convince your boss? There's probably a lot of money involved... how confident are you?
 
@@ -42,4 +42,4 @@ Attending class and office hours. Submitting your work on time. [Communicating i
 
 I unfortunately have to give grades in this class, and a few people might not pass -- a temporary setback, but that is with their long-term success in mind. Rounding a student's final grade of 64% to a C- does not serve their long-term success. Allowing a student to rush through and submit multiple late assignments during finals week does not serve their long-term success.
 
-Success is built on: being earnest (as in: actually learn, don't just rush through the work... care about your education!), being responsible (get the easy stuff right), and taking care of your health.
+Success is built on: being earnest (as in: don't just rush through the work... care about your education!), being responsible (get the easy stuff right), and taking care of your health.

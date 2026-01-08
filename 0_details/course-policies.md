@@ -48,11 +48,11 @@ The instructional staff can see when GitHub commits occur, and will pay attentio
 
 **machine learning project:**
 
-We will get some authentic experience in doing a machine learning calculation. We will briefly introduce the topic, describing some of the strategies but not necessarily diving deeply into the math. MATLAB has a machine learning toolbox, Python has several packages and has the most robust machine learning community (Scikit-learn is my recommendation, but PyTorch and TensorFlow are out there too), Julia has Lux and Flux.
+We will get some authentic experience in doing a machine learning calculation. We will briefly introduce the topic, describing some of the strategies but not necessarily diving deeply into the math. MATLAB has a machine learning toolbox, Python has several packages and has the most robust machine learning community (Scikit-learn, PyTorch, TensorFlow), Julia has Lux and Flux.
 
 AI use is encouraged, tutorial use is encouraged, but plagiarism is not. An example of plagiarism in this context is: taking someone's completed analysis published in a blog somewhere and submitting it as your own work. Plagiarism in this course is completely unacceptable and will lead to immediate failing grade for the course and submission to the honor council, regardless of your grade in the other aspects of the course.
 
-There may be intermediate milestones such as submitting a topic for approval and your LLM prompting. More details will be posted.
+There may be intermediate milestones such as submitting a topic for approval and submitting your LLM prompting. More details will be posted.
 
 
 ___
@@ -63,12 +63,13 @@ This course will have three exams -- two midterms that will occur during class, 
 
 The exams will be entirely pencil-and-paper, no electronics (including calculators). You will be allowed a small set of notes (specifics on this added later). The most important aspect of these notes will be the inputs, outputs, and descriptions of the functions you have written this semester.
 
-Exam questions will likely be something like: achieve a task by doing the necessary setup work (e.g., defining an array of equally spaced values), calling a function, and post-processing the results. It will not be made explicit what function to call -- you will make that judgment based on your understanding of the function inputs, outputs, and limitations. There may be some additional types of questions, I might add some details later.
+Exam questions will likely be something like: achieve a task by doing the necessary setup work (e.g., defining an array of equally spaced values), calling a function, and post-processing the results. It will not be made explicit what function to call -- you will make that judgment based on your understanding of the function inputs, outputs, and limitations. There may be some additional types of questions -- I might add some details here later.
 
 The final exam will be cumulative.
 
 
 
+---
 
 ## Professionalism
 
@@ -89,29 +90,26 @@ I am glad to receive emails from you in general, don't be discouraged to send th
 
 This is a [flipped classroom](flipped-classroom.md) that involves discussion between students and computer use. The classroom will be lively -- it is imperative that we remain focused. If you are seen to be checking social media/the news/sports scores, playing games, watching non-course-related videos, listening to music, etc. ... basically if you are using class time for things not related to class ... you will be asked to leave the classroom and your in-class score for the day will be a non-droppable zero. This includes phone use.
 :::{caution}
-A rough calculation: after dropping a few, your grade on the in-class portion of the class will be based on something like 20 in-class problems this semester. A zero on one will drop your overall grade by about 0.5%.
+A rough calculation: after dropping a few, your grade on the in-class portion of the class will be based on something like 20 in-class problems this semester, and an earnest student will likely receive full credit on this aspect of the course. However, a zero on one will drop your overall grade by about 0.5%.
 :::
 
 ## Late Work
 
-Homework will be due every two weeks, Friday at 11:59PM. I strongly discourage waiting until Friday night to do your homework.
+Homework will be due every two weeks, Friday at 11:59PM. I strongly discourage waiting until Friday night to do your homework. Late work will be subject to a penalty of 10% per day, and may be submitted up to 5 days late.
 
-Late work will be subject to a penalty of 5% 
-
-Computer and internet issues are not a valid excuse for submitting late work. If you would like to "play chicken" with the deadline, then you must accept that might lose. My recommendation is to plan to submit early which will give you a buffer in case you run into trouble. 
-
-Forgetting to submit work does not absolve you from these penalties. You can consider the zero on the assignment to be a penalty for not confirming that your work was submitted.
-
-[Some of the best advice I can give you](../9_readings/success.md) is: get the easy stuff right. Submitting your work on time (and confirming it was submitted) is an example of the easy stuff. If you are going to do the hard work of completing the assignment, don't mess up the easy work of submitting it on time.
+Computer and internet issues are not a valid excuse for submitting late work. If you would like to "play chicken" with the deadline, then you must accept that might lose. My recommendation is to plan to submit early which will give you a buffer in case you run into trouble. Forgetting to submit work does not absolve you from these penalties. You can consider the zero on the assignment to be a penalty for not confirming that your work was submitted. [Some of the best advice I can give you](../9_readings/success.md) is: get the easy stuff right. Submitting your work on time (and confirming it was submitted) is an example of the easy stuff. If you are going to do the hard work of completing the assignment, don't mess up the easy work of submitting it on time.
 
 
 ## AI Policy
 
 This course allows for [responsible use of AI](../0_details/responsible-AI.md) on homework and projects. AI is prohibited on in-class activities (unless explicitly stated for a specific assignment) and on exams.
 
-If we are not going to police AI use, the responsibility shifts to the student to understand what amount of AI use is too much. A good starting point: If you would be hesitant to show me your prompts, you probably went too far.
+If we are not going to police AI use, the responsibility shifts to the student to understand what amount of AI use is too much. 
+:::{tip}
+A good starting point: If you would be hesitant to show me your prompts, you probably went too far.
+:::
 
-The instructional staff will monitor student submissions and commit history. This data will inform discussions with individual students or the class as a whole. For example, one commit near the deadline, with perfect code, is a strong indicator of AI misuse -- if that student proceeds to struggle on the exams, we will have a frank discussion.
+The instructional staff will monitor student submissions and commit history. This data will inform discussions with individual students or the class as a whole. For example, one commit near the deadline, with perfect code, is a strong indicator of AI misuse and/or misuse of class time.
 
 
 

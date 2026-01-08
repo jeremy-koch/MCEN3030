@@ -49,7 +49,7 @@ However, don't be so brief that you leave out key details. I am not going to do 
 
 No details about the error message, just "an error". So, now I have to send an email asking what the specific error message was, which requires the student to reply, then I have to reply to that. A whole ordeal! Include relevant information! But, also, don't just dump information on me and make me sort through it. Focused email content!
 :::{aside}
-Emails like this are part of the reason I am not debugging for students anymore. I was "bailing out" too many students who weren't even reading and processing the error messages. Deciphering error messages -- develop this skill!
+Emails like this are part of the reason I am reluctant to debug for students anymore. I was "bailing out" too many students who weren't even reading and processing the error messages. Deciphering error messages -- develop this skill!
 :::
 
 
@@ -67,11 +67,12 @@ I receive about two dozen emails every semester that boil down to students askin
 :::{tip}
 If you are going to "play chicken" with a deadline, you have to accept that you might lose.
 :::
-Further, in the Fall 2025 semester I received more "grade-grubbing" emails than ever before, wherein students ask, e.g., for a final grade of 89.3% to be rounded to an A-.
+Further, in the Fall 2025 semester I received more "grade-grubbing" emails than ever, wherein students ask, e.g., for a final grade of 89.3% to be rounded to an A-.
 
 The answer to all of these requests is no. We, unfortunately, give grades in this school, and the course policies are the rules of the game that everyone abides by. I am not going to be the judge of who has a good excuse, and it is not a course policy if I waive it for anyone who asks. Build some more robustness in your schedule where you can -- finishing things by the deadline should not, in general, be stressful.
 :::{aside}
 I am always wary of giving special treatment to the outspoken student, while the introverted student accepts the course policies (a deduction for being late). Why does the outspoken student deserve the higher grade? They don't.
 :::
 
-As it pertains to the present discussion: Asking me to go against course policy immediately makes it a bad email (and it becomes a huge cognitive load for me because I have to find a gentle way to say no).
+
+As it pertains to the present discussion: Asking me to go against course policy immediately makes it a bad email (and it becomes a huge cognitive load for me because I have to find a gentle way to say no). Let's just stay on top of things as much as we can!
