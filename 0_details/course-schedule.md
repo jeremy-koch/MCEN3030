@@ -69,10 +69,9 @@
 :::{note}  Week 6: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16-20 Feb
 :icon: false
 - Tuesday 17 Feb:
-    - Golden Search
-    - Steepest Ascent
+    - Pattern Search
 - Thursday 19 Feb:
-    - Summaries
+    - Midterm Practice
 - **Friday, 20 Feb: homework due**
 :::
 
@@ -82,7 +81,7 @@
 :icon: false
 - **Tuesday, 24 Feb: MIDTERM 1 in class (tentative)**
 - Thursday, 26 Feb: no class, Midterm Reading Day
-- machine learning project introduction
+
 :::
 
 
@@ -90,10 +89,10 @@
 
 :::{note}  Week 8: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-6 Mar 
 :icon: false
-- Tuesday 3 Mar:
-    -asfd
-- Thursday 5 Mar:
-    -sadf
+- Tuesday 3 Mar: 
+    - Golden Search
+    - Steepest Ascent
+- Thursday 5 Mar: machine learning project introduction
 :::
 
 
@@ -102,9 +101,9 @@
 :::{note}  Week 9: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-13 Mar
 :icon: false
 - Tuesday 10 Mar:
-    - asfd
+    - 
 - Thursday 12 Mar:
-    - asdf
+    - 
 - **Friday, 13 Mar: homework due**
 :::
 
@@ -123,9 +122,9 @@
 :::{note}  Week 10: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23-27 Mar 
 :icon: false
 - Tuesday 24 Mar:
-    - asdf
+    - Numerical Integration
 - Thursday 26 Mar:
-    - asdf
+    - Monte Carlo Methods
 :::
 
 
@@ -133,9 +132,11 @@
 
 :::{note}  Week 11: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 Mar-3 Apr
 :icon: false
-- Tuesday 31 Mar: Numerical Integration
-
-- Thursday 2 Apr: Monte Carlo Methods
+- Tuesday 31 Mar:
+    - Ordinary Differential Equations Intro
+    - Euler's Method
+- Thursday 2 Apr:
+    - Coupled Equations
 - **Friday, 3 Apr: homework due**
 :::
 
@@ -144,7 +145,7 @@
 
 :::{note}  Week 12: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6-10 Apr
 :icon: false
-- Tuesday 7 Apr: 
+- Tuesday 7 Apr: Midterm Practice
 - **Thursday, 9 Apr: MIDTERM 2 in class (tentative)**
 :::
 
@@ -154,10 +155,10 @@
 :::{note}  Week 13: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13-17 Apr   
 :icon: false
 - Tuesday, 14 Apr: 
-    - Ordinary Differential Equations Intro
-    - Euler's Method
+    - Boundary-Value Problems
 - Thursday, 16 Apr: 
-- Coupled Equations
+    - The Shooting Method
+
 :::
 
 
@@ -166,6 +167,8 @@
 :icon: false
 - Tuesday 21 Apr:
     - Partial Differential Equations
+- Thursday 23 Apr:
+    - Partial Differential Equations 2
 - **Friday, 24 Apr: homework due**
 :::
 

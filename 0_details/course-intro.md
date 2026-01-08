@@ -51,9 +51,8 @@ I prepared this site to augment the learning that occurs elsewhere -- a rephrasi
 It is a living document that will have things added and removed frequently. As such, I do NOT recommend forking this repository (if you know how to do this) -- if you are reading this early in the semester, there could be 50% more material by the end of the semester, I probably have incomplete pages floating around, and I might decide to eliminate some content in favor of adding other content.
 
 - Course units are in the panel on the left, and clicking them will open a drop-down menu. Each item in that drop-down menu is a short reading. The readings are mostly about the motivation and the math, though sometimes code is included. Expect to read 1-3 of these before each class period (alongside watching the videos).
-- Because this is a "{abbr}`polyglot (many languages)`" course, most of the times that code is referenced, it will be included in an environment like that below. You can choose the tab for your language, then see the code. In the top-right corner of each coding environment, you can choose an icon to copy that code block, and then you can paste it into your working environment and run it. Please confirm the code does what you think it does! Maybe I made a mistake!
 - In the top-right corner of this site is a search bar. So, if you are looking for references to _Taylor Series_ within this site, you can search for it up there.
-- At the end of each unit (the topics on the left) is a "Summary" page. As part of this, questions like "how would you do this?" are included... this is your study guide for the exams! Exam questions will be about using the functions we write this semester: you will need to create the inputs, understand and call the functions, and handle the outputs.
+- Because this is a "{abbr}`polyglot (many languages)`" course, most of the times that code is referenced, it will be included in an environment like that below. You can choose the tab for your language, then see the code. In the top-right corner of each coding environment, you can choose an icon to copy that code block, and then you can paste it into your working environment and run it. Please confirm the code does what you think it does! Maybe I made a mistake!
 
 
 ::::{tab-set}
@@ -74,42 +73,6 @@ f=(x,a) -> sin(x)+a
 :::
 ::::
 
-## Motivation
-
-My biggest goal for this semester is get students to be more active in their own education, which I think will have far-reaching consequences beyond MCEN 3030.
-
-
-I want to clarify that being "passive" (which we are trying to avoid) is not the opposite of being "perfect". 
-A passive student:
--  ... 
-
-
-0 might even just plug the problems into an LLM (gasp)
-
-An earnest student:
-- ... is not afraid to ask questions. Asking questions takes courage!
-- ... is not afraid to be wrong. In fact, maybe the best way to learn is to be wrong and figure out why you are wrong.
-- ... 
-
-Don't think I am abandoning you by giving these resources and encouraging you to figure it out. I think that is going to be a good approach, for the most part, but if you want to schedule a meeting so that you can get a bit more confident about MATLAB's interface, let's schedule it. If you want to talk after class  -->
-
-
-
-<!-- 
-## A brief comment on the depth of this book
-
-This webpage is hardly a book, more like a pamphlet, and it alone is not going to get you to succeed in this course. We additionally have lecture videos, and more importantly, in-class work and homework that is going to go much further towards getting you to understand the content.
-
-That being said, this webpage is hopefully going to be a resource for you, and you should read the relevant sections I point before class and reference this first when you have questions (use the search bar!). I estimate the total word count on all these pages to be about 30000... which sounds like a lot, but a textbook has about 300 words per page, so this is something like 100 pages. Over the course of our 15 weeks together, it is incredibly reasonable to ask you to read and digest this volume of information -- less than 10 pages per week!
-
-
-Note that, in my [tips for success](../9_readings/success.md) page, I comment that:
-- Your ability to focus is correlated with your career success. So: settle in and focus as you read for a few minutes. Develop that "muscle".
-- AI is depriving students of their ability to focus and take in the details, instead providing quick and easy "summaries". Every page on this site is basically already summary, don't be summarizing a summary!
-- Passivity is getting you nowhere. Think about the material after you read a section, get a pencil out and derive something yourself, get curious ("why doesn't this work?"), do some digging, connect the dots. -->
-
-
-
 
 
 ```{figure} forest_fire.png
@@ -117,5 +80,5 @@ Note that, in my [tips for success](../9_readings/success.md) page, I comment th
 :width: 300px
 :align: center
 
-A quick example of where you might take your wisdom after completing MCEN 3030. (Sorry, won't cover this in class!) [Agents.jl](https://juliadynamics.github.io/AgentsExampleZoo.jl/dev/examples/forest_fire/) is a Julia package that can implement flocking/swarming models -- really difficult to understand with pencil and paper, as there are often hundreds or thousands of entities interacting in these systems. One of their examples implements a forest fire model -- unfortunately very relevant to us in Colorado.
+A quick example of where you might take your wisdom after completing MCEN 3030 -- this is kind of a specialized numerical solution to a PDE. [Agents.jl](https://juliadynamics.github.io/AgentsExampleZoo.jl/dev/examples/forest_fire/) is a Julia package that can implement flocking/swarming models -- really difficult to understand with pencil and paper, as there are often hundreds or thousands of entities interacting in these systems. One of their examples implements a forest fire model -- unfortunately very relevant to us in Colorado.
 ```

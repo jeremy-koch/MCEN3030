@@ -4,7 +4,7 @@ project:
   toc:
       - file: 0_details/course-intro.md
       - file: 0_details/course-schedule.md
-      - file: 0_details/data.md
+      - file: 0_details/course-statistics.md
       - title: Course Details
         children:
           - file: 0_details/course-policies.md
@@ -40,8 +40,8 @@ project:
           # - file: 3_root-finding/2D-NR.md
           # - file: 3_root-finding/zsummary.md
       - title: Matrix Methods
-        children:
-          - file:
+        # children:
+        #   - file:
       - title: Optimization
         children:
           # - file: 4_optimization/opt-intro.md
