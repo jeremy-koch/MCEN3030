@@ -66,7 +66,7 @@ R=rand(4,4);                % same, but a 4x4 matrix
 
 ## Indexing and Modifying Elements
 
-MATLAB indexes from ```1``` and can use ```end``` to refer to the last index.
+MATLAB indexes from ```1``` and can use ```end``` to refer to the last index. Be careful when talking to Python folks, your "first" element might be their "zeroth".
 
 ```matlab
 x(i)=5;                     % changes the ith element of x (x would need to exist already)
@@ -89,6 +89,8 @@ z=x.*y;
 ```
 From the above code, we would find ```z=[4, 10, 18]```. To square all elements, ```.^2```, to divide element-by-element, ```x./y```. No dot is needed for addition and subtraction.
 
+Common mathematical functions work element-by-element on arrays: ```sin(x)```, ```exp(x)```, ```log(x)``` is the natural log, ```log10(x)``` is the base-10 log, ```sqrt(x)``` for square root. sin, cos, tan, etc.
+
 
 ## Conditional Statements
 Here is the ```if```-```elseif```-```else``` structure:
@@ -103,7 +105,7 @@ else
 end
 ```
 
-The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is &&, the logical or is ||.
+The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is ```&&```, the logical or is ```||```, and ```>=``` and ```<=``` work as you'd expect!
 
 ## Loops
 A ```while``` loop looks like this:
@@ -140,25 +142,6 @@ If two inputs are needed: ```f=@(x,y) x+y;```.
 
 
 ## Some common motifs
-
-Don't "hard-code" in numbers if you can avoid it! It will make your code more flexible, readable, and easier to debug. For example:
-
-```matlab
-x=1:100;
-y=1:100;
-for i=1:100          
-    % are we iterating through x or y?
-    % If we have to change whichever of them to 1:500, we'd have to change our "for" line above
-end
-
-% this is better
-for i=1:length(y)
-    % now we know it is iterating through y
-    % and if we change to y=1:500, it automatically is ready to go!
-end
-```
-
-
 
 If you need something to happen if a number is even:
 

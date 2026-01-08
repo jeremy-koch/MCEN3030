@@ -36,3 +36,22 @@ Anonymous Function
 <!-- :::{tip}
 For all of these, it is imperative that you have good file organization. 
 ::: -->
+
+## Some common motifs
+
+Don't "hard-code" in numbers if you can avoid it! It will make your code more flexible, readable, and easier to debug. For example, in MATLAB:
+
+```matlab
+x=1:100;
+y=1:100;
+for i=1:100          
+    % are we iterating through x or y?
+    % If we have to change whichever of them to 1:500, we'd have to change our "for" line above
+end
+
+% this is better
+for i=1:length(y)
+    % now we know it is iterating through y
+    % and if we change to y=1:500, it automatically is ready to go!
+end
+```

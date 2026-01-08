@@ -66,7 +66,7 @@ R  = np.random.rand(4,4)                 # same, but a 4x4 matrix
 
 ## Indexing: Accessing and Modifying Elements
 
-Python indexes from ```0```. I like to say that the initial element in an array is the "zeroth" element... be careful when talking to MATLAB folks about the "first" element, it might be your "zeroth".
+Python indexes from ```0```. I like to say that the initial element in an array is the "zeroth" element... be careful when talking to MATLAB/Julia folks about the "first" element, it might be your "zeroth".
 
 ```python
 x[i]=5             # changes the ith element of x (x would need to exist already)
@@ -83,98 +83,79 @@ A[4,:]=-9;         # the fourth row is now full of -9s
 
 Python assumes element-by-element math (mostly what we will be doing in this class) by default, so addition, multiplication, and division of arrays is just ```x+y```, ```x*y```, and ```x/y```. Raising to powers is, controversially ```x**2``` (i.e., that is how we square a number). 
 
+NumPy has many built-in mathematical functions that work on arrays: ```np.exp(x)``` for the exponential function, ```np.log(x)``` is the natural log, ```np.log10(x)``` is the base-10 log, ```np.sqrt(x)``` gets a square root. ```np.sin```, ```np.cos```, ```np.tan```, etc.
 
 
 
 ## Conditional Statements
+Here is the ```if```-```elif```-```else``` structure:
+
+```python:
+if x<5:
+    y=10
+elif x>9:
+    y=15
+else:
+    y=-99
+```
+
+Python looks like natural language here: we literally write ```if x>5 and x<10```, and similar with ```or```. ```>=``` and ```<=``` work as you'd expect!
 
 
 ## Loops
+A ```while``` loop looks like this:
+```python
+counter=0;
+while counter<5:
+    print('hi')
+    counter=counter+1
+```
+note that no ```end``` is needed! Whitespace!
+
+A ```for``` reads like natural language:
+```python
+x=np.array([1,2,3]);
+S=0
+for i in range(x):
+    S=S+x[i]
+```
 
 
-## Miscellaneous
 
+## Reading/Writing Spreadsheets
 
-A very useful package in Python is "pandas".
+It is common to use ```*.csv``` files: comma-separated values. You may be able to load from other sources, but csv will be our standard because of the predictability of the formatting.
+
+To read in a csv and store the data as a matrix: ```data = np.loadtxt('my_data.csv', delimiter=',')```. (From there you can get individual columns via ```x_data=data[:,1]``` etc.)
+
+To write a new csv: ```np.savetxt('data.csv', [x_data,y_data], delimiter=',')``` creates a new file in your current directory called "data.csv".
+
+## Anonymous Functions
+
+In our root-finding algorithms, we will input a (mathematical) function into a (programming) function, e.g.: find the root of $f(x)=\sin(x)-0.85$. This can be achieved via an anonymous function, sometimes called a "lambda" function: ```f=lambda x: np.sin(x)-0.85```. 
+
+If two inputs are needed: ```f=lambda x,y: x+y```.
+
 
 ## Some common motifs
 
-Don't "hard-code" in numbers if you can avoid it! It will make your code more flexible, readable, and easier to debug. For example:
-::::{tab-set}
-:::{tab-item} MATLAB
-```matlab
-x=1:100;
-y=1:100;
-for i=1:100          
-    % are we iterating through x or y?
-    % If we have to change whichever of them to 1:500, we'd have to change our "for" line above
-end
-
-% this is better
-for i=1:length(y)
-    % now we know it is iterating through y
-    % and if we change to y=1:500, it automatically is ready to go!
-end
-```
-:::
-<!-- :::{tab-item} python
-```python
-f=lambda x: x**2
-```
-:::
-:::{tab-item} julia
-```julia
-f=lambda x: x**2
-```
-::: -->
-::::
-
 If you need something to happen if a number is even:
-::::{tab-set}
-:::{tab-item} MATLAB
-```matlab
-if mod(x,2)==0  % even!
-    % do something
-else            % odd!
-    % do something else
-end
+
+```python 
+if x % 2 ==0: # even!
+    # do something
+else:            # odd!
+   # do something else
 ```
-:::
-<!-- :::{tab-item} python
-```python
-f=lambda x: x**2
-```
-:::
-:::{tab-item} julia
-```julia
-f=lambda x: x**2
-```
-::: -->
-::::
+
 
 To calculation a summation, initialize the sum at zero:
-::::{tab-set}
-:::{tab-item} MATLAB
-```matlab
-N=15;       % how many terms to include
-S=0;        % initialize the sum at zero
-for n=1:N
-    S=S+sin(n);
-end
-```
-:::
-<!-- :::{tab-item} python
+
 ```python
-f=lambda x: x**2
-```
-:::
-:::{tab-item} julia
-```julia
-f=lambda x: x**2
-```
-::: -->
-::::
+N=15       # how many terms to include
+S=0       # initialize the sum at zero
+for n in range(N):
+    S=S+np.sin(n)
 
-See also: [functions](functions.md).
+```
 
-https://github.com/brenhinkeller/JuliaAdviceForMatlabProgrammers
