@@ -17,24 +17,14 @@ Don't forget that you have the AI green-light for homework... asking "how do I m
 
 [Necessary Coding Elements -- Julia](coding-elements-julia.md)
 
-In addition to basic commands like how to create an array, each of the above links describes scripts, functions, "anonymous functions", and optional arguments.
+In addition to basic commands like how to create an array, each of the above links describes scripts, functions, and "anonymous functions".
 
 Script
-: We will take this to mean a coding file with simple instructions that don't require much overhead. For example: make a list of numbers between 0 and 50, use them in a function, and print the results. This takes three lines of code in a ```*.m```, ```*.py```, or ```*.jl``` file... no need for any formal "main function" declarations, just go through the steps in that script, in order.
-:::{aside}
-For our purposes, MATLAB, Python, and Julia are all "scripting languages", though that title is controversial for Julia because it is technically compiled. 
-:::
-
+: We will take this to mean a coding file with simple instructions that don't require much overhead. For example: make a list of numbers between 0 and 50, use them in a function, and print the results. This takes three lines of code in a ```*.m```, ```*.py```, or ```*.jl``` file... no need for any formal "main function" declarations, just go through the steps in that script, in order. For our purposes, MATLAB, Python, and Julia are scripting languages, though that label is controversial for Julia because it is compiled.
 
 
 Function
-: These turn inputs into outputs according to a set of rules. Functions require a formal declaration, the structure of which is basically the same in all languages: declare the function name, input variables, and how to return the outputs. We "call" functions from scripts or other functions.
-
-
-<!-- "Local Functions"
-:  -->
-
-
+: These turn inputs into outputs according to a set of rules. Functions require a formal declaration, the structure of which is basically the same in all languages: give a function name, input variables, and return the outputs. We "call" functions from scripts or other functions.
 
 
 Anonymous Function

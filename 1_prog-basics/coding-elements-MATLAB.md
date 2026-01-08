@@ -1,63 +1,47 @@
 # Necessary Coding Elements -- MATLAB
 
-MATLAB is the default option for MCEN 3030 and has been the (one) language used for this class since well-before my time. We are opening the door to other languages, but I still expect MATLAB, which is tightly intertwined with engineering education, will have the greatest number of users in this class.
+MATLAB is the default option for MCEN 3030 and has been the (one) language used for this class since before my time. We are opening the door to other languages, but I still expect MATLAB, which is tightly intertwined with engineering education, will have the greatest number of users in this class.
 
-MATLAB is made for math, so, for example, the solution to "the linear algebra problem" $\mathbf{A}\cdot\mathbf{x}=\mathbf{b}$ is ```b=A\x``` (```A\``` is under-divide by A, a nice shorthand for ```inv(A)``` and a little faster than actually calculating the inverse).
-
-A couple examples that epitomize this:
-- If you have a line in your function that is just ```x``` (not suppressed with ```;```), it will print the value of ```x```. Sloppy, annoying if you don't mean to do that, but I do it all the time when developing a program just to quickly see what is going on.
-- 
-For example, having an "unsuppressed" line (without ```;``` at the end) prints the value produced by the line, and so a ```x``` will tell you what ```x``` is.
+MATLAB is made for math, so, for example, the solution to "the linear algebra problem" $\mathbf{A}\cdot\mathbf{x}=\mathbf{b}$ is ```b=inv(A)*x``` or ```b=A\x```.
 
 ## Functions
 
-Let's just give an example and talk about it. Here are the contents of one file, with a "local function" included below it.
+Let's just give an example and talk about it. Here are the contents of one file, with a "local function" included below it (described below).
 ```matlab
 function [out1,out2]=my_fxn(in1,in2)
-    out1=(in1+in2)/2;
-    out2=sqrt(in1*in2);
+    x=[in1,in2];
+    out1=my_local_fxn(x);
+    out2=in2+3;
 end
 
-function 
+function b=my_local_fxn(x)
+    b=mean(x);
+end
 ```
-... and here is a separate file, a script, that would call this function.
+And here are a few things that you might try in a separate script file, or as an input in the command window:
 ```matlab
+my_fxn(4,5)
+
+a=my_fxn(4,5)
+
+[a,b]=my_fxn(4,5)
+
+my_local_fxn([4,5,6])
 
 ```
+
+Some things you will notice:
+- ```my_fxn(4,5)``` works, but produces only one output. ```a=my_fxn(4,5)``` works, but you only get the first output (saved as ```a```).
+- To get both outputs, you must "warn" MATLAB that two are coming. So the second command, ```[a,b]=my_fxn(4,5)``` is how to get both outputs.
+- ```my_local_fxn([4,5,6])``` produces an error: ```Unrecognized function or variable 'my_local_function'.```
+- When calling a function, the output variables don't need to be the same as those in the function declaration. Here: ```a``` and ```b``` are perfectly fine names -- we don't need to save them as ```out1``` and ```out2```.
 
 The Rules:
-- The first file must be named ```my_fxn.m``` and must be in the same directory as the script. The script could be called anything.
-- Calling ```local_fxn(...)``` from the script would cause an error. Local functions are only known within their own ```.m``` file
-- The output variables are named in the function declaration (```out1``` and ```out2```).
-- In order to retrieve outputs 2, 3, ... when calling a function, you must allocate space for them in the call. By default, MATLAB only returns the first output. (However, if you want to be a bit sleek, you can use ~ as one or more of the variable names, and MATLAB won't bother storing those numbers anywhere.)
-- In order for a function to be available outside the ```*.m``` in which it is written, the ```*.m``` file name must match the function name and the first line of the *.m file must be the function definition.
-- Functions can be called from other functions/scripts/the command window when they are in the current working directory, or if the "path" has been added.
-- "Local" functions are "known" only within . These are sometimes useful to handle some work that would make the main function messy. The definition must occur below the "main" function.
-- A consequence of the above: there is only one "main" function per *.m file. This is one of the most annoying things about MATLAB.
-
-A function file, with a local function below it:
-
-Note that:
-
-
-### Optional Arguments
-
-Optional arguments do not have to be included in the function call. If they are included, the associated variable uses the value given in your function call; if they are not, they will default to the value included in the function definition.
-
-For MCEN 3030, a common use is to define a standard error or a maximum number of iterations. Here is how that would look:
-```matlab
-function x_R=Newton_Raphson1(f,x_0,err_accept=10^-3,max_iter=1000)
-    ...
-    % code implementing the NR method where the function terminates
-    % when the error reaches 10^-3 or 1000 iterations have occurred
-    ...
-end
-```
-
-and if you want to use the non-default values, you could call with, e.g.: ```x_root=Newton_Raphson1(f,x_0,max_iter=2000)```.
-
-
-
+- Callable functions must have, as their first line, ```[output variables] = function_name(input variables)```, and the file must be called ```function name.m```.
+- Such functions can be called as long as you are in the same working directory -- if that ```*.m``` file is in the folder you currently have open in MATLAB.
+- The local function ```my_local_fxn``` cannot be called outside of the file. We can't call it from a script or other function or the command window -- it is only known "locally" within the main function file ```my_fxn.m```. Local functions are useful if there is a little side quest you need to do within a main function that gets rid of some clutter.
+- A consequence of the above: there is only one "main" function per ```*.m``` file. This is one of the most annoying things about MATLAB.
+- By default, MATLAB only returns the first output if you simply call the function. In order to retrieve the other output variables, you need to "warn" MATLAB that more are coming by defining variables where they will be stored.
 
 ## Creating vectors/matrices/arrays
 
@@ -82,36 +66,77 @@ R=rand(4,4);                % same, but a 4x4 matrix
 
 ## Indexing and Modifying Elements
 
-MATLAB indexes from ```1``` and can use ```end```
-
+MATLAB indexes from ```1``` and can use ```end``` to refer to the last index.
 
 ```matlab
-x(i)=5;                     % accesses the ith element of x
-x(3:)                       % elements 3 to the end
-x(:5)                       % the first through fifth elements
-x(2:4)                      % the second, third, and fourth elements
+x(i)=5;                     % changes the ith element of x (x would need to exist already)
+x(3:end)=0;                 % elements 3 to the end all become 9 (could have done e.g. [9,10,11]... changes elements 3,4,5)
+x(2:4)=-88;                 % the second, third, and fourth elements become -88
 
 A(4,1)=5;                   % change the fourth element in column 1
-A(:,5)                      % the fifth column is a vector... 
-A(4,:)                      % the fourth row
+A(:,5)=5;                   % the fifth column is a vector... this makes all elements in that vector =5
+A(4,:)=-9;                  % the fourth row is now full of -9s
 ```
 
 ## Doing math with them
 
+MATLAB uses "dot star" ```.*``` and similar to do element-by-element math, which is mostly what we will be doing in this class.
 
-
-
+```matlab
+x=[1, 2, 3];
+y=[4, 5, 6];
+z=x.*y;
+```
+From the above code, we would find ```z=[4, 10, 18]```. To square all elements, ```.^2```, to divide element-by-element, ```x./y```. No dot is needed for addition and subtraction.
 
 
 ## Conditional Statements
+Here is the ```if```-```elseif```-```else``` structure:
 
+```matlab
+if x<5
+    y=10;
+elseif x>9
+    y=15;
+else
+    y=-99;
+end
+```
+
+The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is &&, the logical or is ||.
 
 ## Loops
+A ```while``` loop looks like this:
+```matlab
+counter=0;
+while counter<5
+    display('hi')
+    counter=counter+1;
+end
+```
 
+and a ```for``` loop looks like this:
+```matlab
+x=[1,2,3];
+S=0;
+for i=1:length(x)
+    S=S+x(i);
+end
+```
 
-## Miscellaneous
+## Reading/Writing Spreadsheets
 
-To load in data from a csv. (You may be able to load from other data types, but csv will be our standard because of the predictability. of the formatting.)
+It is common to use ```*.csv``` files: comma-separated values. You may be able to load from other sources, but csv will be our standard because of the predictability of the formatting.
+
+To read in a csv and store the data as a matrix: ```data = readmatrix('my_data.csv');```. (From there you can get individual columns via ```x_data=data(:,1)``` etc.)
+
+To write a new csv: ```writematrix([x_data, y_data], 'data.csv');``` creates a new file in your current directory called "data.csv".
+
+## Anonymous Functions
+
+In our root-finding algorithms, we will input a (mathematical) function into a (programming) function, e.g.: find the root of $f(x)=\sin(x)-0.85$. This can be achieved via an anonymous function: ```f=@(x) sin(x)-0.85;```. 
+
+If two inputs are needed: ```f=@(x,y) x+y;```.
 
 
 ## Some common motifs

@@ -1,10 +1,8 @@
 # Necessary Coding Elements -- Python
 
-Python has become the most popular language for scientists (and for machine learning), likely because of its ease with higher. However
+"Native Python" lists like ```x=[1,2,3,4]``` do not cooperate well with mathematical operations. Instead, we are going to turn everything into NumPy arrays, and so the first line in almost every code you write will be ```import numpy as np```. (The standard alias is ```np```, I would encourage that use.)
 
-We are using NumPy for everything in this class. "Native Python" lists like ```x=[1,2,3,4]``` do not cooperate well with mathematical operations -- instead, we are going to turn everything into NumPy arrays.
-
-Many of the tools we will build -- differential equation solvers, numerical integrators, ... -- are part of the SciPy package. I would recommend installing that package as well. However, remember that we are building our own tools this semester -- if you start some code with ```from scipy.optimize import curve_fit```, you are doing it wrong!
+Many of the tools we will build -- differential equation solvers, numerical integrators, ... -- are part of the SciPy package. I would recommend installing that package as well. However, remember that we are building our own tools this semester: if you start some code with ```from scipy.optimize import curve_fit```, you are doing it wrong!
 
 ## Functions
 
@@ -24,7 +22,7 @@ print(m)
 ```
 
 
-### Optional Arguments
+<!-- ### Optional Arguments
 
 ```python
 def Newton_Raphson1(f,x_0,err_accept=10^-3,max_iter=1000)
@@ -32,7 +30,7 @@ def Newton_Raphson1(f,x_0,err_accept=10^-3,max_iter=1000)
     # NR method where the function terminates when the error reaches 10^-3 or 1000 iterations have occurred.
     ...
     return x_R
-```
+``` -->
 
 
 ## Creating vectors/matrices/arrays
