@@ -11,8 +11,10 @@
 
 :::{note}  Week 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12-16 Jan
 :icon: false
-- Tuesday 13 Jan: Programming intro
-- Thursday 15 Jan: Programming intro 2
+- Tuesday 13 Jan: 
+    -Programming intro
+- Thursday 15 Jan: 
+    -Programming intro 2
 :::
 
 
@@ -91,8 +93,8 @@
 :icon: false
 - Tuesday 3 Mar: 
     - Golden Search
+- Thursday 5 Mar: 
     - Steepest Ascent
-- Thursday 5 Mar: machine learning project introduction
 :::
 
 
@@ -101,9 +103,9 @@
 :::{note}  Week 9: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-13 Mar
 :icon: false
 - Tuesday 10 Mar:
-    - 
+    - Machine Learning Introduction
 - Thursday 12 Mar:
-    - 
+    - Machine Learning Project Work
 - **Friday, 13 Mar: homework due**
 :::
 
