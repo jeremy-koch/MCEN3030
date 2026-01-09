@@ -49,10 +49,14 @@ pip is another option for package management, really it's not that different fro
 
 :::{seealso}
 [Seaborn](https://seaborn.pydata.org/examples/index.html) is built on-top of matplotlib... it is beautiful, I recommend installing it too.
+
+SciPy contains many tools that we are going to try to replicate this semester. Remember: we are building our own tools from the fundamentals, so you can't use, say, SciPy's trapezoid rule integrator on homework. But it is probaby worth installing.
+
+For the machine learning project, [Scikit-Learn](https://scikit-learn.org/stable/) is probably what I will recommend, though more serious users seem to use PyTorch and TensorFlow. We can circle back to this later...
 ::: 
 
-:::{tip}
-Many serious programmers insist each project should have its own "environment" with a unique set of packages. For example, TensorFlow apparently does not play nice with NumPy version 2.0 or higher, and so folks who use TensorFlow will likely have an isolated environment for it where NumPy 1.9x is installed. (I still couldn't get it to work on my machine, but that is besides the point!) For this class, it should not be a big deal to just have the general environment. 
+:::{dropdown} Python "Environments" (Optional)
+Many serious programmers insist each project should have its own "environment" with a unique set of packages. For example, TensorFlow apparently does not play nice with NumPy version 2.0 or higher, and so folks who use TensorFlow will likely have an isolated environment for it where NumPy 1.9x is installed. (I still couldn't get it to work on my machine, but that is beside the point!) For this class, it should not be a big deal to work entirely in the base environment. 
 
 If you do want to create separate environments, e.g., one for your homework repository, one for the machine learning project, you can. From the command line, you would start with something like ```conda create --name homework``` and then ```conda activate homework``` puts you in that environment, and then ```conda install numpy``` would get you numpy in just that environment. You need to install packages in each environment -- if you have three environments set up on your machine, you might technically have numpy installed three times.
 :::
@@ -61,6 +65,6 @@ If you do want to create separate environments, e.g., one for your homework repo
 
 ## Julia
 
-Though this is not as mainstream, there are plenty of tutorials/discussions online from a dedicated and helpful group of users. If you are the type who would be interested in Julia, I assume you will be able to figure it out. Go [here](https://julialang.org), and the [recommended IDE is again VS Code](https://www.julia-vscode.org). There is a [built-in package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/) -- Plots.jl might be all you need to add at the beginning. There is [a debugger](https://www.julia-vscode.org/docs/stable/userguide/debugging/).
+Though this is not as mainstream, there are plenty of tutorials/discussions online from a dedicated and helpful group of users. If you are the type who would be interested in Julia, I assume you will be able to figure it out. Go [here](https://julialang.org), and the [recommended IDE is again VS Code](https://www.julia-vscode.org). There is a [built-in package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/) -- Plots.jl might be all you need to add at the beginning, but the machine learning package you'll use is probably [Flux](https://fluxml.ai/Flux.jl/stable/) or maybe [Lux](https://lux.csail.mit.edu/stable/). There is [a debugger](https://www.julia-vscode.org/docs/stable/userguide/debugging/).
 
-Though Julia is technically a compiled language, working within VS Code makes it not feel compiled, which is nice. Something about [just in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation).
+Though Julia is technically a compiled language, working within VS Code makes it feel like a scripting language, which is nice. Something about [just in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation) makes it work out.

@@ -16,6 +16,8 @@ For all three languages, I have provided
 
 :::{warning}
 No matter what language you choose, you should be prepared to KNOW things like: whether indexing starts with ```0``` or ```1```, how to find the ```length``` of an array, how to write a ```for``` loop, the character used for comments ```# %``` ..., etc. On the exams, forgetting that Python indexes from ```0``` or that MATLAB requires you to ```end``` loops will lose you points -- do not ask for leniency if you make these mistakes. I am empowering you to learn and use whatever language you want, so learn it!
+
+For this reason, you are strongly encouraged to commit to a language (perhaps after a trial period, if you would like). However, and tentatively, I believe I can make the logistics work even if you decide to switch languages during the semester.
 :::
 
 
@@ -34,16 +36,14 @@ Once you have read through the following and think you are ready to commit to a 
 See a more detailed list of pros and cons below, and talk to me if you want to talk about your options. I would guess 60% of the class will choose MATLAB, 35% will choose Python, and 5% will choose Julia/other. (Again: talk to me about "other".) I will let the class know what the distribution is -- I am sure you are curious!
 
 :::{tip}
-From a certain, practical level, these languages are very similar, using ```index:slicing```, ```for```, ```while```, etc. You will be able to understand each other's code and will be pretty capable of switching between languages in the future, if needed.
+From a certain, practical level, these languages are very similar, using ```index:slicing```, ```for```, ```while```, etc. You will be able to understand each other's code and will be pretty capable of switching between languages in the future, if needed. You are not committing for life! And AI can help you translate.
 :::
 
 :::{warning}
-Note that you are responsible for setting up and maintaining your programming environment, which is easy for MATLAB but a bit more involved for the other languages. 
+Note that you are responsible for setting up and maintaining your programming environment, which is easy for MATLAB but is slightly more involved for the other languages. 
 :::
 
-:::{caution}
-Remember our goal is to understand the algorithms, not to use built-in tools. While this rule is mostly about things like ```ode45``` (the default ODE solver in MATLAB, which, to emphasize, is not permitted in this class), there may be occasions where "the pythonic"/"the julian" way of doing something opposes the fundamentals of the algorithm. The biggest example of this will likely be with ```for``` loops. I will try to keep an open mind, but also may require you write in un-optimized code that more clearly demonstrates that you indeed understand the algorithm.
-:::
+
 
 
 
@@ -148,23 +148,19 @@ Example code:
 :::
 
 
-<!-- :::{tab-item} C++
-Reasons to choose C++:
-- For everyone it is free (open source).
-- You may have taken CSCI 1300, which uses C++, and want to continue with that.
-- It has arguably been the language of "serious engineers" for the past 30 years. Robotics has a strong preference towards C++, and the biggest open-source computational fluid dynamics (CFD) code, [OpenFOAM](https://www.openfoam.com), is/was based in C++. Arduino is basically specialized C++.
 
-Reasons to NOT choose C++:
-- C++ is a compiled language. This means the first time you run a new program, it may be slow. It also may still be fast enough to not bother you.
-- I think it is the ugliest and least-readable language of the four in the list.
-- Not that it matters because I am not going to debug your code for you, but I have nearly zero experience with C++. (I do have some experience in C, and I kinda like it, but it has been a while.)
-::: -->
+
 
 
 :::{tab-item} Other languages
 Contact me.
 :::
 ::::
+
+:::{caution}
+Remember our goal is to understand the algorithms, not to use built-in tools. While this rule is mostly about things like ```ode45``` (the default ODE solver in MATLAB, which, to emphasize, is not permitted in this class), there may be occasions where "the pythonic"/"the julian" way of doing something opposes the fundamentals of the algorithm. The biggest example of this will likely be with ```for``` loops. I will try to keep an open mind, but also may require you write in un-optimized code that more clearly demonstrates that you indeed understand the algorithm.
+:::
+
 
 ## More Reading
 
@@ -173,7 +169,7 @@ Contact me.
 [Why numbering should start at zero](https://www.cs.utexas.edu/~EWD/transcriptions/EWD08xx/EWD831.html) (not sure I agree but, here is a reading)
 
 
-https://forem.julialang.org/vinodv/julia-vectors-and-matrices-n2l
+<!-- https://forem.julialang.org/vinodv/julia-vectors-and-matrices-n2l -->
 
 
 
