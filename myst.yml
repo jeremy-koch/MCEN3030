@@ -10,7 +10,7 @@ project:
           - file: 0_details/course-policies.md
           - file: 0_details/flipped-classroom.md
           - file: 0_details/responsible-AI.md
-          - file: 0_details/pro-emails.md
+          - file: 0_details/professional-emails.md
           # - file: 0_details/ML-project.md
       - title: Programming Basics
         children:

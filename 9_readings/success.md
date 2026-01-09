@@ -33,7 +33,7 @@ THAT is the power of LLMs. If you know what you are doing and know how to assess
 
 4. Get the easy stuff right.
 
-Attending class and office hours. Submitting your work on time. [Communicating in a professional way](../0_details/pro-emails.md). Staying off social media in class. Not watching soccer in class (yes, this happens). Showing up to exams with a pencil (yes, this too). These things are not hard. Get the easy stuff right and the hard stuff won't be as hard and/or you will actually reap the full rewards from your hard work.
+Attending class and office hours. Submitting your work on time. [Communicating in a professional way](../0_details/professional-emails.md). Staying off social media in class. Not watching soccer in class (yes, this happens). Showing up to exams with a pencil (yes, this too). These things are not hard. Get the easy stuff right and the hard stuff won't be as hard and/or you will actually reap the full rewards from your hard work.
 
 
 5. Don't forget you and your instructors have the same goal: to see you succeed.

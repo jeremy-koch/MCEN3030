@@ -76,7 +76,7 @@ The final exam will be cumulative.
 In the past year, have observed an uptick in emails that indicate students are not paying attention to course policies and/or that students believe that course policies should not apply to them. Policies are only policies if they apply to the entire class.
 
 I am glad to receive emails from you in general, don't be discouraged to send them to me, but I would like you to think twice before:
-- ... sending an email with just "question" (or something similar) in the subject line. See [how to write emails for this class](pro-emails.md).
+- ... sending an email with just "question" (or something similar) in the subject line. See [how to write emails for this class](professional-emails.md).
 - ... asking me to move deadlines/exams because you have a project or exam in another class.
 - ... asking me to accept a late submission without penalty, including if you "forgot", "thought you had already submitted it", or had internet issues on the due date.
 - ... asking me for extra credit or to curve exams.
