@@ -56,7 +56,7 @@ For the machine learning project, [Scikit-Learn](https://scikit-learn.org/stable
 ::: 
 
 :::{dropdown} Python "Environments" (Optional)
-Many serious programmers insist each project should have its own "environment" with a unique set of packages. For example, TensorFlow apparently does not play nice with NumPy version 2.0 or higher, and so folks who use TensorFlow will likely have an isolated environment for it where NumPy 1.9x is installed. (I still couldn't get it to work on my machine, but that is beside the point!) For this class, it should not be a big deal to work entirely in the base environment. 
+Many serious programmers insist each project should have its own "environment" with a unique set of packages. For example, TensorFlow apparently does not play nice with NumPy version 2.0 or higher, and so folks who use TensorFlow will likely have an isolated environment for it where NumPy 1.9x is installed. (I still couldn't get TensorFlow to work, but that is beside the point!) For this class, it should not be a big deal to work entirely in the base environment. 
 
 If you do want to create separate environments, e.g., one for your homework repository, one for the machine learning project, you can. From the command line, you would start with something like ```conda create --name homework``` and then ```conda activate homework``` puts you in that environment, and then ```conda install numpy``` would get you numpy in just that environment. You need to install packages in each environment -- if you have three environments set up on your machine, you might technically have numpy installed three times.
 :::

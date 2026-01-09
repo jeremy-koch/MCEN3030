@@ -69,7 +69,7 @@ If you are going to "play chicken" with a deadline, you have to accept that you 
 :::
 Further, in the Fall 2025 semester I received more "grade-grubbing" emails than ever, wherein students ask, e.g., for a final grade of 89.3% to be rounded to an A-.
 
-The answer to all of these requests is no. We, unfortunately, give grades in this school, and the course policies are the rules of the game that everyone abides by. I am not going to be the judge of who has a good excuse, and it is not a course policy if I waive it for anyone who asks. Build some more robustness in your schedule where you can -- finishing things by the deadline should not, in general, be stressful.
+The answer to all of these requests is no. We, unfortunately, give grades in this school (there are some schools that don't and it sounds really interesting), and the course policies are the rules of the game that everyone abides by. I am not going to be the judge of who has a good excuse, and it is not a course policy if I waive it for anyone who asks. Build some more robustness in your schedule where you can -- finishing things by the deadline should not, in general, be stressful.
 :::{aside}
 I am always wary of giving special treatment to the outspoken student, while the introverted student accepts the course policies (a deduction for being late). Why does the outspoken student deserve the higher grade? They don't.
 :::
