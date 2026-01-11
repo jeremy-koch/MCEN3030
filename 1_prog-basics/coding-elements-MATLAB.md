@@ -70,11 +70,11 @@ MATLAB indexes from ```1``` and can use ```end``` to refer to the last index. Be
 
 ```matlab
 x(i)=5;                     % changes the ith element of x (x would need to exist already)
-x(3:end)=0;                 % elements 3 to the end all become 9 (could have done e.g. [9,10,11]... changes elements 3,4,5)
+x(3:end)=0;                 % elements 3 to the end all become 0
 x(2:4)=-88;                 % the second, third, and fourth elements become -88
 
 A(4,1)=5;                   % change the fourth element in column 1
-A(:,5)=5;                   % the fifth column is a vector... this makes all elements in that vector =5
+A(:,5)=6;                   % the fifth column is a vector... this makes all those elements equal 6
 A(4,:)=-9;                  % the fourth row is now full of -9s
 ```
 
