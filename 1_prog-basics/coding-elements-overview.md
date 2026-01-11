@@ -28,14 +28,10 @@ Function
 
 
 Anonymous Function
-: MATLAB, Python, and Julia all have a way of writing small functions that are not stored under a traditional function name (hence the moniker "anonymous"). They are still stored under a variable name. When part of a project's foundational architecture, this type of function definition is discouraged (one reason: it makes tracing errors difficult because the functions are not named in the error messages). However, within scripting languages, it is often a really nice tool to create an equation function for use in our algorithms like $f(x) = \ln{\sin(x)}$. As an example: ```f=@(x) log(sin(x))``` (in MATLAB). You can then pass ```f``` as an argument into a function!
+: MATLAB, Python, and Julia all have a way of writing small functions that are not stored under a traditional function name (hence the moniker "anonymous"). They are still stored under a variable name. When part of a project's foundational architecture, this type of function definition is discouraged (one reason: it makes tracing errors difficult because the functions are not named in the error messages). However, within scripting languages, it is often a really nice tool to create an equation function for use in our algorithms like $f(x) = \ln{(\sin(x))}$. As an example: ```f=@(x) log(sin(x))``` (in MATLAB). You can then pass ```f``` as an argument into a function!
 
 
-<!-- The focus on many debates: should arrays be indexed starting with zero or one? Python indexes starting with 0, MATLAB and Julia index starting with 1. -->
 
-<!-- :::{tip}
-For all of these, it is imperative that you have good file organization. 
-::: -->
 
 ## Some common motifs
 
