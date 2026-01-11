@@ -105,7 +105,7 @@ else
 end
 ```
 
-The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is ```&&```, the logical or is ```||```, and ```>=``` and ```<=``` work as you'd expect!
+The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is ```&&```, the logical or is ```||```, and ```>=``` and ```<=``` work as you'd expect! "Not equals" is ```~=```.
 
 ## Loops
 A ```while``` loop looks like this:

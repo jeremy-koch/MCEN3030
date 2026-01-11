@@ -57,101 +57,120 @@ A[4, :] .= -9               # the fourth row is now full of -9s
 
 ## Doing math with them
 
-
-<!-- 
 ```julia
-# x=[1, 2, 3]         # with commas... this creates a column vector
-# y=[4 5 6]           # no commas... this creates a row vector
-# z=x.*y;
+x=[1, 2, 3]         # with commas... this creates a column vector
+y=[4, 5, 6]
+# the same without commas would create a row vector
+z=x.*y
 ```
 From the above code, we would find ```z=[4, 10, 18]```. To square all elements, ```.^2```, to divide element-by-element, ```x./y```. No dot is needed for addition and subtraction.
 
-Common mathematical functions work element-by-element on arrays: ```sin(x)```, ```exp(x)```, ```log(x)``` is the natural log, ```log10(x)``` is the base-10 log, ```sqrt(x)``` for square root. sin, cos, tan, etc.
+The "dot something" structure applies to basic mathematical functions too, which is kind of annoying: ```sin.(x)```, ```exp.(x)```, ```log.(x)``` is the natural log, ```log10.(x)``` is the base-10 log, ```sqrt.(x)``` for square root. sin, cos, tan, etc., are a similar pattern.
 
 
 ## Conditional Statements
 Here is the ```if```-```elseif```-```else``` structure:
 
-```matlab
+```julia
 if x<5
-    y=10;
+    y=10
 elseif x>9
-    y=15;
+    y=15
 else
-    y=-99;
+    y=-99
 end
 ```
 
-The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is ```&&```, the logical or is ```||```, and ```>=``` and ```<=``` work as you'd expect!
+The "logical equals" is ```==``` (as in, ```x==5``` checks to see if ```x``` is equal to ```5```, evaluating that as True/False or 1/0). The logical and is ```&&```, the logical or is ```||```, and ```>=``` and ```<=``` work as you'd expect! "Not equals" is ```!=```. 
+
+Julia has something called "the ternary operator", which is a succinct way to write a "condition, value if true, value if false" statement: ```y = x < 5 ? 10 : -99```.
 
 ## Loops
 A ```while``` loop looks like this:
-```matlab
-counter=0;
-while counter<5
-    display('hi')
-    counter=counter+1;
+```julia
+counter = 0
+while counter < 5
+    println("hi")
+    counter += 1
 end
 ```
+...but ```for``` loops (and maybe ```while``` too, in another application?) have a "gotcha": variables within a ```for``` loop have scope limited to within the loop, by default (and maybe only within scripts or the REPL?). Declaring the variables ```global``` is necessary to adjust them overall. So:
+```julia
+x = [1, 2, 3]
+S = 0
+for i in 1:length(x)
+    global S = S + x[i]
+end
+```
+... has that ```global``` declaration, which is not needed in MATLAB/Python. However, wrapping the summation in a function eliminates the need:
+```julia
+function sum_em(z)
+    S=0
+    for z_i in z
+        S += z_i  # No 'global'
+    end
+    return S
+end
 
-and a ```for``` loop looks like this:
-```matlab
-x=[1,2,3];
-S=0;
-for i=1:length(x)
-    S=S+x(i);
-end
+x = [1, 2, 3]
+S=sum_em(x)
 ```
+We will end up using ```for``` loops a lot in this class, and so this will be something to keep an eye out for. 
 
 ## Reading/Writing Spreadsheets
 
 It is common to use ```*.csv``` files: comma-separated values. You may be able to load from other sources, but csv will be our standard because of the predictability of the formatting.
 
-To read in a csv and store the data as a matrix: ```data = readmatrix('my_data.csv');```. (From there you can get individual columns via ```x_data=data(:,1)``` etc.)
+In Julia, some additional packages are necessary: CSV.jl and DataFrames.jl. (I haven't tried this yet but apparently both are needed?) And then the beginning of your script will be
+```julia
+using CSV
+using DataFrames
 
-To write a new csv: ```writematrix([x_data, y_data], 'data.csv');``` creates a new file in your current directory called "data.csv".
+# This reads the file into a "DataFrame" (similar to a MATLAB Table)
+df = CSV.read("my_data.csv", DataFrame)
+
+# Convert the DataFrame to a plain Matrix
+data = Matrix(df)
+
+# OR: Read it directly as a matrix without headers
+data = CSV.read("my_data.csv", Tables.matrix)
+```
+
+To write a csv:
+```julia
+using CSV
+
+x_data = [1, 2, 3]
+y_data = [10, 20, 30]
+
+# [x_data y_data] creates a matrix with two columns
+data_matrix = [x_data y_data]
+
+# Write to file (header is optional)
+CSV.write("data.csv", Tables.table(data_matrix), header=["X", "Y"])
+```
+
+There is also a built-in option that, for whatever reason, is discouraged: ```using DelimitedFiles``` then ```data = readdlm("my_data.csv", ',')``` would load-in data, and ```writedlm("data.csv", data_matrix, ',')``` would write a new csv.
 
 ## Anonymous Functions
 
-In our root-finding algorithms, we will input a (mathematical) function into a (programming) function, e.g.: find the root of $f(x)=\sin(x)-0.85$. This can be achieved via an anonymous function: ```f=@(x) sin(x)-0.85;```. 
+In our root-finding algorithms, we will input a (mathematical) function into a (programming) function, e.g.: find the root of $f(x)=\sin(x)-0.85$. This can be achieved via an anonymous function: ```f = x -> sin(x) - 0.85``` or ```f(x) = sin(x) - 0.85```. And remember: to use a function with an array we use the "dot something" structure: ```f.([1,2,3])```.
 
-If two inputs are needed: ```f=@(x,y) x+y;```.
+If two inputs are needed: ```f = (x, y) -> x + y``` or ```f(x,y) = x+y```.
 
 
 ## Some common motifs
 
 If you need something to happen if a number is even:
 
-```matlab
-if mod(x,2)==0  % even!
-    % do something
-else            % odd!
-    % do something else
+```julia
+if x % 2 == 0  # Even!
+    # do something
+else           # Odd!
+    # do something else
 end
 ```
-
-
-To calculation a summation, initialize the sum at zero:
-
-```matlab
-N=15;       % how many terms to include
-S=0;        % initialize the sum at zero
-for n=1:N
-    S=S+sin(n);
-end
-```
- -->
-
-
-
-
-
-
-
-
-
-
-
+... but actually Julia has built-in commands: ```iseven(x)``` and ```isodd(x)```.
 
 
 
@@ -159,10 +178,11 @@ end
 
 ## A few frustrations
 
-A few frustrations I have encountered (and most of these are likely just because I am more used to MATLAB/Python, which are more user-friendly):
+A few frustrations I have encountered (and most of these are likely just because I am more used to MATLAB/Python, which are more novice-friendly):
 - ```y = x``` will assign ```y``` to the same memory location as ```x```, which means that changing ```x[1]``` also changes ```y[1]```. If you need to make a genuine copy that can be independently modified: ```y=copy(x)```.
 - Meanwhile, slicing an array makes a copy automatically. ```z=x[2:end]``` creates an independent array, ```z``` that is not tied to ```x```.
-- 
+- Keep an eye on the variable scope within ```for``` loops.
+- The compile times within VS Code (on the few functions I have written... I am learning too!) have been borderline unnoticeable, just a 2-3 second hiccup the first time you run after major changes. Second time, fast. For MCEN 3030, with our smaller functions, this may be a bit of a frustration... until we get to the machine learning project, where I am hopeful compiling will knock the training time down considerably. It is not awful in Python... I am doing a project where it might take 40 seconds to train the model, but I wonder if I switched over to Flux, would be like 5 seconds? I'll be interested to see!
 
 
 
@@ -171,42 +191,3 @@ A few frustrations I have encountered (and most of these are likely just because
 ## Additional resources/readings
 
 https://github.com/brenhinkeller/JuliaAdviceForMatlabProgrammers
-
-
-
-<!-- 
-## Functions
-
-Rules for Julia functions:
-- Definition looks like 
-- Instead of a ```return``` statement, one can use the "implicit output": the last variable given a value in the function. I am suspicous of this and recommend a ```return out1,out2``` before the ```end```. It is kind of clumsy-looking to have both though. -->
-
-<!-- ## Creating vectors/matrices/arrays
-
-## Indexing: Accessing and Modifying Elements
-
-## Doing math with them
-
-
-
-
-
-
-## Conditional Statements
-
-
-## Loops
-
-
-## Miscellaneous
-
-
-## Some common motifs
-
-
-
-
-
-
-## Functions -->
-
