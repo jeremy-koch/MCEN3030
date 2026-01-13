@@ -13,14 +13,20 @@ Rules for Python functions:
 - 
 
 
-Here is a file with a couple functions in it:
+Here is a file with a couple functions in it, and a couple function calls:
 ```python
 import numpy as np
-k=2
-m=np.sin(2)
-print(m)
-```
+def my_first_fxn(a,b):
+    c=a+b
+    return c
 
+def my_second_fxn(a,b):
+    c=a-b
+    return c
+
+C_1=my_first_fxn(3,2)
+C_2=my_second_fxn(3,2)
+```
 
 ### Optional Arguments
 
