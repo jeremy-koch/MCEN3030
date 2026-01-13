@@ -19,7 +19,7 @@
 
 ## Taylor Series Convergence?
 
-We will soon use the Taylor Series
+<!-- We will soon use the Taylor Series
 \begin{equation}
 \hat{f}(x) = f(x_0) + \sum\limits_{n=1}^\infty \frac{1}{n!}(x-x_0)^nf^{(n)}(x_0)
 \end{equation}
@@ -33,4 +33,4 @@ as part of a derivation. But: are we so sure the Taylor Series converges, even w
 The summation
 \begin{equation}
     \sum\limits_{k=1}^\infty 
-\end{equation}
+\end{equation} -->
