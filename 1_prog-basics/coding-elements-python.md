@@ -22,11 +22,20 @@ def my_first_fxn(a,b):
 
 def my_second_fxn(a,b):
     c=a-b
-    return c
+    d=2*a
+    return c,d
 
 C_1=my_first_fxn(3,2)
-C_2=my_second_fxn(3,2)
+C_2,D_2=my_second_fxn(3,2)
 ```
+
+The Rules:
+- Functions begin with ```def```, a function name, and the input variables(/arguments). (Optional arguments are easy to do in Python -- see below.)
+- The output of the function is whatever follows the ```return```. Could but one number or one array or multiple numbers.
+- If there are multiple outputs, you must "prepare" your script for them, as I did above with the ```C_2,D_2=```.
+- Many functions can be included in the same file, and they can be imported into another file in the working directory -- this is what is going on with the ```import numpy``` stuff! The way to do it: if the file is called ```some_fxns.py``` you could do: ```import some_fxns as sf``` and then the call would look like ```C_1=sf.my_first_fxn(3,2)```.
+
+
 
 ### Optional Arguments
 
