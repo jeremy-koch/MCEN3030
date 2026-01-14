@@ -75,7 +75,7 @@ How does a computer calculate something like $\sin\left(0.13\right)$? Computers 
 \begin{equation}
 \sin{x}= x-\frac{x^3}{3!}+\frac{x^5}{5!} - \frac{x^7}{7!} + \dots = \sum\limits_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}.
 \end{equation}
-(We are going to talk about Taylor Series probably 10 times this semester, get ready!) One of the neat things about Taylor Series: we can write any function as a polynomial, and polynomials are just addition and multiplication. Computers are able to do simple arithmetic like this quickly -- this is actually how calculators determine the sine of a number.
+(We are going to talk about Taylor Series probably 10 times this semester, get ready!) One of the neat things about Taylor Series: we can write any function as a polynomial, and polynomials are just addition and multiplication. Computers are able to do simple arithmetic like this quickly. This is actually how calculators determine the sine of a number.
 
 "Truncation error" refers to the difference between a finite summation and a (possibly hypothetical) summation with infinite terms. If $x=0.1$,
 \begin{equation}
@@ -105,7 +105,7 @@ This practical implementation requires some trust that the series is actually co
 \end{equation}
 might "look like" it is converging after 175 terms, i.e., the 175th term changes the value of the sum by less than 0.001. However, this sum diverges as $N\rightarrow\infty$.
 
-In 3030, we will use this convergence criterion frequently, e.g. ```while con>con_accept```, which we would read as: "while the convergence criterion is larger than the acceptable value, continue with the while loop".
-:::{hint}
+In 3030, we will use this convergence criterion frequently as we iterate to find approximate solutions to analytically unsolveable problems. For example: ```while con>con_accept``` might make several appearances, and we would read this as: "while the convergence criterion is larger than the acceptable value, continue with the while loop".
+<!-- :::{hint}
 
-:::
+::: -->
