@@ -8,6 +8,8 @@ There are a lot of extra considerations with Julia that will make it challenging
 
 Julia is famous for "multiple dispatch" which is something we will not really have an opportunity to explore in this class. However, you may independently explore this, and tell me about it!
 
+## Functions
+
 
 
 

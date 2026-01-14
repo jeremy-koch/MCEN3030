@@ -1,17 +1,12 @@
 # Necessary Coding Elements -- Python
 
-"Native Python" lists like ```x=[1,2,3,4]``` do not cooperate well with mathematical operations. Instead, we are going to turn everything into NumPy arrays, and so the first line in almost every code you write will be ```import numpy as np```. (The standard alias is ```np```, I would encourage that use.)
+"Native Python" lists like ```x=[1,2,3,4]``` do not cooperate well with mathematical operations. Instead, we are going to turn everything into NumPy arrays, and so the first line in almost every code you write will be ```import numpy as np```. (The standard alias is ```np```, I encourage that use.)
 
-Many of the tools we will build -- differential equation solvers, numerical integrators, ... -- are part of the SciPy package. I would recommend installing that package as well. However, remember that we are building our own tools this semester: if you start some code with ```from scipy.optimize import curve_fit```, you are doing it wrong!
+The standard plotting package is matplotlib. The second line in your code will probably be ```import matplotlib.pyplot as plt```, and the basic plotting command is ```plt.plot(x,y)``` followed by ```plt.show()```.
+
+Many of the tools we will build -- differential equation solvers, numerical integrators, ... -- can be found in the SciPy package. I would recommend installing that package as well. However, remember that we are building our own tools this semester: if you start some code with ```from scipy.optimize import curve_fit```, you are doing it wrong! But maybe these would be good checks against your code, and maybe we will explore them sometime during the course.
 
 ## Functions
-
-Rules for Python functions:
-- Functions must be defined earlier than they are used -- e.g., the function definition cannot occur on lines 13-17 and be called on line 5.
-- You can include as many 
-- If your ```return``` includes more than one variable, you must have more than one variable defined in your function call line. It will complain about expecting a different-sized output.
-- 
-
 
 Here is a file with a couple functions in it, and a couple function calls:
 ```python
@@ -23,17 +18,17 @@ def my_first_fxn(a,b):
 def my_second_fxn(a,b):
     c=a-b
     d=2*a
-    return c,d
+    return c,d # returns two things
 
 C_1=my_first_fxn(3,2)
 C_2,D_2=my_second_fxn(3,2)
 ```
 
 The Rules:
-- Functions begin with ```def```, a function name, and the input variables(/arguments). (Optional arguments are easy to do in Python -- see below.)
-- The output of the function is whatever follows the ```return```. Could but one number or one array or multiple numbers.
+- Functions begin with a line that includes ```def```, a function name, and the input variables(/arguments). (Optional arguments are easy to do in Python -- see below.)
+- The output of the function is whatever follows the ```return```. Could be one number or one array or multiple numbers or multiple arrays.
 - If there are multiple outputs, you must "prepare" your script for them, as I did above with the ```C_2,D_2=```.
-- Many functions can be included in the same file, and they can be imported into another file in the working directory -- this is what is going on with the ```import numpy``` stuff! The way to do it: if the file is called ```some_fxns.py``` you could do: ```import some_fxns as sf``` and then the call would look like ```C_1=sf.my_first_fxn(3,2)```.
+- Many functions can be included in the same file, and they can be imported into another file in the working directory -- this is basically what is going on with the ```import numpy``` stuff! The way to do it: if the file is called ```some_fxns.py``` you could do: ```import some_fxns as sf``` and then the call would look like ```C_1=sf.my_first_fxn(3,2)```.
 
 
 
@@ -41,7 +36,7 @@ The Rules:
 
 Python allows for easy use of optional arguments -- an idea that is technically possible in MATLAB, but very clumsy. (Julia does optional arguments well too.)
 
-Optional arguments are really neat and relevant to MCEN 3030: in most cases the answers we get will be approximate, and we have to make a judgment about what is close enough; or we have to put our foot down and say our iterations need to stop because we are not going to get the answer. Two metrics that would help us here are an acceptable convergence -- as in, if our last two iterations were basically the same, let's call it good -- and a maximum number of iterations -- as in, we've gone through this algorithm 1000 times, if we aren't there yet we aren't going to get there.
+Optional arguments are really neat and relevant to MCEN 3030: in most cases the answers we get will be approximate, and we have to make a judgment about what is close enough; or we have to put our foot down and say our iterations need to stop because we are not going to get the answer. Two metrics that would help us here are an acceptable convergence -- as in, if our last two iterations were basically the same, let's call it good -- and a maximum number of iterations -- as in, we've gone through this algorithm 1000 times, if we aren't there yet we aren't going to get there. It is reasonable to have default values for these two metrics, but to allow them to be adjusted if the user desires.
 
 
 
