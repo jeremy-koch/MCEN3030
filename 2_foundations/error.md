@@ -1,6 +1,6 @@
 # Numerical Error
 
-Here we describe a few sources of numerical error, and a few ways to quantify it. These are definitions, and not everyone uses precisely the same terminology, but we will try to be consistent in this class.
+Here we describe numerical error. These are definitions, and not everyone uses precisely the same terminology, but we will try to be consistent in this class.
 
 ---
 
@@ -8,9 +8,12 @@ Here we describe a few sources of numerical error, and a few ways to quantify it
 
 ### Absolute error
 
-Error is a fact of life in engineering -- measurement devices are miscalibrated, data is processed according to Bernoulli's Equation but Bernoulli's Equation neglects viscosity, computers can store only finite detail, etc. For whatever reason that error emerges, we can describe the relationship between the "true value" and "measured value" with (error)=(true value)-(measured value). We define this measurement of error as the "absolute error".
+Error is a fact of life in engineering -- measurement devices are miscalibrated, data is processed according to Bernoulli's Equation but Bernoulli's Equation neglects viscosity, computers can store only finite detail, etc. Regardless of the reason the error emerges, we can describe the relationship between the "true value" and "measured value" with (error)=(true value)-(measured value). We define this measurement of error as the "absolute error".
 
-In some situations it is useful to quantify error in this way. For example, in darts you might have an error of 3 (cm) in regards to the center of the dartboard. That conveys meaningful information about how to adjust your trajectory to hit the target. However, a downside of this metric is that it neglects to consider the magnitudes of the numbers involved: an error of $\pm 1$ is no big-deal if the values in question are greater than, say, 100, while an error of $\pm 1$ is devastating if the numbers in question are about 1.1. Related: the absolute error changes depending on the units being used. "One away" might be incredibly good if we are talking about a measurement in microns, but it might be awful if we are talking meters.
+In some situations it is useful to quantify error in this way. For example, in darts you might have an error of 3 (cm) in regards to the triple 20. That conveys meaningful information about how to adjust your trajectory to hit the target. However, a downside of this metric is that it neglects to consider the magnitudes of the numbers involved: an error of $\pm 1$ is no-big-deal if the values in question are greater than, say, 100, while an error of $\pm 1$ is devastating if the numbers in question are about 1.1. "One away" might be incredibly good if we are talking about a dart missing its target in microns, but it might be awful if we are talking meters.
+:::{aside}
+The absolute error changes depending on the units being used.
+:::
 
 ### Relative Error
 
@@ -24,12 +27,12 @@ We may choose to represent this as a percentage by multiplying it by 100. Then, 
 Problems arise if the true value is zero, and arbitrary placement of the zero point influences this metric: the relative error between 275 and 280 K is fairly small, the relative error between 2 and 7°C is much larger.
 :::
 :::{tip}
-(I usually prefer to represent a 1% error as err=0.01 in my code, to avoid having to do the awkward multiplication by 100.)
+I usually prefer to represent a 1% error as err=0.01 in my code, to avoid having to do the awkward multiplication by 100.
 :::
 
 ## Accuracy and Precision
 
-Let's describe what we might mean by "accuracy" and "precision" when it comes to storage of numbers. The most common way to store a number in scientific programming is as a "double"/"double-float", with 64 bits of information (in binary). Because of the way these numbers are represented (see the dropdown below), this corresponds to about 16 (base 10) digits. We might say that the "precision" of such a number (in regards to the storage process), is 16 digits.
+Let's describe what we might mean by "accuracy" and "precision" when it comes to storage of numbers. The most common way to store a number in scientific programming is as a "double"/"double-float", with 64 bits of information (in binary). Because of the way these numbers are represented, this corresponds to about 16 (base 10) digits. We might say that the "precision" of such a number (in regards to the storage process), is 16 digits.
 
 
 
@@ -40,7 +43,7 @@ If we use 3.309402940125679 as $\pi$, well that's not very accurate. Accuracy is
 Regarding this 3.309402940125679: it would be like if you had a very carefully designed experiment that could indeed discern 3.309402940125678 from 3.309402940125679, but there was some sort of miscalibration that gave the wrong value. It was a precise experiment, but not an accurate one.
 :::
 
-In cases where we are aware of the true value of a number (let's call it $x$), we can describe the number of accurate digits in the approximation (let's call it $\hat{x}), as
+In cases where we are aware of the true value of a number (let's call it $x$), we can describe the number of accurate digits in the approximation (let's call it $\hat{x}$), as
 \begin{equation}
 (\text{accurate digits})=-\log_{10}\left|\frac{x-\hat{x}}{x}\right|.
 \end{equation}
@@ -62,7 +65,7 @@ We can express big numbers, e.g. 10^100, and small numbers, e.g. 10^-100, as dou
 \begin{equation}
 2121212121212121\times 9292929292929292 = 19712274257728799240893786348332.
 \end{equation}
-The two numbers on the left-hand side of this equation can be completely described by a double. Their product can't, and we'd lose the precision of the last 16 digits of that number. The detail of the number lost after a calculation is known as "the round-off error".
+The two numbers on the left-hand side of this equation can be perfectly described by a double. Their product can't, and we'd lose the precision of the last 16 digits of that number. The detail of the number lost after a calculation is known as "the round-off error".
 
 In many practical applications, we need not be too concerned with round-off error -- losing the last 16 digits above, leaving $0.1971227425772879\times 10^{32}$... that is still precise enough to be used in any engineering calculation. However, it is possible to "push too far" in some computational algorithms, maybe in an intermediate step, such that the round-off error appreciably affects the calculation.
 
@@ -72,7 +75,7 @@ How does a computer calculate something like $\sin\left(0.13\right)$? Computers 
 \begin{equation}
 \sin{x}= x-\frac{x^3}{3!}+\frac{x^5}{5!} - \frac{x^7}{7!} + \dots = \sum\limits_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}.
 \end{equation}
-(We are going to talk about Taylor Series probably 10 times this summer, get ready!) One of the neat things about Taylor Series: we can write any function as a polynomial, and polynomials are just addition and multiplication. Computers are able to do simple arithmetic like this quickly -- this is actually how calculators determine the sine of a number.
+(We are going to talk about Taylor Series probably 10 times this semester, get ready!) One of the neat things about Taylor Series: we can write any function as a polynomial, and polynomials are just addition and multiplication. Computers are able to do simple arithmetic like this quickly -- this is actually how calculators determine the sine of a number.
 
 "Truncation error" refers to the difference between a finite summation and a (possibly hypothetical) summation with infinite terms. If $x=0.1$,
 \begin{equation}
