@@ -29,7 +29,7 @@ project:
       - title: Some Foundational Concepts
         children:
           # - file: 2_foundations/floats.md
-          # - file: 2_foundations/error.md
+          - file: 2_foundations/error.md
           # - file: 2_foundations/the-condition-number.md
           # - file: 2_foundations/zsummary.md
       - title: Root-Finding Methods
