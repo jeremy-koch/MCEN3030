@@ -163,4 +163,3 @@ for n=1:N
     S=S+sin(n);
 end
 ```
-

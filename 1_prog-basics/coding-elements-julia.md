@@ -10,9 +10,28 @@ Julia is famous for "multiple dispatch" which is something we will not really ha
 
 ## Functions
 
+Here is a file with a couple functions in it, and a couple function calls:
+```julia 
+function my_first_fxn(a, b)
+    c = a + b
+    return c
+end
 
+function my_second_fxn(a, b)
+    c = a - b
+    d = 2 * a
+    return c, d 
+end
 
+C_1 = my_first_fxn(3, 2)
+C_2, D_2 = my_second_fxn(3, 2)
+```
 
+The Rules:
+- Functions begin with a line that includes ```function```, a function name, and the input variables(/arguments).
+- The output of the function is whatever follows the ```return```. Could be one number or one array or multiple numbers or multiple arrays. An ```end``` must be included as well -- it's a bit clumsy.
+- There is something called "implicit return", where the last thing that is evaluated is the thing that is returned. Probably being explicit (as we are above) is the more careful thing to do.
+- If there are multiple outputs, you must "prepare" your script for them, as I did above with the ```C_2,D_2=```.
 
 
 ## Creating vectors/matrices/arrays

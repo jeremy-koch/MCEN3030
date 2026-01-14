@@ -10,7 +10,6 @@ Many of the tools we will build -- differential equation solvers, numerical inte
 
 Here is a file with a couple functions in it, and a couple function calls:
 ```python
-import numpy as np
 def my_first_fxn(a,b):
     c=a+b
     return c
