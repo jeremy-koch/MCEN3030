@@ -67,7 +67,7 @@ We can express big numbers, e.g. 10^100, and small numbers, e.g. 10^-100, as dou
 \end{equation}
 The two numbers on the left-hand side of this equation can be perfectly described by a double. Their product can't, and we'd lose the precision of the last 16 digits of that number. The detail of the number lost after a calculation is known as "the round-off error".
 
-In many practical applications, we need not be too concerned with round-off error -- losing the last 16 digits above, leaving $0.1971227425772879\times 10^{32}$... that is still precise enough to be used in any engineering calculation. However, it is possible to "push too far" in some computational algorithms, maybe in an intermediate step, such that the round-off error appreciably affects the calculation.
+In many practical applications, we need not be too concerned with round-off error -- losing the last 16 digits above, leaving $0.1971227425772879\times 10^{32}$ (instead of $0.19712274257728799240893786348332\times 10^{32}$)... that is still precise enough to be used in any engineering calculation. However, it is possible to "push too far" in some computational algorithms, maybe in an intermediate step, such that the round-off error appreciably affects the calculation.
 
 ### Truncation Error
 
