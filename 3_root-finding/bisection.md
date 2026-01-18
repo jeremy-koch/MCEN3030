@@ -8,20 +8,15 @@ Throughout this class, we will often sketch out functions to try to explain/unde
 
 ## The algorithm
 
-0\. For a given function $f(x)$, we define a search region between $x_L$ ("$x$ lower") and $x_U$ ("$x$ upper"). There must be precisely one root on this range, else the algorithm breaks!
-
-1\. Calculate $x_M$ ("$x$ middle") as $(x_L+x_U)/2$.
-
-2\. Calculate $f(x_L)$, $f(x_M)$, and $f(x_U)$ and consider the sign of $f(x_L)\cdot f(x_M)$ OR $f(x_M)\cdot f(x_U)$. (See discussion below about making your code more robust.)
-
-3\. (a) If $f(x_L)\cdot f(x_M)< 0$, that means that the function changes sign somewhere between $x_L$ and $x_M$. That is, the root is between $x_L$ and $x_M$.
-
+0\. For a given function $f(x)$, we define a search region between $x_L$ ("$x$ lower") and $x_U$ ("$x$ upper"). There must be precisely one root on this range, else the algorithm breaks!  
+1\. Calculate $x_M$ ("$x$ middle") as $(x_L+x_U)/2$.  
+2\. Calculate $f(x_L)$, $f(x_M)$, and $f(x_U)$ and consider the sign of $f(x_L)\cdot f(x_M)$ OR $f(x_M)\cdot f(x_U)$. (See discussion below about making your code more robust.)  
+3\. (a) If $f(x_L)\cdot f(x_M)< 0$, that means that the function changes sign somewhere between $x_L$ and $x_M$. That is, the root is between $x_L$ and $x_M$.  
 4\. We reset: $x_U=x_M$ and go back to step (1) (where we will use our new definition of $x_U$ to calculate the next $x_M$).
 
 The other possibility is:
 
-3\. (b) If $f(x_M)\cdot f(x_U)< 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.
-
+3\. (b) If $f(x_M)\cdot f(x_U)< 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.  
 4\. (b) We reset: $x_L=x_M$ and go back to step (1) (where we will use our new definition of $x_L$ to calculate the next $x_M$).
 
 ### Making the algorithm more robust
