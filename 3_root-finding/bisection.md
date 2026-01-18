@@ -3,7 +3,7 @@
 The Bisection Method is the canonical example of a bracketing method. Assuming that a function $f(x)$ is continuous and that precisely one root exists in a search range $x_L\rightarrow x_U$, it iteratively halves the size of the search range until we say "good enough". So: we might start the search knowing the root is between 0 and 100, a range of 100; after one iteration, we will be able to halve that to 50, after two iterations, 25, ... , after six iterations, we can say with confidence that the root lies within a range of 0.78125. Another way to say that: we pinpoint the root to $x_\text{root}\pm 0.390625$.
 
 :::{note}
-Throughout this class, we will often sketch out functions to try to explain/understand algorithms. However, it is usually the case that we don't actually know what the function looks like... otherwise we'd just say "the root is right there!"
+Throughout this class, we will often sketch out functions to try to explain/understand algorithms. However, it is usually the case that we don't actually know what the function looks like... otherwise we'd just say "the root is right there!" In the video, we made a sketch, here we will do something a bit more authentic.
 :::
 
 ## The algorithm
@@ -68,7 +68,7 @@ while a < 10:
 ```
 :::
 :::{tab-item} Julia
-```
+```julia
 a = 5
 while a < 10
     if a == 5
