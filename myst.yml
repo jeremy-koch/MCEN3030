@@ -19,11 +19,8 @@ project:
           - file: 1_prog-basics/installing.md
           - file: 1_prog-basics/coding-elements-overview.md
           - file: 1_prog-basics/coding-elements-MATLAB.md
-            hidden: true
           - file: 1_prog-basics/coding-elements-python.md
-            hidden: true
           - file: 1_prog-basics/coding-elements-julia.md
-            hidden: true
           # - file: 1_prog-basics/explore-some-tasks.md
           # - file: 1_prog-basics/github.md
       - title: Some Foundational Concepts
@@ -34,8 +31,8 @@ project:
           # - file: 2_foundations/zsummary.md
       - title: Root-Finding Methods
         children:
-          # - file: 3_root-finding/_root-finding-intro.md
-          # - file: 3_root-finding/Taylor-Series.md
+          - file: 3_root-finding/_root-finding-intro.md
+          - file: 3_root-finding/bisection.md
           # - file: 3_root-finding/1D-NR.md
           # - file: 3_root-finding/2D-NR.md
           # - file: 3_root-finding/zsummary.md

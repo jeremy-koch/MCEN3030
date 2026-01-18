@@ -8,9 +8,18 @@
 ## Some things to think about...
 
 
+:::{exercise} Largest and smallest doubles
 
 
----
+:::
+
+:::{exercise} "Machine epsilon"
+
+
+
+:::
+
+
 
 :::{exercise} A Riemann Zeta Function Question 
 The summation
@@ -23,4 +32,3 @@ However, if you perform the summation from 1 to, say, 500, you will see a slight
 
 (b) Instead, we might evaluate the sum from 500 back to 1. It is more accurate... why?
 :::
----

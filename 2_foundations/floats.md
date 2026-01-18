@@ -2,9 +2,6 @@
 
 
 
-## Binary
-
-
 "Computers are just a bunch of 1's and 0's" is absolutely true -- early storage of information was achieved by 
 :::{aside}
 https://en.wikipedia.org/wiki/Magnetic-core_memory
@@ -28,29 +25,11 @@ In practice, it only takes about 40 digits to compute the radius of the universe
 
 
 
-## Linearization
-
-Text
+## Floats and Double Floats
 
 
 
 
 
-<!-- ::::{tab-set}
-:::{tab-item} MATLAB
-```MATLAB
-f=@(x) x^2
-```
-:::
-:::{tab-item} python
-```python
-f=lambda x: x**2
-```
-:::
-:::{tab-item} julia
-```julia
-f=lambda x: x**2
-```
-:::
+## "Machine Precision"
 
-:::: -->
