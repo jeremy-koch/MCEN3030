@@ -11,13 +11,32 @@ Throughout this class, we will often sketch out functions to try to explain/unde
 0\. For a given function $f(x)$, we define a search region between $x_L$ ("$x$ lower") and $x_U$ ("$x$ upper"). There must be precisely one root on this range, else the algorithm breaks!  
 1\. Calculate $x_M$ ("$x$ middle") as $(x_L+x_U)/2$.  
 2\. Calculate $f(x_L)$, $f(x_M)$, and $f(x_U)$ and consider the sign of $f(x_L)\cdot f(x_M)$ OR $f(x_M)\cdot f(x_U)$. (See discussion below about making your code more robust.)  
-3\. (a) If $f(x_L)\cdot f(x_M)< 0$, that means that the function changes sign somewhere between $x_L$ and $x_M$. That is, the root is between $x_L$ and $x_M$.  
-4\. We reset: $x_U=x_M$ and go back to step (1) (where we will use our new definition of $x_U$ to calculate the next $x_M$).
+3a\. If $f(x_L)\cdot f(x_M)< 0$, that means that the function changes sign somewhere between $x_L$ and $x_M$. That is, the root is between $x_L$ and $x_M$.  
+4a\. We reset: $x_U=x_M$ and go back to step (1) (where we will use our new definition of $x_U$ to calculate the next $x_M$).
 
 The other possibility is:
 
-3\. (b) If $f(x_M)\cdot f(x_U)< 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.  
-4\. (b) We reset: $x_L=x_M$ and go back to step (1) (where we will use our new definition of $x_L$ to calculate the next $x_M$).
+3b\. If $f(x_M)\cdot f(x_U)< 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.  
+4b\. We reset: $x_L=x_M$ and go back to step (1) (where we will use our new definition of $x_L$ to calculate the next $x_M$).
+
+### An example
+
+What happens for $f(x)=\sin(x)-0.85$? If we are seeking the first root, we know it will exist between $x_L=0$ and $x_U=\pi/2$, and then $x_M=\pi/4$. (We might call $\pi/4$ our initial estimate of the root, and could say: $x_\text{root,0}=\pi/4\pm \pi/4$.)
+
+Let's put it in a table, calling the setup above the zeroth iteration:
+```{csv-table}
+:header: $x_L$, $x_M$, $x_U$, $f(x_L)$, $f(x_M)$, $f(x_U)$ 
+
+$0$, $\pi/4$, $\pi/2$, $-0.85$, $-0.1428$, $0.15$
+```
+Since $f(\pi/4)\cdot f(\pi/2)<0$, we know the root is between $x_M$ and $x_U$, so: we reset $x_L=x_M=\pi/4$, keep $x_U=\pi/2$, and calculate a new $x_M=3\pi/8$. (After one iteration, our estimate of the root is $x_\text{root,1}=3\pi/8\pm \pi/8$.)
+```{csv-table}
+:header: $x_L$, $x_M$, $x_U$, $f(x_L)$, $f(x_M)$, $f(x_U)$ 
+
+$\pi/4$, $3\pi/8$, $\pi/2$, $-0.1428$, $0.07388$, $0.15$
+```
+
+Note we need only one new function evaluation, $f(3\pi/8)=0.07388$, and we see $f(x_L)\cdot f(x_M) = f(\pi/4)\cdot f(3\pi/8)<0$. So: we reset $x_U=x_M$, keep $x_L=\pi/4$, and calculate a new $x_M=5\pi/16$.
 
 ### Making the algorithm more robust
 
