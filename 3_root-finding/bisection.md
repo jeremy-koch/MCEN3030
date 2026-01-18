@@ -72,14 +72,10 @@ while a < 10:
 a = 5
 while a < 10
     if a == 5
-        break  # Exits the loop immediately
+        break  # Exit the loop immediately
     end
     global a += 1
 end
 ```
 :::
 ::::
-
-## Comparison to "brute force"
-
-Added soon...
