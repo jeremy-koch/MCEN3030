@@ -74,3 +74,7 @@ x_root = x[idx]
 The downside of this approach is: we calculated the value of the function at every value of $x$, and then performed a second operation that checked over all of those values (```min```/```argmin```/```findmin```). A lot of calculations! We will call this a "brute force" method, because we are essentially just checking every possibility.
 
 We will see that the methods described in this unit can achieve the same goal with significantly fewer operations, meaning they are much faster.
+
+:::{tip}
+We will write functions for these algorithms, and the equation $f(x)$ will be an input to those functions. Revisit [anonymous functions in the coding elements pages](../1_prog-basics/coding-elements-overview.md)... that is how we will do it!
+:::

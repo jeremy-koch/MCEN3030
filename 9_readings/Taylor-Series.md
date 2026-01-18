@@ -1,8 +1,5 @@
 # Taylor Series Refresher
 
-
-## The Taylor Series
-
 Suppose we have a complicated function $f(x)$, made of natural logs and arctangents or whatever. Not friendly to deal with. We could reasonably ask the question: if there is another function $\hat{f}(x)$ that has the same value as $f(x)$ at $x=x_0$, and the same value of the first derivative (so the value of $\hat{f}(x)$ is changing just as rapidly as $f(x)$ at $x=x_0$), and the same value of the second derivative (so the rate of change of the rate of change of $\hat{f}(x)$ matches that of $f(x)$), and the same value of the third derivative, and the same value of the fourth derivative, etc., onwards to the infinitieth derivative... well, that sounds like we effectively have the same functional behavior for both $f(x)$ and $\hat{f}(x)$. A function that meets this requirement can usually be constructed:
 \begin{align}
 \hat{f}(x) &= f(x_0)+ (x-x_0)f'(x_0) + \frac{1}{2!}(x-x_0)^2f''(x_0) + \frac{1}{3!}(x-x_0)^3f'''(x_0) \dots \\
@@ -10,13 +7,9 @@ Suppose we have a complicated function $f(x)$, made of natural logs and arctange
 \end{align}
 out to infinity terms with $f^{(n)}$ being the $n$th derivative. Importantly, this equivalent function, $\hat{f}(x)$, is a polynomial, and polynomials are easy to deal with! The trade-off, of course, is that there are now infinity terms. We'll see if we can tame that.
 
-<!-- ## Truncation Error
+This is the Taylor Series for the function $f(x)$, and it is one of the most important ideas in engineering. 
 
-In practice, we (either by hand our with a computer) cannot process infinity terms, and so we must "truncate" the summation 
-We could characterize the error between the original function $f(x)$ and the equivalent polynomial $\hat{f}(x)$ at an arbitrary point $x$ via
-\begin{equation}
-\text{error} = \left|f(x) - \hat{f}(x)\right| = \left|f(x) - \left[f(x_0)+ f'(x_0)(x-x_0) + \dots \right]\right|
-\end{equation} -->
+
 
 
 ## Linearization

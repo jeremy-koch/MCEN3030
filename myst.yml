@@ -33,7 +33,7 @@ project:
         children:
           - file: 3_root-finding/_root-finding-intro.md
           - file: 3_root-finding/bisection.md
-          # - file: 3_root-finding/1D-NR.md
+          - file: 3_root-finding/1D-NR.md
           # - file: 3_root-finding/2D-NR.md
           # - file: 3_root-finding/zsummary.md
       - title: Matrix Methods
