@@ -14,10 +14,15 @@ Throughout this class, we will often sketch out functions to try to explain/unde
 3. (a) If $f(x_L)\cdot f(x_M)< 0$, that means that the function changes sign somewhere between $x_L$ and $x_M$. That is, the root is between $x_L$ and $x_M$.
 4. (a) We reset: $x_U=x_M$ and go back to step (1) (where we will use our new definition of $x_U$ to calculate the next $x_M$).
 
-The other case is:
-3. (b) If $f(x_M)\cdot f(x_U)<> 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.
+The other possibility is:
+3. (b) If $f(x_M)\cdot f(x_U)< 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.
 4. (b) We reset: $x_L=x_M$ and go back to step (1) (where we will use our new definition of $x_L$ to calculate the next $x_M$).
 
+### Making the algorithm more robust
+
+We may not actually be certain there is a root within the range we provide, or there may be two roots. In either case, this algorithm fails.
 
 
-More soon.
+## Comparison to 
+
+Might add a bit more...
