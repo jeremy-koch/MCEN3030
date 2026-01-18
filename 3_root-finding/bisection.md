@@ -25,18 +25,19 @@ What happens for $f(x)=\sin(x)-0.85$? If we are seeking the first root, we know 
 
 Let's put it in a table, calling the setup above the zeroth iteration:
 ```{csv-table}
-:header: $x_L$, $x_M$, $x_U$, $f(x_L)$, $f(x_M)$, $f(x_U)$ 
+:header: iteration, $x_L$, $x_M$, $x_U$, $f(x_L)$, $f(x_M)$, $f(x_U)$ 
 
-$0$, $\pi/4$, $\pi/2$, $-0.85$, $-0.1428$, $0.15$
+0, $0$, $\pi/4$, $\pi/2$, $-0.85$, $-0.1428$, $0.15$
 ```
-Since $f(\pi/4)\cdot f(\pi/2)<0$, we know the root is between $x_M$ and $x_U$, so: we reset $x_L=x_M=\pi/4$, keep $x_U=\pi/2$, and calculate a new $x_M=3\pi/8$. (After one iteration, our estimate of the root is $x_\text{root,1}=3\pi/8\pm \pi/8$.)
+Since $f(\pi/4)\cdot f(\pi/2)<0$, we know the root is between $x_M$ and $x_U$, so: we reset $x_L=x_M=\pi/4$, keep $x_U=\pi/2$, and calculate a new $x_M=3\pi/8$. (After one iteration, our estimate of the root is $x_\text{root,1}=3\pi/8\pm \pi/8$.) A few more steps:
 ```{csv-table}
-:header: $x_L$, $x_M$, $x_U$, $f(x_L)$, $f(x_M)$, $f(x_U)$ 
+:header: iteration, $x_L$, $x_M$, $x_U$, $f(x_L)$, $f(x_M)$, $f(x_U)$ 
 
-$\pi/4$, $3\pi/8$, $\pi/2$, $-0.1428$, $0.07388$, $0.15$
+1, $\pi/4$, $3\pi/8$, $\pi/2$, $-0.1428$, $0.0739$, $0.15$
+2, $\pi/4$, $5\pi/16$, $3\pi/8$, $-0.1428$, $-0.0185$, $0.0739$
+3, $5\pi/16$, $11\pi/32$, $3\pi/8$, $-0.0185$, $0.0319$, $0.0739$
 ```
-
-Note we need only one new function evaluation, $f(3\pi/8)=0.07388$, and we see $f(x_L)\cdot f(x_M) = f(\pi/4)\cdot f(3\pi/8)<0$. So: we reset $x_U=x_M$, keep $x_L=\pi/4$, and calculate a new $x_M=5\pi/16$.
+... and we could say: after three iterations, our estimate of the root is $x_\text{root,3}=11\pi/32\pm \pi/32$.
 
 ### Making the algorithm more robust
 
