@@ -37,7 +37,7 @@ However, at least if there is only one root within the brackets, it is guarantee
 - They are not guaranteed to find the root. 
 - Because they aren't confined to a certain region, they may accidentally find "the wrong root". E.g. you want the positive solution, you find the negative one.
 - You may need to do some prep work, e.g. calculating a derivative or rearranging $g(x)=0$ to something slightly different, a $h(x)=0$ (e.g., $h(x)\equiv g(x)/x$... it is still equal to zero).
-However, they can converge more quickly than bracketed methods. Additionally, the main one we will discuss (Newton-Raphson) can be implemented in higher dimensions -- it does not only work for $g(x)=0$, it also works for $f(x,y)=0$ with $g(x,y)=0$, and further, with $f(x,y,z)=0,g(x,y,z)=0,h(x,y,z)=0$.
+However, they can converge more quickly than bracketed methods. Additionally, the main one we will discuss (Newton-Raphson) can be implemented in higher dimensions -- it works for $g(x)=0$; it also works for the system $f(x,y)=0$, $g(x,y)=0$; and further, with $f(x,y,z)=0,g(x,y,z)=0,h(x,y,z)=0$.
 :::{aside}
 Even higher dimensions too, but I don't want to write it out!
 :::
@@ -50,7 +50,7 @@ The following will get you the root if one exists on a given range. Let's assume
 ```matlab
 x=x_L:dx:x_U;
 y=f(x);
-[~,idx]=min(y);
+[~,idx]=min(abs(y));
 x_root=x(idx);
 ```
 :::
@@ -58,7 +58,7 @@ x_root=x(idx);
 ```python
 x = np.arange(x_L, x_U, dx)
 y = f(x)
-idx = np.argmin(y)
+idx = np.argmin(np.abs(y))
 x_root = x[idx]
 ```
 :::
@@ -66,7 +66,7 @@ x_root = x[idx]
 ```
 x = x_L:dx:x_U
 y = f.(x)
-_, idx = findmin(y)
+_, idx = findmin(abs.(y))
 x_root = x[idx]
 ```
 :::
