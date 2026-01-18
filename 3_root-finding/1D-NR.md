@@ -41,10 +41,10 @@ I did these calculations on [Wolfram Alpha](www.wolframalpha.com) using the "nat
 :width: 100%
 :align: center
 
-The first and second iterations of Newton-Raphson. Converges pretty quickly!
+The first and second iterations of Newton-Raphson (red arrows) for $f(x)=x^{-2}-11$ (in blue), beginning with seed $x_0=0.333$. Converges pretty quickly!
 ```
 
 
-:::{seealso}
-Check out this discussion of [the fast inverse square root](https://en.wikipedia.org/wiki/Fast_inverse_square_root) used in the game Quake III. The first step in their algorithm is a mysterious "bit-fiddling technique" (wherein bits stored in a float just change positions), but then they used a Newton-Raphson step to improve the accuracy of the calculation. 
+:::{seealso} Check out...
+...this discussion of [the fast inverse square root](https://en.wikipedia.org/wiki/Fast_inverse_square_root) used in the game Quake III. The first step in their algorithm is a mysterious "bit-fiddling technique" (wherein bits stored in a float just change positions), but then they used a Newton-Raphson step to improve the accuracy of the calculation. 
 :::

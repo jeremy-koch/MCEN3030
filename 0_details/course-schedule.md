@@ -11,10 +11,11 @@
 
 :::{note}  Week 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12-16 Jan
 :icon: false
-- Tuesday 13 Jan: 
-    -Programming intro
+- Tuesday 13 Jan:
+    - [Programming intro](../1_prog-basics/coding-elements-overview.md)
 - Thursday 15 Jan: 
-    -Programming intro 2
+    - [Numerical Error](../2_foundations/error.md)  
+    (Video on Canvas)
 :::
 
 
@@ -23,10 +24,11 @@
 :::{note}  Week 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19-23 Jan
 :icon: false
 - Tuesday 20 Jan:
-    - Root-finding Methods Intro
-    - Bisection Method
+    - [Root-finding Methods Intro](../3_root-finding/_root-finding-intro.md)
+    - [The Bisection Method](../3_root-finding/bisection.md)  
+    (Video on Canvas)
 - Thursday 22 Jan:
-    - 1D Newton-Raphson
+    - [The (1D) Newton-Raphson Method](../3_root-finding/1D-NR.md)
 - **Friday, 23 Jan: homework due**
 :::
 
