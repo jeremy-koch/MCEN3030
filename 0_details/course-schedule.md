@@ -14,8 +14,9 @@
 - Tuesday 13 Jan:
     - [Programming intro](../1_prog-basics/coding-elements-overview.md)
 - Thursday 15 Jan: 
-    - [Numerical Error](../2_foundations/error.md)  
+    - Floats  
     (Video on Canvas)
+    - [Numerical Error](../2_foundations/error.md)
 :::
 
 
@@ -28,7 +29,8 @@
     - [The Bisection Method](../3_root-finding/bisection.md)  
     (Video on Canvas)
 - Thursday 22 Jan:
-    - [The (1D) Newton-Raphson Method](../3_root-finding/1D-NR.md)
+    - [The (1D) Newton-Raphson Method and Secant Method](../3_root-finding/1D-NR.md)  
+    (Video on Canvas)
 - **Friday, 23 Jan: homework due**
 :::
 
@@ -40,7 +42,7 @@
 - Tuesday 27 Jan:
     - 2D Newton-Raphson
 - Thursday 29 Jan:
-    - Secant Method
+    - TBD
 :::
 
 
