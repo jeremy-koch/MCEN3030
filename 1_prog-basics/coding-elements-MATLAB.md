@@ -140,6 +140,44 @@ In our root-finding algorithms, we will input a (mathematical) function into a (
 
 If two inputs are needed: ```f=@(x,y) x+y;```.
 
+## break, continue, and return
+
+When you are within a loop, ```break``` immediately breaks you out of the loop entirely. So, for example:
+```matlab
+for i=1:5
+    if i==3
+        break
+    end
+end
+display(i)
+```
+You should see that ```i``` is 3.
+
+When you are within a loop, ```continue``` immediately sends you back to the top of the loop. So, for example:
+```matlab
+S=0;
+for i=1:5
+    if i==2 || i==3
+        continue
+    end
+    S=S+1;
+end
+display(S)
+```
+You should see that ```S``` is 3.
+
+Anywhere within a function, a ```return``` functions as an ```end```, and outputs the current values of the output variables. So, for example:
+```matlab
+function y=my_fxn(x)
+    if x==0
+        y=0;
+        return
+    end
+    y=15;
+end
+```
+If you call the function with ```my_fxn(0)```, it should return 0. If you call it with any other number, say ```my_fxn(1)```, it should return 15.
+
 
 ## Some common motifs
 

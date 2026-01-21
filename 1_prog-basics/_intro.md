@@ -7,7 +7,7 @@ You all know what ```if```, ```for```, and ```while``` do. You know what an arra
 In the first week of this course, you will:
 - ... [decide which programming language](languages.md) to use this semester, and [get it going on your machine](installing.md).
 - ... explore some tasks using some references I have created about [basic mathematical commands](coding-elements-overview.md).
-- ... become familiar with GitHub
+- ... become familiar with [GitHub](github.md). (Kind of optional... you can integrate it with your coding environment if you want, otherwise can just upload via your web browser.)
 
 Additionally, make sure you have read all the Course Details section, as well as [tips for success](../9_readings/success.md).
 

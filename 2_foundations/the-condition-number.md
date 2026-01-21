@@ -1,17 +1,13 @@
 # The Condition Number (Optional) 
 
-## Scalar Functions
-
-Let's examine a fairly basic function: $f(x) = \ln(x)$. Specifically, let's consider how the limitations of the float architecture might cause variation in 
-
 ## Nearly parallel equations
 By solving the system of equations
-\begin{align}
+$$
 a_1x+b_1y = c_1\\
 a_2x+b_2y = c_2
-\end{align}
+$$
 we are identifying the location in $(x,y)$-space that satisfies both $a_1x+b_1y = c_1$ and $a_2x+b_2y = c_2$. We can frame this as a matrix equation:
-\begin{equation}
+$$
 \begin{bmatrix}
 a_1 & b_1\\
 a_2 & b_2
@@ -23,23 +19,35 @@ x\\y
 \begin{bmatrix}
 c_1 \\ c_2
 \end{bmatrix}
-\end{equation}
+$$
 and can discuss a few cases:
 1. There might be infinitely many solutions, e.g. if equation 2 is a multiple of equation 1. Then all $(x,y)$-pairs that satisfy one of the equations will satisfy both of the equations, and we have infinitely many solutions. The determinant of the matrix is 0.
-2. There might be no solutions, e.g. if the lines are parallel but with different intercepts. We can't satisfy both equations at the same time. he determinant of the matrix is 0 here too.
+2. There might be no solutions, e.g. if the lines are parallel but with different intercepts. We can't satisfy both equations at the same time. The determinant of the matrix is 0 here too.
 3. There might be one solution. The lines are not parallel, and there will be exactly one location where the lines intersect in $(x,y)$-space -- the solution to the problem. The determinant is not zero.
 
 As a purely mathematical problem: Given some values of $a_1,a_2,b_1,b_2,c_1,c_2$, we can say if zero, one, or many solutions exist, and can say what the solution is if one exists.
 
-## Error within the parameters
+## Effect of error
 
-As an engineering problem, we might need a bit more wisdom. What happens if we are basing our solution on a set of experimental measurements of the parameters , with those measurements having some uncertainty or error? Is it OK to just solve the system based on the linear algebra strategies we know, and then claim that the result will have an uncertainty that is similar to the uncertainty in our parameters?
+Recall "round-off error": we have a finite number of digits to store our numbers. Is that concerning? Usually no, but there are situations when it can be.
 
-Let's show how this can go VERY wrong. Here is a matrix system:
+Here is a matrix system:
+$$\begin{bmatrix}
+1 & -1\\
+1.01 & -1
+\end{bmatrix}
+\begin{bmatrix}
+x\\y
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\1+e
+\end{bmatrix}.$$
+This system represents two lines that are not-quite parallel, with a small difference in their y-intercept that is characterized by $e$ (not 2.718, just a variable describing the uncertainty or error). Whenever $e=0.01$, our solution is $(x,y)=(1,0)$. Whenever $e=0.02$, the solution to the system is $(x,y)=(2,1)$! We change the forcing function by 2% and have a massive. This could be massively consequential in an engineering problem! We are in the business of making predictions, and our predictions here could be dramatically incorrect! What are they paying us for?!
+:::{aside}
+When we study matrix systems like $Ax=b$, it is typical to call $b$ "the forcing function".
+:::
 
-.
-
-This system represents two lines that are not-quite parallel, with a small difference in their y-intercept that is characterized by  (not 2.718, just a variable describing the uncertainty or error). Whenever , our solution is . Whenever , the solution to the system is . Whenever , the solution to the system is . These may seem like small changes, but recognize: we are changing the forcing function by 2% and changing our solution from  to . This could be massively consequential in an engineering problem! We are in the business of making predictions, and our predictions here could be dramatically incorrect! What are they paying us for?!
 
 This system is said to be "ill-conditioned".
 
