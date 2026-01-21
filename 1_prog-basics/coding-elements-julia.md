@@ -180,6 +180,57 @@ In our root-finding algorithms, we will input a (mathematical) function into a (
 If two inputs are needed: ```f = (x, y) -> x + y``` or ```f(x,y) = x+y```.
 
 
+
+
+# break, continue, and return
+
+When you are within a loop, ```break``` immediately breaks you out of the loop entirely. So, for example:
+```julia
+S=0
+for i in 1:500
+    if i==5
+        break
+    end
+    global S+=1
+end
+println(S)
+```
+You should see that ```S``` is 4.
+
+When you are within a loop, ```continue``` immediately sends you back to the top of the loop. So, for example:
+```julia
+S=0
+for i in 1:5
+    if i==2 || i==3
+        continue
+    end
+    global S+=1
+end
+println(S)
+```
+You should see that ```S``` is 3.
+
+You can ```return``` from anywhere in a function. So, for example:
+```julia
+function my_fxn(x)
+    if x==0
+        return 0
+    end
+    return 15
+end
+
+println(my_fxn(0))
+println(my_fxn(1))
+```
+You should see that the first print produces 0, the second produces 15.
+
+
+
+
+
+
+
+
 ## Some common motifs
 
 If you need something to happen if a number is even:

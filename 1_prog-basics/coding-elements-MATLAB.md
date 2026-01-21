@@ -201,3 +201,13 @@ for n=1:N
     S=S+sin(n);
 end
 ```
+
+MATLAB has built-in functions: ```isnan```, which checks if a number is ```NaN``` ("not a number"); and ```isinf```, which checks if a number is ```Inf```. ```NaN``` and ```Inf``` are different in MATLAB:
+```matlab
+isnan(15)  % returns 0 because 15 IS a number
+isnan(1/0) % returns 0 because MATLAB interprets Inf as a number
+isnan(0/0) % returns 1
+isinf(15)  % returns 0
+isinf(1/0) % returns 1
+isinf(0,0) % returns 0
+```
