@@ -6,19 +6,19 @@ Imagine trying to co-write code with 31 other people by emailing files back-and-
 
 ## In this course
 
-We will use GitHub Classroom this semester for homework submissions. In keeping with the theme of letting you choose your own adventure, I outline below two approaches here: a web-browser based method, which requires no downloads, just uploading to the web (similar to what you do for GradeScope/Canvas); and a more advanced approach, which after some initial setup work, will allow you to submit directly from MATLAB/VS Code.
+We will use GitHub Classroom this semester for homework submissions. In keeping with the theme of letting you choose your own adventure (a bit), I outline below two approaches: a web-based method, which requires no downloads, just uploading via your web browser (similar to what you do for GradeScope/Canvas); and a more advanced approach, which after some initial setup work will allow you to submit directly from MATLAB/VS Code.
 :::{note}
 This website was built in VS Code, and I push changes to its repository with a couple clicks in VS Code's left toolbar. Feels good.
 :::
 
 Even if you don't embrace it early in the semester, you might consider using it for the machine learning project later.
 :::{tip}
-If you are proud of your project, you can publish it publically on GitHub and maybe include a link to it in your resume. Additionally... particularly now that AI is around to help, it is easy to put together a website and host it on GitHub. And it doesn't have to look like this one -- plenty of tutorials and templates out there! Maybe you'd be interested in establishing an internet presence, highlighting projects to show future employers...
+If you are proud of your project, you can publish it publically on GitHub and maybe include a link to it in your resume. Additionally: particularly now that AI is around to help, it is easy to put together a website and host it on GitHub. And it doesn't have to look like this one -- plenty of tutorials and templates out there! Maybe you'd be interested in establishing an internet presence, highlighting projects to show future employers...
 :::
 
 ## GitHub Classroom setup
 
-Canvas will host links to each homework's repository. The first time you click it, it will ask you to pick your account from a list, and then will send your colorado.edu address a confirmation email. Until you accept the invitation in your email, it will tell you that the repository is unavailable. After accepting, that link will show you a webpage with a description of the homework problems and folders for submission. This is YOUR repository (which I hopefully have access to... we'll see this weekend, I guess) -- it should say something like mcen3030-hw1-yourName at the top.
+Canvas will host links to each homework's repository. The first time you click one, it will ask you to pick your account from a list, and then will send your colorado.edu address a confirmation email. Until you accept the invitation in your email, it will tell you that the repository is unavailable. After accepting, that link will show you a webpage with a description of the homework problems. This is YOUR repository (which I hopefully have access to... we'll see this weekend, I guess) -- it should say something like mcen3030-hw1-yourName at the top, and you will submit your code into the appropriate folder
 
 The confirmation step should only be needed once. On future assignments, the links will take you directly to the new homework assignment. 
 
@@ -40,17 +40,17 @@ This approach is perfectly fine to use for the rest of the semester, and can be 
 
 ## Setting up the homework submission pipeline -- Harder-at-first-but-ultimately-not-too-bad mode
 
-It is possible to directly link your homework repository to your programming environment, and you can simply click "commit"+"push" to submit. No need to clumsily navigate around on the internet -- submit directly from MATLAB or VS Code! Feels good!
+It is possible to directly link each homework repository to your programming environment, and you can simply click "commit"+"push" to submit. No need to clumsily navigate around on the internet -- submit directly from MATLAB or VS Code! Feels good!
 
-Similarly to above, you will accept each homework assignment by clicking the link, and a new repository will be created under your name. Each will need to be integrated into VS Code/MATLAB -- I'll describe that setup below.
+Similarly to above, you will accept each homework assignment by clicking the link, and a new repository will be created under your name. Each will need to be integrated into VS Code/MATLAB, as described below.
 :::{tip}
-These instructions may look a bit overwhelming but likely we are talking about a few minutes of work. Submitting homeworks will then be a breeze, quicker than navigating the internet. Plus, interacting with GitHub is a good skill to have -- you could put it on your resume if you get confident with it.
+These instructions may look a bit overwhelming but likely we are talking about 20 minutes of work. Submitting homeworks will then be a breeze, quicker than navigating the internet. Plus, interacting with GitHub is a good skill to have -- you could put it on your resume if you get confident with it.
 :::
 
 ### If you are using VS Code...
-... I followed [this tutorial](https://code.visualstudio.com/docs/sourcecontrol/github) to get it set up. There is an overwhelming amount of info there but only part of it is really relevant to us: Prerequisites, Getting started, Cloning a repository, and then there is information scattered about on "committing" (which is to your local repository, as in on your computer) and "pushing" (sending it to the online repository). When committing you have to give a message -- something like "draft of problem 1" or similar is more than sufficient. (Since you don't have 31 collaborators, this isn't a huge deal.)
+... I followed [this tutorial](https://code.visualstudio.com/docs/sourcecontrol/github) to get it set up. There is a lot there but only part of it is really relevant to us: Prerequisites, Getting started, Cloning a repository, and then there is information scattered about on "committing" (which is to your local repository, as in updating the version on your computer) and "pushing" (sending it to the online repository). When committing you have to give a commit message -- something like "draft of problem 1" or similar is more than sufficient. (Since you don't have 31 collaborators, this isn't a huge deal.)
 
-To emphasize, you will need to commit and push to submit the homework. This is done through the "Source Control" icon on the left toolbar (which should be highlighted after you have made changes). Particularly the first time, and maybe every time, I recommend visiting the web version to make sure your submission made it there.
+To emphasize, you will need to commit and push to submit the homework. This is done through the "Source Control" icon on the left toolbar (which should be highlighted after you have made changes to the repository). Particularly the first time, and maybe every time, I recommend visiting the web version to make sure your submission made it there.
 :::{tip}
 Try asking an AI for help or to clarify things. As I was setting up the GitHub Classroom, I asked Gemini things like: "Can students upload their solutions online without needing to use git?" ... and it more-or-less gave the tutorial above. It can really help navigate tutorials, especially when they are bloated with extra things you don't need (as is the case here).
 :::
@@ -88,7 +88,6 @@ The token is like a password and should be a secret.
 :::
 
 
-
 ### If these sound like too much...
 
-No problem, just skip back up to "Easy mode" above. You can submit online for now and get this set up later, or never get it set up and use the online submission forever. 
+No problem, just skip back up to "Easy mode" above. You can submit online for now and get this set up later, or use the online submission forever and never get this git stuff set up. It won't hold you back at all! 
