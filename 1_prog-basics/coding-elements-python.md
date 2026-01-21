@@ -139,11 +139,58 @@ To read in a csv and store the data as a matrix: ```data = np.loadtxt('my_data.c
 
 To write a new csv: ```np.savetxt('data.csv', [x_data,y_data], delimiter=',')``` creates a new file in your current directory called "data.csv".
 
+
+
+
+
+
+
 ## Anonymous Functions
 
 In our root-finding algorithms, we will input a (mathematical) function into a (programming) function, e.g.: find the root of $f(x)=\sin(x)-0.85$. This can be achieved via an anonymous function, sometimes called a "lambda" function: ```f=lambda x: np.sin(x)-0.85```. 
 
 If two inputs are needed: ```f=lambda x,y: x+y```.
+
+
+
+
+
+
+
+## break, continue, and return
+
+When you are within a loop, ```break``` immediately breaks you out of the loop entirely. So, for example:
+```python
+for i in range(5): # note: I recommend np.arange, it is more robust, but this works in base python
+    if i==3:
+        break
+print(i)
+```
+You should see that ```i``` is 3.
+
+When you are within a loop, ```continue``` immediately sends you back to the top of the loop. So, for example:
+```python
+S=0
+for i in range(5):
+    if i==2 or i==3:
+        continue
+    S=S+1
+print(S)
+```
+You should see that ```S``` is 3.
+
+You can ```return``` from anywhere in a function. So, for example:
+```python
+def my_fxn(x):
+	if x==0:
+		return 0
+	return 15
+
+print(my_fxn(0))
+print(my_fxn(1))
+```
+You should see that the first print produces 0, the second produces 15.
+
 
 
 ## Some common motifs
