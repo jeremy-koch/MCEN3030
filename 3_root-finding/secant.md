@@ -28,9 +28,8 @@ A demo: In this first case, the seed values are 0.5 and 0.6, and so the secant l
 :width: 100%
 :align: center
 
-Secant Method with seeds 0.5 and 0.6. 
+Secant Method with seeds 0.5 and 0.6, for $f(x) = exp(x)-3.91$. The initial secant line is reminiscent of the tangent line at $x=0.6$, but that is not the case with further iterations. Yet we still converge!
 ```
-We see that the second line is not at all reminiscent of a tangent line, yet this still converges.
 
 Same problem, but now the seed values are 0 and 1.9.
 ```{figure} secant_2.png
@@ -38,9 +37,9 @@ Same problem, but now the seed values are 0 and 1.9.
 :width: 100%
 :align: center
 
-Secant Method with seeds 0 and 1.9.
+Secant Method with seeds 0 and 1.9, again for $f(x) = exp(x)-3.91$. The initial secant line is not at all reminiscent of the tangent line at $x=0$ or $x=1.9$, yet we still converge to the root.
 ```
-Still no problem in getting convergence.
+
 :::{tip}
 Trace these paths and make sure you understand how the points are related by this algorithm.
 :::
