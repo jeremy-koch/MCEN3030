@@ -15,7 +15,7 @@ $$
 $$
 This equation is what you will need to program, and the algorithm is quite simple: use the seed $x_0$ to compute the first iteration $x_1$ via the above equation, then use $x_1$ to compute $x_2$, and so on. The program stops when an an [acceptable convergence](../2_foundations/error.md) is met, or when the maximum number of iterations is met.
 :::{hint}
-For the former... sounds like a ```while``` loop, right? While the convergence metric is bigger than the acceptable convergence value? For the latter, maybe ```break``` again, as described [on the bottom of this page](bisection.md).
+For the former... sounds like a ```while``` loop, right? While the convergence metric is bigger than the acceptable convergence value? For the latter, maybe ```break``` or ```return```. See the [coding elements page](../1_prog-basics/coding-elements-overview.md).
 :::
 
 ### An example

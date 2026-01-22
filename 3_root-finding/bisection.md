@@ -45,37 +45,4 @@ We may not actually be certain there is a root within the range we provide, or t
 
 It is also possible, but unlikely, that ```f(x_L)==0```, or ```f(x_M)==0```, or ```f(x_U)==0```. In any of these cases, the algorithm should promptly end.
 
-Consider the ```break``` command... here is a toy example that you might adapt:
-::::{tab-set}
-:::{tab-item} MATLAB
-```matlab
-a=5;
-while a<10
-    if a==5
-        break; % Exit the loop immediately
-    end
-    a=a+1;
-end
-```
-:::
-:::{tab-item} Python
-```python
-a = 5
-while a < 10:
-    if a == 5:
-        break  # Exit the loop immediately
-    a += 1
-```
-:::
-:::{tab-item} Julia
-```julia
-a = 5
-while a < 10
-    if a == 5
-        break  # Exit the loop immediately
-    end
-    global a += 1
-end
-```
-:::
-::::
+Consider the ```break``` or ```return``` commands. See the [coding elements page](../1_prog-basics/coding-elements-overview.md).
