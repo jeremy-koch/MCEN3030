@@ -38,7 +38,3 @@ Further, taking the Newton-Raphson video as an example: The following plot descr
 :align: center
 ```
 So: less than half of the class bothered to open the video. Of the 67 students who opened the video, only 40 watched the entire video. That is: only 28% of the students enrolled in MCEN 3030 watched the entire video.
-
-The video was 11 minutes and 38 seconds long.
-
-Yes, I can see which students watched the video. Thank you to those who are embracing this course structure.
