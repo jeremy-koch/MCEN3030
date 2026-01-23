@@ -5,9 +5,17 @@ Added (1) for those interested, (2) as examples of (hopefully) well-prepared plo
 
 ## Language choice
 
-Added later
+| :---   | :--- |
+| MATLAB | 100 |
+| Python | 41  | 
+| Julia  | 4   |
 
 
-## Video views, in-class problem completion, and GitHub commits
+## Video views
 
-Added later
+```{figure} video_views.png
+:alt: 
+:width: 300px
+:align: center
+```
+
