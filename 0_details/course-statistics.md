@@ -5,17 +5,28 @@ Added (1) for those interested, (2) as examples of (hopefully) well-prepared plo
 
 ## Language choice
 
-| :---   | :--- |
-| MATLAB | 100 |
-| Python | 41  | 
-| Julia  | 4   |
+<table>
+  <tr>
+    <th>MATLAB</th>
+    <td>100</td>
+  </tr>
+  <tr>
+    <th>Python</th>
+    <td>41</td>
+  </tr>
+  <tr>
+    <th>Julia</th>
+    <td>4</td>
+  </tr>
+</table>
+
 
 
 ## Video views
 
 ```{figure} video_views.png
 :alt: 
-:width: 300px
+:width: 100%
 :align: center
 ```
 
