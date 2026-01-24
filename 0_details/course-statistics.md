@@ -8,7 +8,7 @@ Added (1) for those interested, (2) as examples of (hopefully) well-prepared plo
 <table style="width: 40%">
   <tr>
     <th>MATLAB</th>
-    <td>100</td>
+    <td>98</td>
   </tr>
   <tr>
     <th>Python</th>
