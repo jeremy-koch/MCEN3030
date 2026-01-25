@@ -11,7 +11,7 @@ $$
 mx-y+b=0\\
 x^2+y^2-R^2=0
 $$
-and call that first equation $f(x,y)=0$ and the second $g(x,y)=0$. So it is like a simultaneous root-finding problem. The [Taylor Series idea](../9_readings/Taylor-Series.md) can be extrapolated to 2+ dimensions based on a reference location $(x_0,y_0)$. Examining the linearized versions of general $f$ and $g$:
+and call that first equation $f(x,y)=0$ and the second $g(x,y)=0$. So it is like a simultaneous root-finding problem. The [Taylor Series idea](../2_foundations/Taylor-Series.md) can be extrapolated to 2+ dimensions based on a reference location $(x_0,y_0)$. Examining the linearized versions of general $f$ and $g$:
 $$
 f(x,y)\approx f(x_0,y_0) + \frac{\partial f}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial f}{\partial y}\bigg\rvert_0 (y-y_0)\\
 g(x,y)\approx g(x_0,y_0) + \frac{\partial g}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial g}{\partial y}\bigg\rvert_0 (y-y_0)
@@ -67,4 +67,4 @@ The algorithm matches that of the 1D Newton-Raphson method, but let's clarify th
 
 ## Solving the matrix system
 
-Finding the inverse of a matrix is actually a challenging computational problem. We will learn a computer-friendly version of Gaussian Elimination shortly, but for a small system like this, [Cramer's Rule](../9_readings/Cramer.md) is reasonable.
+Finding the inverse of a matrix is actually a challenging computational problem. We will learn a computer-friendly version of Gaussian Elimination shortly, but for a small system like this, [Cramer's Rule](../2_foundations/Cramer.md) is reasonable.
