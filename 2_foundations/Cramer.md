@@ -351,11 +351,11 @@ det(rand(500,500))
 :::
 
 
-:::{tab-item} python
+:::{tab-item} Python
 ```python
 import numpy as np
 d=np.linalg.det(np.random.rand(500, 500))
-print(D)
+print(d)
 ```
 
 :::
