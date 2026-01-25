@@ -1,6 +1,6 @@
 # Newton-Raphson Method (2+D)
 
-The [(1D) Newton-Raphson Method](1D-NR.md) can be extended to higher dimensional systems. Suppose we have two equations,
+The [(1D) Newton-Raphson Method](NR-1D.md) can be extended to higher dimensional systems. Suppose we have two equations,
 $y=mx+b$ and $x^2 + y^2 = R^2$, with known constants $m$, $b$, and $R$.
 :::{note}
 So, a line and a circle. Keep in mind that there may be zero, one, or two solutions...
