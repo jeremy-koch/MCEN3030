@@ -30,6 +30,8 @@ project:
         children:
           # - file: 2_foundations/floats.md
           - file: 2_foundations/error.md
+          - file: 2_foundations/Taylor-Series.md
+          - file: 2_foundations/Cramer.md
           # - file: 2_foundations/the-condition-number.md
           # - file: 2_foundations/zsummary.md
       - title: Root-Finding Methods
@@ -61,9 +63,7 @@ project:
       - title: Appendix/Some More Readings
         children: 
           - file: 9_readings/success.md
-          - file: 9_readings/Taylor-Series.md
-          - file: 9_readings/Cramer.md
-          # - file: 9_readings/AI-thoughts.md
+  
   # id: a48983b1-c764-4b15-8eba-7c5fd0e5f7b6
   # title:
   # description:
