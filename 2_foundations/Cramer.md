@@ -13,7 +13,7 @@ $$
 x_n = \frac{\text{det}(\mathbf{A}_n)}{\text{det}(\mathbf{A})}
 $$
 where $\mathbf{A}_n$ is the matrix formed by replacing the $n^\text{th}$ column in $\mathbf{A}$ with $\mathbf{b}$. A quick example: if
-$$
+\begin{equation}
 \begin{bmatrix}
 2 & 0\\ -1 & 1
 \end{bmatrix}
@@ -24,9 +24,9 @@ x \\ y
 \begin{bmatrix}
 3 \\ 1
 \end{bmatrix}
-$$
+\end{equation}
 then
-$$
+\begin{equation}
 x = \frac{\text{det}\left(
 \begin{bmatrix}
 3 & 0\\ 1 & 1
@@ -36,9 +36,9 @@ x = \frac{\text{det}\left(
 2 & 0\\ -1 & 1
 \end{bmatrix}
 \right)}
-$$
+\end{equation}
 and
-$$
+\begin{equation}
 y = \frac{\text{det}\left(
 \begin{bmatrix}
 2 & 3\\ -1 & 1
@@ -48,7 +48,7 @@ y = \frac{\text{det}\left(
 2 & 0\\ -1 & 1
 \end{bmatrix}
 \right)}.
-$$
+\end{equation}
 
 ## Calculating the determinant, and FLOPs
 
