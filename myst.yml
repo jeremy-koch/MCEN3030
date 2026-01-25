@@ -38,7 +38,7 @@ project:
           - file: 3_root-finding/bisection.md
           - file: 3_root-finding/1D-NR.md
           - file: 3_root-finding/secant.md
-          # - file: 3_root-finding/2D-NR.md
+          - file: 3_root-finding/2D-NR.md
           # - file: 3_root-finding/zsummary.md
       - title: Matrix Methods
         # children:
@@ -60,8 +60,9 @@ project:
           # - file: 5_ODEs/zsummary.md
       - title: Appendix/Some More Readings
         children: 
-          - file: 9_readings/Taylor-Series.md
           - file: 9_readings/success.md
+          - file: 9_readings/Taylor-Series.md
+          - file: 9_readings/Cramer.md
           # - file: 9_readings/AI-thoughts.md
   # id: a48983b1-c764-4b15-8eba-7c5fd0e5f7b6
   # title:
