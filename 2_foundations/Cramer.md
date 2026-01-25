@@ -56,17 +56,17 @@ Computer performance is sometimes measured in FLOPs per second -- floating point
 
 
 For a $2\times 2$ matrix, the determinant is calculated with:
-$$
+\begin{equation}
 \text{det}\left(
 \begin{bmatrix}
 a_{11} & a_{12}\\ a_{21} & a_{22}
 \end{bmatrix}
 \right) = a_{11}a_{22}-a_{12}a_{21}.
-$$
+\end{equation}
 So, $3$ FLOPs.
 
 For a $3\times 3$ matrix:
-$$
+\begin{equation}
 \text{det}\left(
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}\\
@@ -87,7 +87,7 @@ a_{21} & a_{23}\\ a_{31} & a_{33}
 a_{21} & a_{22}\\ a_{31} & a_{32}
 \end{bmatrix}
 \right).
-$$
+\end{equation}
 So, each of the $2\times 2$ determinants takes $3$ FLOPs, and then each of those is multiplied by something, and then we add the results together. Maybe there is some subtlety here, but for the point of this demonstration: $(3)(3)(2)= 18$ FLOPs.
 
 For a $4\times 4$ matrix, we will need to calculate the determinant of four $3\times 3$ matrices, each takes 18 FLOPs, then four multiplications, then three additions. $(18)(4)(3)=216$ FLOPs.
