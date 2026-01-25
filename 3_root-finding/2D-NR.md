@@ -22,7 +22,7 @@ $$
 \frac{\partial g}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial g}{\partial y}\bigg\rvert_0 (y-y_0)= -g(x_0,y_0)
 $$
 and can then reframe this as a matrix system, defining $\Delta x\equiv x-x_0$ and $\Delta y=y-y_0$:
-$$
+\begin{equation}
 \begin{bmatrix}
 \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y}\\
 \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
@@ -34,14 +34,14 @@ $$
 \begin{bmatrix}
 -f\\ -g
 \end{bmatrix}_0.
-$$
+\end{equation}
 Note that the matrix and right-hand side of this equation are evaluated at the reference location to determine the unknown vector of displacements $(\Delta x,\Delta y)$.
 :::{note}
 A matrix full of partial derivatives like this is called "The Jacobian". And in the general linear algebra problem $\mathbf{Ax}=\mathbf{b}$, the $\mathbf{b}$ is sometimes called "the forcing function" -- in this context, the further $f$ and $g$ are from zero, the greater $\Delta x$ and $\Delta y$ are, and so there is a greater "push" from the current location.
 :::
 
 As was the case with the 1D Newton-Raphson Method, we think about this not as a single step, but rather an iterative scheme:
-$$
+\begin{equation}
 \begin{bmatrix}
 \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y}\\
 \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
@@ -53,7 +53,7 @@ $$
 \begin{bmatrix}
 -f\\ -g
 \end{bmatrix}_i
-$$
+\end{equation}
 where $x_{i+1}=x_i + \Delta x_i$ and $y_{i+1} = y_i +\Delta y_i$.
 
 ## The algorithm
