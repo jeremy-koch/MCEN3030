@@ -26,6 +26,7 @@ project:
             hidden: true
           # - file: 1_prog-basics/explore-some-tasks.md
           - file: 1_prog-basics/github.md
+          - file: 1_prog-basics/classes.md
       - title: Some Foundational Concepts
         children:
           # - file: 2_foundations/floats.md

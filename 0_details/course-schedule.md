@@ -42,7 +42,7 @@
 - Tuesday 27 Jan:
     - 2D Newton-Raphson
 - Thursday 29 Jan:
-    - TBD
+    - LU Decomposition
 :::
 
 
@@ -52,9 +52,9 @@
 :::{note}  Week 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 - 6 Feb
 :icon: false
 - Tuesday 3 Feb:
-    - LU Decomposition
+    - TBD
 - Thursday 5 Feb:
-    - Singular Value Decomposition
+    - TBD
 - **Friday, 6 Feb: homework due**
 :::
 

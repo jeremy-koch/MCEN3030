@@ -7,7 +7,7 @@ a_1x+b_1y = c_1\\
 a_2x+b_2y = c_2
 $$
 we are identifying the location in $(x,y)$-space that satisfies both $a_1x+b_1y = c_1$ and $a_2x+b_2y = c_2$. We can frame this as a matrix equation:
-$$
+\begin{equation}
 \begin{bmatrix}
 a_1 & b_1\\
 a_2 & b_2
@@ -19,7 +19,7 @@ x\\y
 \begin{bmatrix}
 c_1 \\ c_2
 \end{bmatrix}
-$$
+\end{equation}
 and can discuss a few cases:
 1. There might be infinitely many solutions, e.g. if equation 2 is a multiple of equation 1. Then all $(x,y)$-pairs that satisfy one of the equations will satisfy both of the equations, and we have infinitely many solutions. The determinant of the matrix is 0.
 2. There might be no solutions, e.g. if the lines are parallel but with different intercepts. We can't satisfy both equations at the same time. The determinant of the matrix is 0 here too.

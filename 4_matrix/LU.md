@@ -1,0 +1,152 @@
+# LU Decomposition
+
+Many analyses in engineering can be boiled-down to: solve $\mathbf{A}\mathbf{x}=\mathbf{b}$. For a square matrix with a non-zero determinant, the solution is:
+$$
+\mathbf{x}=\mathbf{A}^{-1}\mathbf{b}
+$$
+but how do we get the inverse? For small matrices there are formulas available, but computational methods is not about handling small matrices!
+
+The $\mathbf{LU}$ decomposition is essentially a formalized version of Gaussian Elimination -- that technique where you subtract rows from each other until you isolate a single unknown in an equation. This can be used to find a matrix inverse/solve $\mathbf{A}\mathbf{x}=\mathbf{b}$. MATLAB/NumPy/Julia use $\mathbf{LU}$ -- I'll go ahead and give you the code that you could use to check your work, but we are going to construct the algorithm ourselves based on row operations.
+
+
+
+## LU decomposition
+
+### Upper-triangular matrix $\mathbf{U}$
+Beginning with the general
+\begin{equation*}
+\mathbf{A}\equiv
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
+a_{21} & a_{22} & a_{23} & a_{24} & a_{25} & \hdots & a_{2n} \\
+a_{31} & a_{32} & a_{33} & a_{34} & a_{35} & \hdots & a_{3n} \\
+a_{41} & a_{42} & a_{43} & a_{44} & a_{45} & \hdots & a_{4n} \\
+a_{51} & a_{52} & a_{53} & a_{54} & a_{55} & \hdots & a_{5n} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & a_{n3} & a_{n4} & a_{n5} & \hdots & a_{nn}
+\end{bmatrix}
+\end{equation*}
+we perform a series of row operations to make the first column zero (except for the first entry in the column). This can be achieved via
+\begin{alignat*}{2}
+    (\text{second row})&\rightarrow (\text{second row})-&&\frac{a_{21}}{a_{11}}(\text{first row})\\
+    (\text{third row})&\rightarrow (\text{third row})-&&\frac{a_{31}}{a_{11}}(\text{first row})\\
+    (\text{fourth row})&\rightarrow (\text{fourth row})-&&\frac{a_{41}}{a_{11}}(\text{first row})
+\end{alignat*}
+where the $\rightarrow$ can be interpreted as ``becomes''.\footnote{What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not worry about it in this class.} After proceeding through all $n$ rows, we will have developed an intermediate matrix\footnote{Note the $'$ notation conflicts with MATLAB's implementation of the transpose -- this is not a transpose.}
+\begin{equation*}
+\mathbf{A'}\equiv
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
+0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & \hdots & a'_{2n} \\
+0 & a'_{32} & a'_{33} & a'_{34} & a'_{35} & \hdots & a'_{3n} \\
+0 & a'_{42} & a'_{43} & a'_{44} & a'_{45} & \hdots & a'_{4n} \\
+0 & a'_{52} & a'_{53} & a'_{54} & a'_{55} & \hdots & a'_{5n} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & a'_{n2} & a'_{n3} & a'_{n4} & a'_{n5} & \hdots & a'_{nn}
+\end{bmatrix}.
+\end{equation*}
+If we proceed similarly with
+\begin{alignat*}{2}
+    (\text{new third row})&\rightarrow (\text{new third row})-&&\frac{a'_{32}}{a'_{22}}(\text{new second row})\\
+    (\text{new fourth row})&\rightarrow (\text{new fourth row})-&&\frac{a'_{42}}{a'_{22}}(\text{new second row})
+\end{alignat*}
+we will arrive at 
+\begin{equation*}
+\mathbf{A''}\equiv
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
+0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & \hdots & a'_{2n} \\
+0 & 0 & a''_{33} & a''_{34} & a''_{35} & \hdots & a''_{3n} \\
+0 & 0 & a''_{43} & a''_{44} & a''_{45} & \hdots & a''_{4n} \\
+0 & 0 & a''_{53} & a''_{54} & a''_{55} & \hdots & a''_{5n} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & a''_{n3} & a''_{n4} & a''_{n5} & \hdots & a''_{nn}
+\end{bmatrix}.
+\end{equation*}
+and can continue with this process until we arrive at 
+\begin{equation*}
+\mathbf{U}\equiv\mathbf{A}''''''\phantom{.}^{...}\equiv
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
+0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & \hdots & a'_{2n} \\
+0 & 0 & a''_{33} & a''_{34} & a''_{35} & \hdots & a''_{3n} \\
+0 & 0 & 0 & a'''_{44} & a'''_{45} & \hdots & a'''_{4n} \\
+0 & 0 & 0 & 0 & a''''_{55} & \hdots & a''''_{5n} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & 0 & 0 & \hdots & a''''''\phantom{.}^{...}_{nn}
+\end{bmatrix}\equiv
+\begin{bmatrix}
+u_{11} & u_{12} & u_{13} & u_{14} & u_{15} & \hdots & u_{1n}\\
+0 & u_{22} & u_{23} & u_{24} & u_{25} & \hdots & u_{2n} \\
+0 & 0 & u_{33} & u_{34} & u_{35} & \hdots & u_{3n} \\
+0 & 0 & 0 & u_{44} & u_{45} & \hdots & u_{4n} \\
+0 & 0 & 0 & 0 & u_{55} & \hdots & u_{5n} \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & 0 & 0 & \hdots & u_{nn}
+\end{bmatrix}.
+\end{equation*}
+This is the upper-triangular matrix $\mathbf{U}$ that will be useful in the back-substitution algorithm.
+
+### Lower-triangular matrix $\mathbf{L}$
+The row operations described above can be made mathematical by a multiplication by
+\begin{equation*}
+\mathbf{L}\equiv
+\begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & \hdots & 0\\
+a_{21}/a_{11} & 1 & 0 & 0 & 0 & \hdots & 0 \\
+a_{31}/a_{11} & a'_{32}/a'_{22} & 1 & 0 & 0 & \hdots & 0 \\
+a_{41}/a_{11} & a'_{42}/a'_{22} & a''_{43}/a''_{33} & 1 & 0 & \hdots & 0 \\
+a_{51}/a_{11} & a'_{52}/a'_{22} & a''_{53}/a''_{33} & a'''_{54}/a'''_{44} & 1 & \hdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+a_{n1}/a_{11} & a'_{n2}/a'_{22} & a''_{n3}/a''_{33} & a'''_{n4}/a'''_{44} & a''''_{n5}/a''''_{55} & \hdots & 1
+\end{bmatrix}
+\end{equation*}
+as in, $\mathbf{L}\mathbf{U}=\mathbf{A}$. Note that the lower-triangular entries are the same as the multipliers we used in the algorithm to get $\mathbf{U}$. The creation of $\mathbf{L}$ is practically a by-product of generating $\mathbf{U}$.
+
+
+
+
+
+
+
+## The Forward Substitution Algorithm
+
+Beginning with Eq.~\eqref{U}, we multiply both sides by $\mathbf{L}$ to obtain
+\begin{equation*}
+    \mathbf{L}\mathbf{U}\mathbf{x} = \mathbf{L}\mathbf{d}.
+\end{equation*}
+Since $\mathbf{L}\mathbf{U}=\mathbf{A}$, this reveals that
+\begin{equation*}
+    \mathbf{L}\mathbf{d}=\mathbf{b}.
+\end{equation*}
+Because $\mathbf{L}$ is a lower-triangular matrix, determination of $\mathbf{d}$ is relatively straightforward via the ``forward-substitution algorithm''. Framed in terms of a generic lower-triangular matrix with entries $\ell_{ij}$, the first three steps are:
+\begin{alignat*}{2}
+\ell_{11}d_1 & ~ &&= b_1 \implies d_1 = \frac{1}{\ell_{11}}b_1\\
+\ell_{21}d_1 & +\ell_{22}d_2  &&= b_2 \implies d_2 = \frac{1}{\ell_{22}}\left(b_2-\ell_{21}d_1\right)\\
+\ell_{31}d_1 & +\ell_{32}d_2+\ell_{33}d_3 &&= b_3 \implies d_3 = \frac{1}{\ell_{33}}\left(b_3-\ell_{31}d_1-\ell_{32}d_2\right)
+\end{alignat*}
+and generally
+\begin{equation*}
+    d_i = \frac{1}{\ell_{ii}}\left(
+    b_i-\sum_{j=1}^{i-1} \ell_{ij}d_j
+    \right).
+\end{equation*}
+We use this to generate $\mathbf{d}$ from the given forcing function $\mathbf{b}$.
+
+## The backward-substitution algorithm
+
+Beginning with Eq.~\eqref{U}, and since $\mathbf{U}$ is an upper-triangular matrix, and since we known $\mathbf{d}$ after going through the forward-substitution algorithm above, we can determine the solution $\mathbf{x}$ via the backward-substitution algorithm. Framed in terms of a generic upper-triangular matrix with entries $u_{ij}$, for a a matrix with $n$ rows, the first three steps are:
+\begin{alignat*}{2}
+u_{nn}x_n &= d_n &&\implies x_n = d_n/u_{nn}\\
+u_{(n-1)(n-1)}x_{n-1} +u_{(n-1)(n)}x_{n}  &= d_{n-1} &&\implies x_{n-1}=\frac{1}{u_{(n-1)(n-1)}}\left(d_{n-1}-u_{(n-1)(n)}x_{n}\right)\\
+u_{(n-2)(n-2)}x_{n-2} +
+u_{(n-2)(n-1)}x_{n-1} +u_{(n-2)(n)}x_{n} &= d_{n-2} &&\implies\\
+&x_{n-2}=&&\frac{1}{u_{(n-2)(n-2)}}\left(d_{n-2}-u_{(n-2)(n-1)}x_{n-1} -u_{(n-2)(n)}x_{n}\right)
+\end{alignat*}
+and generally
+\begin{equation*}
+    x_i = \frac{1}{u_{ii}}\left(
+    d_i-\sum_{j=i+1}^{n} u_{ij}x_j
+    \right).
+\end{equation*}
+This expression is mathematically correct, but it's implementation is tricky: this algorithm must proceed \ul{backwards}: $i=n$, then $i=n-1$, etc.\footnote{Within MATLAB, 5:-1:1 returns 5,4,3,2,1.} We use this to get our solution $\mathbf{x}$.
