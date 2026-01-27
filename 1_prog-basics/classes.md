@@ -21,7 +21,7 @@ For our purposes:
 :::
 :::{note} methods
 :icon: false
-... are . Here, we will calculate $f(x,y)$, $g(x,y)$, $\partial f/\partial x(x,y)$, $\partial f/\partial y(x,y)$, $\partial g/\partial x(x,y)$, and $\partial g/\partial y(x,y)$. Additionally, let's go ahead and create the Jacobian Matrix as an additional method, which notably will call on the other methods!
+... are tasks or functions associated with the class. For example, we could have a method that calculated the area of the circle (based on ```R```). Here, we will calculate $f(x,y)$, $g(x,y)$, $\partial f/\partial x(x,y)$, $\partial f/\partial y(x,y)$, $\partial g/\partial x(x,y)$, and $\partial g/\partial y(x,y)$. Additionally, let's go ahead and create the Jacobian Matrix as an additional method, which notably will call on the other methods!
 :::
 
 ::::{tab-set}
