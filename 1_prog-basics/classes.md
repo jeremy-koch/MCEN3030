@@ -8,7 +8,7 @@ An interesting alternative is to pass one thing called, say, ```F```, that inclu
 
 Let's just dive-in with an example.
 
-We are going to define a class below called ```LineCircle``` that could be used in a [2D Newton-Raphson Method](../3_root-finding/NR-2D.md) problem -- "find where this line intersects this circle". (I made up the name ```LineCircle```, could have called it ```BroccoliRabe``` and everything would be the same.) This set of properties, constructor, and collection of methods could be modified to apply to any system $f(x,y),g(x,y)$, and adding to it would allow us to apply the algorithm to a 3D system: $f(x,y,z),g(x,y,z),h(x,y,z)$ (though, unless we are really thoughtful, it would probably require a different Newton-Raphson code).
+We are going to define a class below called ```LineCircle``` that could be used in a [2D Newton-Raphson Method](../3_root-finding/NR-2D.md) problem -- "find where this line intersects this circle". (I made up the name ```LineCircle```, could have called it ```BroccoliRabe``` and everything would be the same.) The set of properties, constructor, and collection of methods could be modified to apply to any system of two equations, and adding more things to this class would allow us to apply the algorithm to a 3D system (though, unless we are really thoughtful, it would probably require a different Newton-Raphson code).
 
 For our purposes: 
 :::{note} properties
@@ -26,7 +26,7 @@ For our purposes:
 
 ::::{tab-set}
 :::{tab-item} MATLAB
-Note: class definitions in MATLAB must occur in their own file, similar to how we define functions (and the class name must match the file name) OR it can be defined at the bottom of another file (like a local function).
+Note: class definitions in MATLAB must occur in their own file, similar to how we define functions. The class name must match the file name. Alternatively: it can be defined at the bottom of another file (like a local function).
 ```matlab
 classdef LineCircle
     properties
@@ -78,7 +78,7 @@ classdef LineCircle
     end
 end
 ```
-With this class defined (in it's own file called ```LineCircle.m```), we can then create a new variable in this class and can access its properties:
+With this class defined (in it's own file called ```LineCircle.m```), we can then create a new variable in this class based on the properties and can access those properties using an ```F.something```. And, usefully, we can pass ```F``` to a function. That is, we can input ```(F,...)``` instead of ```(f,g,dfdx,dfdy,dgdx,dgdy,...)```.
 ```matlab
 F = LineCircle(1,0,1);
 
@@ -91,19 +91,24 @@ function [A,B]=a_fxn(F,x_0,y_0)
 end
 
 ```
-And, usefully, we can pass ```F``` to a function, and then retrieve its contents with that same ```F.something``` structure. That is, we can input ```(F,...)``` instead of ```(f,g,dfdx,dfdy,dgdx,dgdy,...)```.
+
 :::
 
 
 :::{tab-item} Python
-With Python, we can have the class definition and script within the same file:
+With Python, we can have the class definition and script within the same file. With the class defined, we can create a new variable in the class based on the properties using an ```F.something```. And, usefully, we can pass ```F``` to a function. That is, we can input ```(F,...)``` instead of ```(f,g,dfdx,dfdy,dgdx,dgdy,...)```.
 ```python
 class LineCircle:
     def __init__(self, m_in, b_in, R_in):
+        """
+        The constructor and property definitions. 
+        Must use "self" to refer to itself
+        """
         self.m = m_in
         self.b = b_in
         self.R = R_in
-        
+    
+    # the useful functions:
     def f(self, x, y):
         return self.m * x + self.b - y
         
