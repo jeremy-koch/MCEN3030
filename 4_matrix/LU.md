@@ -19,13 +19,13 @@ Beginning with the general
 \begin{equation*}
 \mathbf{A}\equiv
 \begin{bmatrix}
-a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
-a_{21} & a_{22} & a_{23} & a_{24} & a_{25} & \hdots & a_{2n} \\
-a_{31} & a_{32} & a_{33} & a_{34} & a_{35} & \hdots & a_{3n} \\
-a_{41} & a_{42} & a_{43} & a_{44} & a_{45} & \hdots & a_{4n} \\
-a_{51} & a_{52} & a_{53} & a_{54} & a_{55} & \hdots & a_{5n} \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & a_{n3} & a_{n4} & a_{n5} & \hdots & a_{nn}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
+a_{21} & a_{22} & a_{23} & a_{24} & a_{25} & ... & a_{2n} \\
+a_{31} & a_{32} & a_{33} & a_{34} & a_{35} & ... & a_{3n} \\
+a_{41} & a_{42} & a_{43} & a_{44} & a_{45} & ... & a_{4n} \\
+a_{51} & a_{52} & a_{53} & a_{54} & a_{55} & ... & a_{5n} \\
+... & ... & ... & ... & ... & ... & ...\\
+a_{n1} & a_{n2} & a_{n3} & a_{n4} & a_{n5} & ... & a_{nn}
 \end{bmatrix}
 \end{equation*}
 we perform a series of row operations to make the first column zero (except for the first entry in the column). This can be achieved via
@@ -43,13 +43,13 @@ After proceeding through all $n$ rows, we will have developed an intermediate ma
 \begin{equation*}
 \mathbf{A'}\equiv
 \begin{bmatrix}
-a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
-0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & \hdots & a'_{2n} \\
-0 & a'_{32} & a'_{33} & a'_{34} & a'_{35} & \hdots & a'_{3n} \\
-0 & a'_{42} & a'_{43} & a'_{44} & a'_{45} & \hdots & a'_{4n} \\
-0 & a'_{52} & a'_{53} & a'_{54} & a'_{55} & \hdots & a'_{5n} \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-0 & a'_{n2} & a'_{n3} & a'_{n4} & a'_{n5} & \hdots & a'_{nn}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
+0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & ... & a'_{2n} \\
+0 & a'_{32} & a'_{33} & a'_{34} & a'_{35} & ... & a'_{3n} \\
+0 & a'_{42} & a'_{43} & a'_{44} & a'_{45} & ... & a'_{4n} \\
+0 & a'_{52} & a'_{53} & a'_{54} & a'_{55} & ... & a'_{5n} \\
+... & ... & ... & ... & ... & ... & ...\\
+0 & a'_{n2} & a'_{n3} & a'_{n4} & a'_{n5} & ... & a'_{nn}
 \end{bmatrix}.
 \end{equation*}
 If we proceed similarly with
@@ -61,35 +61,35 @@ we will arrive at
 \begin{equation*}
 \mathbf{A''}\equiv
 \begin{bmatrix}
-a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
-0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & \hdots & a'_{2n} \\
-0 & 0 & a''_{33} & a''_{34} & a''_{35} & \hdots & a''_{3n} \\
-0 & 0 & a''_{43} & a''_{44} & a''_{45} & \hdots & a''_{4n} \\
-0 & 0 & a''_{53} & a''_{54} & a''_{55} & \hdots & a''_{5n} \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-0 & 0 & a''_{n3} & a''_{n4} & a''_{n5} & \hdots & a''_{nn}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
+0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & ... & a'_{2n} \\
+0 & 0 & a''_{33} & a''_{34} & a''_{35} & ... & a''_{3n} \\
+0 & 0 & a''_{43} & a''_{44} & a''_{45} & ... & a''_{4n} \\
+0 & 0 & a''_{53} & a''_{54} & a''_{55} & ... & a''_{5n} \\
+... & ... & ... & ... & ... & ... & ...\\
+0 & 0 & a''_{n3} & a''_{n4} & a''_{n5} & ... & a''_{nn}
 \end{bmatrix}.
 \end{equation*}
 and can continue with this process until we arrive at 
 \begin{equation*}
 \mathbf{U}\equiv\mathbf{A}''''''\phantom{.}^{...}\equiv
 \begin{bmatrix}
-a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & \hdots & a_{1n}\\
-0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & \hdots & a'_{2n} \\
-0 & 0 & a''_{33} & a''_{34} & a''_{35} & \hdots & a''_{3n} \\
-0 & 0 & 0 & a'''_{44} & a'''_{45} & \hdots & a'''_{4n} \\
-0 & 0 & 0 & 0 & a''''_{55} & \hdots & a''''_{5n} \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-0 & 0 & 0 & 0 & 0 & \hdots & a''''''\phantom{.}^{...}_{nn}
+a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
+0 & a'_{22} & a'_{23} & a'_{24} & a'_{25} & ... & a'_{2n} \\
+0 & 0 & a''_{33} & a''_{34} & a''_{35} & ... & a''_{3n} \\
+0 & 0 & 0 & a'''_{44} & a'''_{45} & ... & a'''_{4n} \\
+0 & 0 & 0 & 0 & a''''_{55} & ... & a''''_{5n} \\
+... & ... & ... & ... & ... & ... & ...\\
+0 & 0 & 0 & 0 & 0 & ... & a''''''\phantom{.}^{...}_{nn}
 \end{bmatrix}\equiv
 \begin{bmatrix}
-u_{11} & u_{12} & u_{13} & u_{14} & u_{15} & \hdots & u_{1n}\\
-0 & u_{22} & u_{23} & u_{24} & u_{25} & \hdots & u_{2n} \\
-0 & 0 & u_{33} & u_{34} & u_{35} & \hdots & u_{3n} \\
-0 & 0 & 0 & u_{44} & u_{45} & \hdots & u_{4n} \\
-0 & 0 & 0 & 0 & u_{55} & \hdots & u_{5n} \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-0 & 0 & 0 & 0 & 0 & \hdots & u_{nn}
+u_{11} & u_{12} & u_{13} & u_{14} & u_{15} & ... & u_{1n}\\
+0 & u_{22} & u_{23} & u_{24} & u_{25} & ... & u_{2n} \\
+0 & 0 & u_{33} & u_{34} & u_{35} & ... & u_{3n} \\
+0 & 0 & 0 & u_{44} & u_{45} & ... & u_{4n} \\
+0 & 0 & 0 & 0 & u_{55} & ... & u_{5n} \\
+... & ... & ... & ... & ... & ... & ...\\
+0 & 0 & 0 & 0 & 0 & ... & u_{nn}
 \end{bmatrix}.
 \end{equation*}
 This is the upper-triangular matrix $\mathbf{U}$ that will be useful in the back-substitution algorithm.
@@ -99,13 +99,13 @@ The row operations described above can be made mathematical by a multiplication 
 \begin{equation*}
 \mathbf{L}\equiv
 \begin{bmatrix}
-1 & 0 & 0 & 0 & 0 & \hdots & 0\\
-a_{21}/a_{11} & 1 & 0 & 0 & 0 & \hdots & 0 \\
-a_{31}/a_{11} & a'_{32}/a'_{22} & 1 & 0 & 0 & \hdots & 0 \\
-a_{41}/a_{11} & a'_{42}/a'_{22} & a''_{43}/a''_{33} & 1 & 0 & \hdots & 0 \\
-a_{51}/a_{11} & a'_{52}/a'_{22} & a''_{53}/a''_{33} & a'''_{54}/a'''_{44} & 1 & \hdots & 0 \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
-a_{n1}/a_{11} & a'_{n2}/a'_{22} & a''_{n3}/a''_{33} & a'''_{n4}/a'''_{44} & a''''_{n5}/a''''_{55} & \hdots & 1
+1 & 0 & 0 & 0 & 0 & ... & 0\\
+a_{21}/a_{11} & 1 & 0 & 0 & 0 & ... & 0 \\
+a_{31}/a_{11} & a'_{32}/a'_{22} & 1 & 0 & 0 & ... & 0 \\
+a_{41}/a_{11} & a'_{42}/a'_{22} & a''_{43}/a''_{33} & 1 & 0 & ... & 0 \\
+a_{51}/a_{11} & a'_{52}/a'_{22} & a''_{53}/a''_{33} & a'''_{54}/a'''_{44} & 1 & ... & 0 \\
+... & ... & ... & ... & ... & ... & ...\\
+a_{n1}/a_{11} & a'_{n2}/a'_{22} & a''_{n3}/a''_{33} & a'''_{n4}/a'''_{44} & a''''_{n5}/a''''_{55} & ... & 1
 \end{bmatrix}
 \end{equation*}
 as in, $\mathbf{L}\mathbf{U}=\mathbf{A}$. Note that the lower-triangular entries are the same as the multipliers we used in the algorithm to get $\mathbf{U}$. The creation of $\mathbf{L}$ is practically a by-product of generating $\mathbf{U}$.
