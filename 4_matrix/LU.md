@@ -6,7 +6,7 @@ $$
 $$
 but how do we get the inverse? For small matrices there are formulas available, but computational methods is not about handling small matrices!
 
-The $\mathbf{LU}$ decomposition is essentially a formalized version of Gaussian Elimination -- that technique where you subtract rows from each other until you isolate a single unknown in an equation. This can be used to find a matrix inverse/solve $\mathbf{A}\mathbf{x}=\mathbf{b}$. 
+The $\mathbf{LU}$ decomposition is essentially a formalized version of Gaussian Elimination -- that technique where you subtract rows from each other until you isolate a single unknown in an equation. This can be used to find a matrix inverse, i.e., to solve $\mathbf{A}\mathbf{x}=\mathbf{b}$. 
 
 MATLAB/NumPy/Julia use $\mathbf{LU}$ in their calculation of the matrix inverse. We will build-up a similar functionality, without leaning on the built-in version. Row operations!
 
@@ -25,10 +25,6 @@ where $n\times n$ matrix $\mathbf{A}$ and forcing function $\mathbf{b}$ are know
 \end{equation}
 where $\mathbf{U}$ is an upper-triangular matrix and $\mathbf{d}$ is related to the forcing function. With an upper-triangular matrix, the back-substitution algorithm quickly reveals the solution.
 
-
-% The vector $\mathbf{d}$ \textit{could} be determined by having $\mathbf{b}$ participate in the row operations via and augmented matrix $\mathbf{A}|\mathbf{b}$). We will take another approach: Suppose there is a matrix $\mathbf{L}$ such that $\mathbf{L}\mathbf{U}=\mathbf{A}$. Then 
-
-% Instead, we will calculate $\mathbf{d}$ once we have 
 
 ## LU decomposition
 ### Upper-triangular matrix $\mathbf{U}$ 
@@ -165,4 +161,4 @@ and generally
     d_i-\sum_{j=i+1}^{n} u_{ij}x_j
     \right).
 \end{equation*}
-This expression is mathematically correct, but it's implementation is tricky: this algorithm must proceed \ul{backwards}: $i=n$, then $i=n-1$, etc.
+This expression is mathematically correct, but it's implementation is tricky: this algorithm must proceed backwards: $i=n$, then $i=n-1$, etc.
