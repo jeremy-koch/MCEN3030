@@ -40,9 +40,10 @@
 :::{note}  Week 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26-30 Jan 
 :icon: false
 - Tuesday 27 Jan:
-    - 2D Newton-Raphson
+    - [The 2D Newton-Raphson Method](../3_root-finding/NR-2D.md)
 - Thursday 29 Jan:
-    - LU Decomposition
+    - [LU Decomposition](../4_matrix/LU.md)
+    - [A note on the matrix inverse](../4_matrix/inverse.md)
 :::
 
 
