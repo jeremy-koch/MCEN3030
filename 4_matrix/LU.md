@@ -6,7 +6,9 @@ $$
 $$
 but how do we get the inverse? For small matrices there are formulas available, but computational methods is not about handling small matrices!
 
-The $\mathbf{LU}$ decomposition is essentially a formalized version of Gaussian Elimination -- that technique where you subtract rows from each other until you isolate a single unknown in an equation. This can be used to find a matrix inverse/solve $\mathbf{A}\mathbf{x}=\mathbf{b}$. MATLAB/NumPy/Julia use $\mathbf{LU}$ -- I'll go ahead and give you the code that you could use to check your work, but we are going to construct the algorithm ourselves based on row operations.
+The $\mathbf{LU}$ decomposition is essentially a formalized version of Gaussian Elimination -- that technique where you subtract rows from each other until you isolate a single unknown in an equation. This can be used to find a matrix inverse/solve $\mathbf{A}\mathbf{x}=\mathbf{b}$. 
+
+MATLAB/NumPy/Julia use $\mathbf{LU}$ in their calculation of the matrix inverse. We will build-up a similar functionality, without leaning on the built-in version. Row operations!
 
 
 
@@ -27,12 +29,17 @@ a_{n1} & a_{n2} & a_{n3} & a_{n4} & a_{n5} & \hdots & a_{nn}
 \end{bmatrix}
 \end{equation*}
 we perform a series of row operations to make the first column zero (except for the first entry in the column). This can be achieved via
-\begin{alignat*}{2}
+\begin{equation*}
     (\text{second row})&\rightarrow (\text{second row})-&&\frac{a_{21}}{a_{11}}(\text{first row})\\
     (\text{third row})&\rightarrow (\text{third row})-&&\frac{a_{31}}{a_{11}}(\text{first row})\\
     (\text{fourth row})&\rightarrow (\text{fourth row})-&&\frac{a_{41}}{a_{11}}(\text{first row})
-\end{alignat*}
-where the $\rightarrow$ can be interpreted as ``becomes''.\footnote{What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not worry about it in this class.} After proceeding through all $n$ rows, we will have developed an intermediate matrix\footnote{Note the $'$ notation conflicts with MATLAB's implementation of the transpose -- this is not a transpose.}
+\end{equation*}
+where the $\rightarrow$ can be interpreted as "becomes".
+:::{aside}
+What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not worry about it in this class.
+:::
+
+After proceeding through all $n$ rows, we will have developed an intermediate matrix
 \begin{equation*}
 \mathbf{A'}\equiv
 \begin{bmatrix}
