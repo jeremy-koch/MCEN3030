@@ -51,7 +51,7 @@ we perform a series of row operations to make the first column zero (except for 
     (\text{third row})&\rightarrow (\text{third row})-&&\frac{a_{31}}{a_{11}}(\text{first row})\\
     (\text{fourth row})&\rightarrow (\text{fourth row})-&&\frac{a_{41}}{a_{11}}(\text{first row})
 \end{alignat*}
-where the $\rightarrow$ can be interpreted as ``becomes''.
+where the $\rightarrow$ can be interpreted as "becomes".
 :::{caution}
 What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not really worry about it in this class.
 :::
@@ -109,7 +109,7 @@ u_{11} & u_{12} & u_{13} & u_{14} & u_{15} & ... & u_{1n}\\
 0 & 0 & 0 & 0 & 0 & ... & u_{nn}
 \end{bmatrix}.
 \end{equation*}
-This is the upper-triangular matrix $\mathbf{U}$ that will be useful in the back-substitution algorithm.
+(You maybe will need to scroll right to see all that equation!) This is the upper-triangular matrix $\mathbf{U}$ that will be useful in the back-substitution algorithm.
 
 ### Lower-triangular matrix $\mathbf{L}$
 The row operations described above can be made mathematical by a multiplication by
@@ -127,8 +127,8 @@ a_{n1}/a_{11} & a'_{n2}/a'_{22} & a''_{n3}/a''_{33} & a'''_{n4}/a'''_{44} & a'''
 \end{equation*}
 as in, $\mathbf{L}\mathbf{U}=\mathbf{A}$. Note that the lower-triangular entries are the same as the multipliers we used in the algorithm to get $\mathbf{U}$. The creation of $\mathbf{L}$ is practically a by-product of generating $\mathbf{U}$.
 
-## The Forward-Substitution Algorithm}
-Beginning with Eq.~\eqref{U}, we multiply both sides by $\mathbf{L}$ to obtain
+## The Forward-Substitution Algorithm
+Beginning with $\mathbf{Ux}=\mathbf{d}$, we multiply both sides by $\mathbf{L}$ to obtain
 \begin{equation*}
     \mathbf{L}\mathbf{U}\mathbf{x} = \mathbf{L}\mathbf{d}.
 \end{equation*}
@@ -136,7 +136,7 @@ Since $\mathbf{L}\mathbf{U}=\mathbf{A}$, this reveals that
 \begin{equation*}
     \mathbf{L}\mathbf{d}=\mathbf{b}.
 \end{equation*}
-Because $\mathbf{L}$ is a lower-triangular matrix, determination of $\mathbf{d}$ is relatively straightforward via the ``forward-substitution algorithm''. Framed in terms of a generic lower-triangular matrix with entries $\ell_{ij}$, the first three steps are:
+Because $\mathbf{L}$ is a lower-triangular matrix, determination of $\mathbf{d}$ is relatively straightforward via the Forward-Substitution Algorithm. Framed in terms of a generic lower-triangular matrix with entries $\ell_{ij}$, the first three steps are:
 \begin{alignat*}{2}
 \ell_{11}d_1 & ~ &&= b_1 \implies d_1 = \frac{1}{\ell_{11}}b_1\\
 \ell_{21}d_1 & +\ell_{22}d_2  &&= b_2 \implies d_2 = \frac{1}{\ell_{22}}\left(b_2-\ell_{21}d_1\right)\\
@@ -151,7 +151,7 @@ and generally
 We use this to generate $\mathbf{d}$ from the given forcing function $\mathbf{b}$.
 
 ## The Backward-Substitution Algorithm
-Beginning with Eq.~\eqref{U}, and since $\mathbf{U}$ is an upper-triangular matrix, and since we known $\mathbf{d}$ after going through the forward-substitution algorithm above, we can determine the solution $\mathbf{x}$ via the backward-substitution algorithm. Framed in terms of a generic upper-triangular matrix with entries $u_{ij}$, for a a matrix with $n$ rows, the first three steps are:
+Beginning with $\mathbf{Ux}=\mathbf{d}$, and since $\mathbf{U}$ is an upper-triangular matrix, and since we known $\mathbf{d}$ after going through the forward-substitution algorithm above, we can determine the solution $\mathbf{x}$ via the backward-substitution algorithm. Framed in terms of a generic upper-triangular matrix with entries $u_{ij}$, for a a matrix with $n$ rows, the first three steps are:
 \begin{alignat*}{2}
 u_{nn}x_n &= d_n &&\implies x_n = d_n/u_{nn}\\
 u_{(n-1)(n-1)}x_{n-1} +u_{(n-1)(n)}x_{n}  &= d_{n-1} &&\implies x_{n-1}=\frac{1}{u_{(n-1)(n-1)}}\left(d_{n-1}-u_{(n-1)(n)}x_{n}\right)\\
