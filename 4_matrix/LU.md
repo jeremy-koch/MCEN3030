@@ -14,7 +14,24 @@ MATLAB/NumPy/Julia use $\mathbf{LU}$ in their calculation of the matrix inverse.
 
 ## LU decomposition
 
-### Upper-triangular matrix $\mathbf{U}$
+### Summary
+We seek the solution $\mathbf{x}$ to 
+\begin{equation}\label{A}
+    \mathbf{A}\mathbf{x} = \mathbf{b}
+\end{equation}
+where $n\times n$ matrix $\mathbf{A}$ and forcing function $\mathbf{b}$ are known. Our goal is to use row operations to obtain
+\begin{equation}\label{U}
+    \mathbf{U}\mathbf{x} = \mathbf{d}
+\end{equation}
+where $\mathbf{U}$ is an upper-triangular matrix and $\mathbf{d}$ is related to the forcing function. With an upper-triangular matrix, the back-substitution algorithm quickly reveals the solution.
+
+
+% The vector $\mathbf{d}$ \textit{could} be determined by having $\mathbf{b}$ participate in the row operations via and augmented matrix $\mathbf{A}|\mathbf{b}$). We will take another approach: Suppose there is a matrix $\mathbf{L}$ such that $\mathbf{L}\mathbf{U}=\mathbf{A}$. Then 
+
+% Instead, we will calculate $\mathbf{d}$ once we have 
+
+## LU decomposition
+### Upper-triangular matrix $\mathbf{U}$ 
 Beginning with the general
 \begin{equation*}
 \mathbf{A}\equiv
@@ -24,19 +41,19 @@ a_{21} & a_{22} & a_{23} & a_{24} & a_{25} & ... & a_{2n} \\
 a_{31} & a_{32} & a_{33} & a_{34} & a_{35} & ... & a_{3n} \\
 a_{41} & a_{42} & a_{43} & a_{44} & a_{45} & ... & a_{4n} \\
 a_{51} & a_{52} & a_{53} & a_{54} & a_{55} & ... & a_{5n} \\
-... & ... & ... & ... & ... & ... & ...\\
+⋮ & ⋮ & ⋮ & ⋮ & ⋮ & ⋱ & ⋮\\
 a_{n1} & a_{n2} & a_{n3} & a_{n4} & a_{n5} & ... & a_{nn}
 \end{bmatrix}
 \end{equation*}
 we perform a series of row operations to make the first column zero (except for the first entry in the column). This can be achieved via
-\begin{equation*}
+\begin{alignat*}{2}
     (\text{second row})&\rightarrow (\text{second row})-&&\frac{a_{21}}{a_{11}}(\text{first row})\\
     (\text{third row})&\rightarrow (\text{third row})-&&\frac{a_{31}}{a_{11}}(\text{first row})\\
     (\text{fourth row})&\rightarrow (\text{fourth row})-&&\frac{a_{41}}{a_{11}}(\text{first row})
-\end{equation*}
-where the $\rightarrow$ can be interpreted as "becomes".
-:::{aside}
-What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not worry about it in this class.
+\end{alignat*}
+where the $\rightarrow$ can be interpreted as ``becomes''.
+:::{caution}
+What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not really worry about it in this class.
 :::
 
 After proceeding through all $n$ rows, we will have developed an intermediate matrix
@@ -48,7 +65,7 @@ a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
 0 & a'_{32} & a'_{33} & a'_{34} & a'_{35} & ... & a'_{3n} \\
 0 & a'_{42} & a'_{43} & a'_{44} & a'_{45} & ... & a'_{4n} \\
 0 & a'_{52} & a'_{53} & a'_{54} & a'_{55} & ... & a'_{5n} \\
-... & ... & ... & ... & ... & ... & ...\\
+⋮ & ⋮ & ⋮ & ⋮ & ⋮ & ⋱ & ⋮\\
 0 & a'_{n2} & a'_{n3} & a'_{n4} & a'_{n5} & ... & a'_{nn}
 \end{bmatrix}.
 \end{equation*}
@@ -66,7 +83,7 @@ a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
 0 & 0 & a''_{33} & a''_{34} & a''_{35} & ... & a''_{3n} \\
 0 & 0 & a''_{43} & a''_{44} & a''_{45} & ... & a''_{4n} \\
 0 & 0 & a''_{53} & a''_{54} & a''_{55} & ... & a''_{5n} \\
-... & ... & ... & ... & ... & ... & ...\\
+⋮ & ⋮ & ⋮ & ⋮ & ⋮ & ⋱ & ⋮\\
 0 & 0 & a''_{n3} & a''_{n4} & a''_{n5} & ... & a''_{nn}
 \end{bmatrix}.
 \end{equation*}
@@ -79,7 +96,7 @@ a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & ... & a_{1n}\\
 0 & 0 & a''_{33} & a''_{34} & a''_{35} & ... & a''_{3n} \\
 0 & 0 & 0 & a'''_{44} & a'''_{45} & ... & a'''_{4n} \\
 0 & 0 & 0 & 0 & a''''_{55} & ... & a''''_{5n} \\
-... & ... & ... & ... & ... & ... & ...\\
+⋮ & ⋮ & ⋮ & ⋮ & ⋮ & ⋱ & ⋮\\
 0 & 0 & 0 & 0 & 0 & ... & a''''''\phantom{.}^{...}_{nn}
 \end{bmatrix}\equiv
 \begin{bmatrix}
@@ -88,7 +105,7 @@ u_{11} & u_{12} & u_{13} & u_{14} & u_{15} & ... & u_{1n}\\
 0 & 0 & u_{33} & u_{34} & u_{35} & ... & u_{3n} \\
 0 & 0 & 0 & u_{44} & u_{45} & ... & u_{4n} \\
 0 & 0 & 0 & 0 & u_{55} & ... & u_{5n} \\
-... & ... & ... & ... & ... & ... & ...\\
+⋮ & ⋮ & ⋮ & ⋮ & ⋮ & ⋱ & ⋮\\
 0 & 0 & 0 & 0 & 0 & ... & u_{nn}
 \end{bmatrix}.
 \end{equation*}
@@ -104,20 +121,13 @@ a_{21}/a_{11} & 1 & 0 & 0 & 0 & ... & 0 \\
 a_{31}/a_{11} & a'_{32}/a'_{22} & 1 & 0 & 0 & ... & 0 \\
 a_{41}/a_{11} & a'_{42}/a'_{22} & a''_{43}/a''_{33} & 1 & 0 & ... & 0 \\
 a_{51}/a_{11} & a'_{52}/a'_{22} & a''_{53}/a''_{33} & a'''_{54}/a'''_{44} & 1 & ... & 0 \\
-... & ... & ... & ... & ... & ... & ...\\
+⋮ & ⋮ & ⋮ & ⋮ & ⋮ & ⋱ & ⋮\\
 a_{n1}/a_{11} & a'_{n2}/a'_{22} & a''_{n3}/a''_{33} & a'''_{n4}/a'''_{44} & a''''_{n5}/a''''_{55} & ... & 1
 \end{bmatrix}
 \end{equation*}
 as in, $\mathbf{L}\mathbf{U}=\mathbf{A}$. Note that the lower-triangular entries are the same as the multipliers we used in the algorithm to get $\mathbf{U}$. The creation of $\mathbf{L}$ is practically a by-product of generating $\mathbf{U}$.
 
-
-
-
-
-
-
-## The Forward Substitution Algorithm
-
+## The Forward-Substitution Algorithm}
 Beginning with Eq.~\eqref{U}, we multiply both sides by $\mathbf{L}$ to obtain
 \begin{equation*}
     \mathbf{L}\mathbf{U}\mathbf{x} = \mathbf{L}\mathbf{d}.
@@ -140,8 +150,7 @@ and generally
 \end{equation*}
 We use this to generate $\mathbf{d}$ from the given forcing function $\mathbf{b}$.
 
-## The backward-substitution algorithm
-
+## The Backward-Substitution Algorithm
 Beginning with Eq.~\eqref{U}, and since $\mathbf{U}$ is an upper-triangular matrix, and since we known $\mathbf{d}$ after going through the forward-substitution algorithm above, we can determine the solution $\mathbf{x}$ via the backward-substitution algorithm. Framed in terms of a generic upper-triangular matrix with entries $u_{ij}$, for a a matrix with $n$ rows, the first three steps are:
 \begin{alignat*}{2}
 u_{nn}x_n &= d_n &&\implies x_n = d_n/u_{nn}\\
@@ -156,4 +165,4 @@ and generally
     d_i-\sum_{j=i+1}^{n} u_{ij}x_j
     \right).
 \end{equation*}
-This expression is mathematically correct, but it's implementation is tricky: this algorithm must proceed \ul{backwards}: $i=n$, then $i=n-1$, etc.\footnote{Within MATLAB, 5:-1:1 returns 5,4,3,2,1.} We use this to get our solution $\mathbf{x}$.
+This expression is mathematically correct, but it's implementation is tricky: this algorithm must proceed \ul{backwards}: $i=n$, then $i=n-1$, etc.
