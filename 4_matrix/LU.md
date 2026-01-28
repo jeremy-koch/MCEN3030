@@ -49,7 +49,7 @@ we perform a series of row operations to make the first column zero (except for 
 \end{alignat*}
 where the $\rightarrow$ can be interpreted as "becomes".
 :::{caution}
-What happens if $a_{11}=0$, even approximately (e.g., 0.000000017)? We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not really worry about it in this class.
+What happens if $a_{11}=0$? The coefficient blows up! We need to rearrange the rows such that this is not the case. This is called pivoting, and we will not really worry about it in this class.
 :::
 
 After proceeding through all $n$ rows, we will have developed an intermediate matrix
