@@ -46,6 +46,8 @@ project:
       - title: Matrix Methods
         children:
           - file: 4_matrix/LU.md
+          - file: 4_matrix/LU_starter.md
+            hidden: true
           - file: 4_matrix/inverse.md
       - title: Optimization
         children:
