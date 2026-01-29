@@ -117,8 +117,8 @@ d=zeros(size(b));
 
 % Use a for loop that counts from i=1 to n.
 % Within that loop, you will need to calculate a new sum each time.
-% I recommend re-initializing a variable called S each time, at zero,
-% and then computing the sum with another for loop.
+% I recommend re-initializing a variable called S, at zero,
+% and then computing the sum with a second for loop.
 
 end
 ```
@@ -141,8 +141,8 @@ def forward_sub(L, b):
 
     # Use a for loop that counts from i=1 to n.
     # Within that loop, you will need to calculate a new sum each time.
-    # I recommend re-initializing a variable called S each time, at zero,
-    # and then computing the sum with another for loop.
+    # I recommend re-initializing a variable called S, at zero,
+    # and then computing the sum with a second for loop.
     
     return d
 ```
@@ -163,8 +163,8 @@ function forward_sub(L, b)
 
     # Use a for loop that counts from i=1 to n.
     # Within that loop, you will need to calculate a new sum each time.
-    # I recommend re-initializing a variable called S each time, at zero,
-    # and then computing the sum with another for loop.
+    # I recommend re-initializing a variable called S, at zero,
+    # and then computing the sum with a second for loop.
 
     return d
 end
@@ -191,8 +191,8 @@ x=zeros(size(d));
 
 % Use a for loop that counts backwards from i=n to 1.
 % Within that loop, you will need to calculate a new sum each time.
-% I recommend re-initializing a variable called S each time, at zero,
-% and then computing the sum with another for loop.
+% I recommend re-initializing a variable called S, at zero,
+% and then computing the sum with a second for loop.
 
 end
 ```
@@ -215,8 +215,8 @@ def back_sub(U, d):
 
     # Use a for loop that counts backwards from i=n to 1.
     # Within that loop, you will need to calculate a new sum each time.
-    # I recommend re-initializing a variable called S each time, at zero,
-    # and then computing the sum with another for loop.
+    # I recommend re-initializing a variable called S, at zero,
+    # and then computing the sum with a second for loop.
 
     return x
 ```
@@ -237,8 +237,8 @@ function back_sub(U, d)
 
     # Use a for loop that counts backwards from i=n to 1.
     # Within that loop, you will need to calculate a new sum each time.
-    # I recommend re-initializing a variable called S each time, at zero,
-    # and then computing the sum with another for loop.
+    # I recommend re-initializing a variable called S, at zero,
+    # and then computing the sum with a second for loop.
 
     return x
 end
