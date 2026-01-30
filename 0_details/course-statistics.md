@@ -29,9 +29,14 @@ Added (1) for those interested, (2) as examples of (hopefully) well-prepared plo
 :width: 100%
 :align: center
 ```
-Average is 68.5 (or 73.0 if we discard the somewhat-optional Taylor Series video). So, around 50% of students are watching the videos. 
+Looking better!
 
-Further, taking the Newton-Raphson video as an example: The following plot describes the percentage of students ($y$-axis) who watched at least $x$% of the video ($x$-axis). 
+
+
+
+Leaving this for now...
+
+Taking the Newton-Raphson video as an example: The following plot describes the percentage of students ($y$-axis) who watched at least $x$% of the video ($x$-axis). 
 ```{figure} cumulative.png
 :alt: 
 :width: 100%

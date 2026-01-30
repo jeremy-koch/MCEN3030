@@ -41,6 +41,8 @@
 :icon: false
 - Tuesday 27 Jan:
     - [The 2D Newton-Raphson Method](../3_root-finding/NR-2D.md)
+    - [Cramer's Rule](../2_foundations/Cramer.md)
+    - [Classes](../1_prog-basics/classes.md)
 - Thursday 29 Jan:
     - [LU Decomposition](../4_matrix/LU.md)
     - [A note on the matrix inverse](../4_matrix/inverse.md)
