@@ -41,10 +41,12 @@
 :icon: false
 - Tuesday 27 Jan:
     - [The 2D Newton-Raphson Method](../3_root-finding/NR-2D.md)
+    (Video on Canvas)
     - [Cramer's Rule](../2_foundations/Cramer.md)
     - [Classes](../1_prog-basics/classes.md)
 - Thursday 29 Jan:
-    - [LU Decomposition](../4_matrix/LU.md)
+    - [The LU Decomposition](../4_matrix/LU.md)
+    (Video on Canvas)
     - [A note on the matrix inverse](../4_matrix/inverse.md)
 :::
 
@@ -55,9 +57,11 @@
 :::{note}  Week 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 - 6 Feb
 :icon: false
 - Tuesday 3 Feb:
-    - TBD
+    - [The EigenValue Decomposition](../4_matrix/evd.md)
+    (Video on Canvas)
+    - [The Singular-Value Decomposition](../4_matrix/svd.md)
 - Thursday 5 Feb:
-    - TBD
+    - Midterm Practice/Status Check
 - **Friday, 6 Feb: homework due**
 :::
 
