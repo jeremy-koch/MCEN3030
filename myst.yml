@@ -49,6 +49,8 @@ project:
           - file: 4_matrix/LU_starter.md
             hidden: true
           - file: 4_matrix/inverse.md
+          - file: 4_matrix/evd.md
+          - file: 4_matrix/svd.md
       - title: Optimization
         children:
           # - file: 4_optimization/opt-intro.md
