@@ -120,6 +120,6 @@ Take a look at your low-rank approximation. For our purposes, we are trying to m
 
 
 :::{tab-item} Julia
-```plo``` then ```display```
+```plot``` then ```display```
 :::
 ::::
