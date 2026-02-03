@@ -6,7 +6,7 @@ $$
     \mathbf{A} = \mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^T.
 $$
 
-This is the "singular-value decomposition", SVD. We will do an in-class problem on this on Tuesday, bring a computer and an image. I'll add the link here.
+This is the "singular-value decomposition", SVD. We will do an in-class problem on this on Tuesday, bring a computer and an image. [Here is the link](svd_problem.md).
 
 
 ## How to do the SVD in MATLAB/Python/Julia
