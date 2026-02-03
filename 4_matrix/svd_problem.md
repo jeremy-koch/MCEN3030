@@ -94,7 +94,7 @@ Here's one: ```S(1:k,1:k)```
 
 
 :::{tab-item} Python
-Here's one: ```S_compressed = np.diag(s[:k])```
+Here's one, if you've got the original S matrix created: ```S_compressed = S[0:k,0:k]```
 :::
 
 
