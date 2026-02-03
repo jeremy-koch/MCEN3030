@@ -80,7 +80,7 @@ M_reconstructed = U * Diagonal(S_vals) * Vt
 ::::
 
 :::{note}
-The matrix $\mathbf{U}$ is an $m\times m$ orthogonal matrix, $\mathbf{V}$ is an $n\times n$ orthogonal matrix, and $\boldsymbol{\Sigma}$ is an $m\times n$ diagonal matrix, with positive values on the diagonal, decreasing in size: $s_1\geq s_2 \geq s_3 \geq ... \geq 0$. The number of singular values in this matrix is the lesser of $m$ and $n$, and for a square matrix, these values are the matrix's eigenvalues squared.
+The matrix $\mathbf{U}$ is an $m\times m$ orthogonal matrix, $\mathbf{V}$ is an $n\times n$ orthogonal matrix, and $\boldsymbol{\Sigma}$ is an $m\times n$ diagonal matrix, with positive values on the diagonal, decreasing in size: $s_1\geq s_2 \geq s_3 \geq ... \geq 0$. The number of singular values in this matrix is the lesser of $m$ and $n$. For a square matrix, the singular values are the matrix's eigenvalues squared.
 :::
 
 
