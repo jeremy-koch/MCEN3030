@@ -27,6 +27,8 @@ project:
           # - file: 1_prog-basics/explore-some-tasks.md
           - file: 1_prog-basics/github.md
           - file: 1_prog-basics/classes.md
+          - file: 1_prog-basics/notebooks.md
+            hidden: true
       - title: Some Foundational Concepts
         children:
           # - file: 2_foundations/floats.md
@@ -51,6 +53,8 @@ project:
           - file: 4_matrix/inverse.md
           - file: 4_matrix/evd.md
           - file: 4_matrix/svd.md
+          - file: 4_matrix/svd_problem.md
+            hidden: true
       - title: Optimization
         children:
           # - file: 4_optimization/opt-intro.md
