@@ -50,7 +50,11 @@ M = np.array([
 # Python returns V already transposed (Vh = V^H)
 U, S_vals, Vh = np.linalg.svd(M)
 
-M_reconstructed = np.dot(U * S_vals, Vh)
+# To get S_vals into a matrix
+S=np.zeros(M.shape)
+np.fill_diagon(S,S_vals)
+
+M_reconstructed = U @ S @ V
 ```
 :::
 
