@@ -97,17 +97,17 @@ $$
 \mathbf{Z}^T\mathbf{Z}\mathbf{A} = \mathbf{Z}^T\mathbf{Y}. 
 $$
 
-noting that $\mathbf{Z}$ and $\mathbf{Y}$ are known from our experimental data and model choice, the unknown in this equation is $\mathbf{A}$ -- that is, solving this, using matrix techniques, will yield the best fits for $(a,b,c,d)$ (for this model).
+Noting that $\mathbf{Z}$ and $\mathbf{Y}$ are known from our experimental data and model choice, the unknown in this equation is $\mathbf{A}$ -- that is, solving this equation, using matrix techniques, will yield the best fits for $(a,b,c,d)$ (for this model).
 
 
 ## The algorithm
 
 1. Pick a model. If it is a linear model, proceed with the following.
-2. Use the model and your experimental data to build $\mathbf{Z}$. (Also, your experimental data outputs should be collected in a column vector $\mathbf{Y}$.)
-3. Determine the best fits to that model via $\mathbf{A} = (\mathbf{Z}^T\mathbf{Z})^{-1}\mathbf{Z}^T\mathbf{Y}. 
-4. (Optional) Plot the data and the model fits and judge if it was a good model selection. If it doesn't look good, find a different model -- maybe one with an extra variable in it, or a different combination of variables, or maybe a nonlinear model.
+2. Use the experimental data to build $\mathbf{Z}$ (specific to the model). Also, your experimental data outputs should be collected in a column vector $\mathbf{Y}$.
+3. Determine the best fits to that model via $\mathbf{A} = (\mathbf{Z}^T\mathbf{Z})^{-1}\mathbf{Z}^T\mathbf{Y}$. 
+4. (Recommended) Plot the data and the model fits and judge if it was a good model selection. If it doesn't look good, find a different model -- maybe one with an extra variable in it, or a different combination of variables, or maybe a nonlinear model.
 
 
 ## Next steps
 
-We will talk about nonlinear models. The vocabulary is quite similar, but our $\mathbf{Z}$ matrix in that case is going to be filled with partial derivatives and we are going to need to use an iterative process
+We will talk about nonlinear models. The vocabulary is quite similar, but our $\mathbf{Z}$ matrix in that case is going to be filled with partial derivatives and we are going to need to use an iterative process.

@@ -55,7 +55,7 @@ project:
           - file: 4_matrix/svd.md
           - file: 4_matrix/svd_problem.md
             hidden: true
-        - title: Model Fitting
+      - title: Model Fitting
         children:
           - file: 5_fitting/linear.md
           - file: 5_fitting/nonlinear.md
