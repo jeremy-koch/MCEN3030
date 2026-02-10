@@ -71,9 +71,10 @@
 :::{note}  Week 5: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-13 Feb
 :icon: false
 - Tuesday 10 Feb:
-    - Linear fitting
-    - The meaning of R^2
+    - [Linear fitting](../5_fitting/linear.md)
+    (Video on Canvas)
 - Thursday 12 Feb:
+    - The meaning of R^2
     - Nonlinear fitting
 :::
 

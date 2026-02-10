@@ -12,15 +12,19 @@ mx-y+b=0\\
 x^2+y^2-R^2=0
 $$
 and call that first equation $f(x,y)=0$ and the second $g(x,y)=0$. So it is like a simultaneous root-finding problem. The [Taylor Series idea](../2_foundations/Taylor-Series.md) can be extrapolated to 2+ dimensions based on a reference location $(x_0,y_0)$. Examining the linearized versions of general $f$ and $g$:
+
 $$
 f(x,y)\approx f(x_0,y_0) + \frac{\partial f}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial f}{\partial y}\bigg\rvert_0 (y-y_0)\\
 g(x,y)\approx g(x_0,y_0) + \frac{\partial g}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial g}{\partial y}\bigg\rvert_0 (y-y_0)
 $$
+
 where, e.g., $\partial f/\partial y\rvert_0$ is evaluated at $(x_0,y_0)$. Similar to in the 1D case, we can set $f(x,y)=0$ and $g(x,y)=0$ and rearrange to:
+
 $$
 \frac{\partial f}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial f}{\partial y}\bigg\rvert_0 (y-y_0) = -f(x_0,y_0)\\
 \frac{\partial g}{\partial x}\bigg\rvert_0 (x-x_0) + \frac{\partial g}{\partial y}\bigg\rvert_0 (y-y_0)= -g(x_0,y_0)
 $$
+
 and can then reframe this as a matrix system, defining $\Delta x\equiv x-x_0$ and $\Delta y=y-y_0$:
 \begin{equation}
 \begin{bmatrix}
