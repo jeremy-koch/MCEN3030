@@ -70,7 +70,7 @@ We are hinting at a truth: if there is uncertainty in the data there is uncertai
 
 You might notice that there is a correlation between $x_1$ and $x_2$, namely $x_1\approx x_2$. So... what if we just ditched the $x_2$ variable and tried a model like $\hat{y}=a_0+a_1 x_1$? I find $a_0=0.21$ and $a_1=1.97$, with $R^2=0.9975$, for the first data set; and $a_0=0.09$ and $a_1=2.03$, with $R^2=0.9976$ for the second. Still a bit of a difference between the two fits, but much less. The takeaway is: when the input variables are correlated, the fitted parameter values have a high level of uncertainty.
 :::{aside}
-If $x_2=x_1$, we could rewrite the original model as $\hat{y}=a_0+(a_1+a_2) x_1$ = a_0 + b_1 x_1$ and then fit $a_0$ and $b_1$.
+If $x_2=x_1$, we could rewrite the original model as $\hat{y}=a_0+(a_1+a_2) x_1 = a_0 + b_1 x_1$ and then fit $a_0$ and $b_1$.
 :::
 
 ## Mathematical Definition of VIF
