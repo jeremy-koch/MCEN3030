@@ -85,7 +85,7 @@ where $R_n^2$ is the R-squared value when we try to predict the $n$-th variable 
 
 What does that mean? As an example, we would carry out an analysis to fit $x_4 = c_0 + c_1 x_1 + c_2 x_2 + c_3 x_3 + c_5 x^5$. We are essentially investigating if $x_4$ is a function of the other four input variables (NOT $y$, just the input variables). Then we calculate the $R^2$ value for that modeling effort, and then use that to calculate $\text{VIF}_4$. If $R^2$ is large, it implies that $x_4$ is well-predicted by the other variables in the model -- that is, we don't really have $x_4$ as an independent variable in the data set, it is predicted by the other variables in the problem. According to the above equation, $\text{VIF}_4$ will have a large value as well.
 :::{note}
-Why use VIF instead of $R^2$? It is closely aligned with the amount of statistical variance in the model fit, but let's not get too deep into that!
+Why use VIF instead of $R^2$? It is closely aligned with the amount of statistical variance in the model parameters, but let's not get too deep into that!
 :::
 
 If any $\text{VIF}_n$ value is "large" (and the definition of "large" depends on the context), it is common practice to just eliminate that variable from the ensuing modeling analysis. It is common to say 10 is "large": this implies the associated $R_n^2=0.90$. If $\text{VIF}_4 > 10$, we might consider dropping variable $x_4$ from our linear model and proceed with $y(x_1,x_2,x_3,x_5)$. (One should probably rerun the VIF analysis with this pared-down data set to confirm the remaining variables are not correlated.)

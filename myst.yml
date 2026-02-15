@@ -60,7 +60,6 @@ project:
           - file: 5_fitting/linear.md
           - file: 5_fitting/nonlinear.md
           - file: 5_fitting/meaningR2.md
-            hidden: true
           - file: 5_fitting/anscomb.md
           - file: 5_fitting/vif.md
       - title: Optimization
