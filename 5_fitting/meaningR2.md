@@ -27,15 +27,19 @@ What constitutes a "good" value of $R^2$ depends very much on the field of study
 
 Meanwhile, in a careful mechanics experiment in the lab... we'd probably expect an $R^2=0.90$ or so. A well-controlled experiment will have eliminated variables that are difficult to control or quantify and thus will have tight error bars. Hopefully the model that we use will describe the data really well, and so $R^2$ should be close to 1.
 
+A common interpretation is that $1-R^2$ should be a measure of the random noise in the data set, and some data sets are just noisier than others. We'll see an example below, though, where it is not noise in the model...
+
 ### Overfitting
 
-Additionally, we always get a "better" $R^2$ value when we add additional parameters to the model. I'll give a cartoonish example: Let's say we have collected some experimental data on the value of $g$ (the acceleration due to gravity) as a function of the oscillation frequency of a pendulum. What should it be? Flat: $g=9.81$ m/s$^2$. But suppose there was a bit of a wobble in the data due to experimental error... call Alfred Nobel! We're going to be famous!
+Additionally, we always get a "better" $R^2$ value when we add additional parameters to the model. I'll give a cartoonish example: Let's say we have collected some experimental data on the value of $g$ (the acceleration due to gravity) as a function of the oscillation frequency of a pendulum. What should it be? Flat: $g=9.81$ m/s$^2$. But suppose there was a bit of a wobble in the data due to experimental error.
 
 A model like $g(\omega) = a+b(\omega-c)^2$ might indeed be a "better fit" to the given data, because we have introduced additional parameters $b$ and $c$ that could capture that wobble. But it is nonsense... $g$ should be constant. We would call this "overfitting" or "fitting the error".
 :::{seealso}
 John von Neumann has a [famous quote](https://en.wikipedia.org/wiki/Von_Neumann%27s_elephant): "With four parameters I can fit an elephant, and with five I can make him wiggle his trunk." He was being critical of his friend for claiming that a model fit the experimental data, pointing out that if you have enough free parameters you can "fit" anything!
 :::
 
+
+## 
 
 
 ## Frequently Asked Questions

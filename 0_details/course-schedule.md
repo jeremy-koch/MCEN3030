@@ -74,8 +74,9 @@
     - [Linear fitting](../5_fitting/linear.md)
     (Video on Canvas)
 - Thursday 12 Feb:
-    - The meaning of R^2
-    - Nonlinear fitting
+    - [Nonlinear fitting](../5_fitting/nonlinear.md)
+    - The meaning of R^2 (added soon)
+    - [The Variance Inflation Factor](../5_fitting/vif.md) (optional)
 :::
 
 

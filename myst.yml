@@ -62,6 +62,7 @@ project:
           - file: 5_fitting/meaningR2.md
             hidden: true
           - file: 5_fitting/anscomb.md
+          - file: 5_fitting/vif.md
       - title: Optimization
         children:
           # - file: 4_optimization/opt-intro.md
