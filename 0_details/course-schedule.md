@@ -75,7 +75,8 @@
     (Video on Canvas)
 - Thursday 12 Feb:
     - [Nonlinear fitting](../5_fitting/nonlinear.md)
-    - The meaning of R^2 (added soon)
+    (Video on Canvas)
+    - [The meaning of R^2](../5_fitting/meaningR2.md)
     - [The Variance Inflation Factor](../5_fitting/vif.md) (optional)
 :::
 

@@ -1,6 +1,6 @@
-# The R2 value
+# The $R^2$ value
 
-A word about the "R-squared value" that you may have seen, e.g. when plotting a trendline in Microsoft Excel or Google Sheets:
+A word about the "R-squared value"/"coefficient of determination" that you may have seen, e.g. when plotting a trendline in Microsoft Excel or Google Sheets:
 
 ```{figure} r2plot.png
 :alt: 
@@ -18,7 +18,7 @@ $$
 R^2 \equiv 1-\frac{S_r}{S_t}
 $$
 
-where $S_r$ is the sum of the squares of the residuals in our model fit (as defined in the lecture video) and $S_t$ is the sum of the squares assuming the "model" is that the data is constant at the average value of the data set. It can be interpreted as "the fraction of the total variance in the data set that is explained by the model".
+where $S_r$ is the sum of the squares of the residuals in our model fit (as defined in the lecture video) and $S_t$ is the sum of the squares assuming the "model" is that the data is constant at the average value of the data set. $R^2$ can be interpreted as "the fraction of the total variance in the data set that is explained by the model".
 :::{hint}
 Think about the extremes here. If $R^2 \approx 1$, that implies $S_r\ll S_t$. That is, the model we selected is a much better representation of the data than the model where we just pick the average. If $R^2 \approx 0$, the model we selected is no better than just picking the average value of the data ($S_r\approx S_t$).
 :::
