@@ -85,7 +85,7 @@
 :::{note}  Week 6: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16-20 Feb
 :icon: false
 - Tuesday 17 Feb:
-    - Pattern Search
+    - Plotting (and plotting taste!)
 - Thursday 19 Feb:
     - Midterm Practice
 - **Friday, 20 Feb: homework due**
@@ -119,7 +119,7 @@
 - Tuesday 10 Mar:
     - Machine Learning Introduction
 - Thursday 12 Mar:
-    - Machine Learning Project Work
+    - Numerical Integration
 - **Friday, 13 Mar: homework due**
 :::
 
@@ -138,9 +138,9 @@
 :::{note}  Week 10: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23-27 Mar 
 :icon: false
 - Tuesday 24 Mar:
-    - Numerical Integration
-- Thursday 26 Mar:
     - Monte Carlo Methods
+- Thursday 26 Mar:
+    - Ordinary Differential Equations
 :::
 
 
@@ -149,10 +149,9 @@
 :::{note}  Week 11: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 Mar-3 Apr
 :icon: false
 - Tuesday 31 Mar:
-    - Ordinary Differential Equations Intro
-    - Euler's Method
-- Thursday 2 Apr:
     - Coupled Equations
+- Thursday 2 Apr:
+    - TBD
 - **Friday, 3 Apr: homework due**
 :::
 
