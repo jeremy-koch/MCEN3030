@@ -19,7 +19,7 @@ The other possibility is:
 3b\. If $f(x_M)\cdot f(x_U)< 0$, that means that the function changes sign somewhere between $x_M$ and $x_U$. That is, the root is between $x_M$ and $x_U$.  
 4b\. We reset: $x_L=x_M$ and go back to step (1) (where we will use our new definition of $x_L$ to calculate the next $x_M$).
 
-### An example
+## An example
 
 What happens for $f(x)=\sin(x)-0.85$? If we are seeking the first root, we know it will exist between $x_L=0$ and $x_U=\pi/2$, and then $x_M=\pi/4$. (We might call $\pi/4$ our initial estimate of the root, and could say: $x_\text{root,0}=\pi/4\pm \pi/4$.)
 
@@ -39,7 +39,7 @@ Since $f(\pi/4)\cdot f(\pi/2)<0$, we know the root is between $x_M$ and $x_U$, s
 ```
 ... and we could say: after three iterations, our estimate of the root is $x_\text{root,3}=11\pi/32\pm \pi/32$.
 
-### Making the algorithm more robust
+## Making the algorithm more robust
 
 We may not actually be certain there is a root within the range we provide, or there may be two roots. In either case, this algorithm fails. It might be a good idea to check the values of both $f(x_L)\cdot f(x_M)$ and $f(x_M)\cdot f(x_U)$ and return an error message if both are $>0$ or both are $<0$.
 

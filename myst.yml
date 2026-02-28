@@ -28,7 +28,6 @@ project:
           - file: 1_prog-basics/github.md
           - file: 1_prog-basics/classes.md
           - file: 1_prog-basics/notebooks.md
-            hidden: true
       - title: Some Foundational Concepts
         children:
           # - file: 2_foundations/floats.md
@@ -64,8 +63,7 @@ project:
           - file: 5_fitting/vif.md
       - title: Optimization
         children:
-          # - file: 4_optimization/opt-intro.md
-          # - file: 4_optimization/golden.md
+          - file: 4_optimization/golden.md
           # - file: 4_optimization/steepest.md
           # - file: 4_optimization/zsummary.md
       - title: Differential Equations
