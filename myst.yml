@@ -63,7 +63,7 @@ project:
           - file: 5_fitting/vif.md
       - title: Optimization
         children:
-          - file: 4_optimization/golden.md
+          - file: 6_optimization/golden.md
           # - file: 4_optimization/steepest.md
           # - file: 4_optimization/zsummary.md
       - title: Differential Equations
