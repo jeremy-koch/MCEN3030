@@ -106,7 +106,8 @@
 :::{note}  Week 8: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-6 Mar 
 :icon: false
 - Tuesday 3 Mar: 
-    - Golden Search
+    - [The Golden Search Method](../6_optimization/golden.md)
+    (Video on Canvas)
 - Thursday 5 Mar: 
     - Steepest Ascent
 :::

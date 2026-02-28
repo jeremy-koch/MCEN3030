@@ -2,7 +2,7 @@
 
 The Golden Search Method is a way to algorithmically find the maximum of a function $f(x)$ on a given range $x_L\rightarrow x_U$ with a minimum number of function evaluations. The idea is similar to [The Bisection Method](../3_root-finding/bisection.md): evaluate the function at a few locations, then deduce that the maximum cannot occur within a certain subset of the range, then reduce the range and redefine variables, then iterate until we are happy with the error bound.
 :::{tip}
-If a minimum is desired, we can either flip the logic below, or just find the max of $-f(x)$.
+If a minimum is desired, we can either flip the logic described below, or just find the max of $-f(x)$.
 :::
 
 ## The algorithm
@@ -18,9 +18,9 @@ Unlike Bisection Method (with roots), this algorithm does not fail in the case t
 1\. Calculate two interior points: $x_2 = x_U - d(x_U-x_L)$ and $x_1 = x_L + d(x_U-x_L)$. Assuming that $x_L<x_U$, we will have $x_L<x_2<x_1<x_U$.  
 2\. Calculate $f_1=f(x_1)$ and $f_2=f(x_2)$.
 
-Then, the path for steps (3) and (4) depends on the function values:
 
-3\.  
+
+3\.  The path depends on the function values:  
 (a) If $f(x_1)>f(x_2)$, the maximum cannot be between $x_L \rightarrow x_2$. We toss that range from our search and change values:
 
 $$
@@ -68,6 +68,8 @@ x_1=1.146+d(3-1.146) = 2.292~(\text{note}~x_1>x_2)\\
 f_1=0.084
 $$
 
+and we keep $x_U=3$.
+
 ### Iteration 2
 
 Now we see $f_2>f_1$, and so we toss $x_1\rightarrow x_U$ from our search. Redefine:
@@ -79,6 +81,8 @@ f_1=0.097~(\text{the old}~f_2)\\
 x_2=2.292-d(2.292-1.146) = 1.584~(\text{note}~x_1>x_2)\\
 f_2=0.094
 $$
+
+and we keep $x_L=1.146$.
 
 ### Iteration 3
 
@@ -93,9 +97,9 @@ Now $f_1>f_2$. What should we discard?
 
 ## Why use $d=(\sqrt{5}-1)/2$?
 
-We want to minimize the number of function calls in our search for the function maximum. Without losing anything meaningful to the logic, we can say our search range is $0\rightarrow L$. To proceed with the Golden Search Method, we choose to investigate two points within the range, located at $x=L_1$ and $x=L_2$. If we think about the symmetry: $L_2+L_1=L$ (and to be clear, the points on the number line in ascending order are: $0$, $L_2$, $L_1$, $L$.)
+We want to minimize the number of function calls in our search for the function's maximum. Without losing anything meaningful to the logic, we can say our search range is $0\rightarrow L$. To proceed with the Golden Search Method, we choose to investigate two points within the range, located at $x=L_1$ and $x=L_2$. If we think about the symmetry: $L_2+L_1=L$ (and to make sure we are on the same page, the points on the number line in ascending order are: $0$, $L_2$, $L_1$, $L$.)
 
-It would be really neat if we chose these values such that if we were to refine the range by tossing out, say, $L_1\rightarrow L$ from the search, one of the search points in the next iteration would be evaluated already: the one at $L_2$. Our "new range" after the discard would be $0\rightarrow L_1$, and the distance $L_2$ should take up as much of that range as $L_1$ did of the original range $L$. To put it as a ratio:
+It would be really neat if we chose the $L_1$ and $L_2$ values such that if we were to refine the range by tossing out, say, $x=L_1\rightarrow L$ from the search, one of the search points in the next iteration would be evaluated already: the one at $L_2$. Our "new range" after the discard would be $0\rightarrow L_1$, and the distance $L_2$ should take up as much of that range as $L_1$ did of the original range $L$. To put it as a ratio:
 
 $$
 \frac{L}{L_1}=\frac{L_1}{L_2}.
@@ -113,7 +117,7 @@ $$
 R= \frac{-1\pm \sqrt{5}}{2}.
 $$
 
-One of the roots is negative, which doesn't make sense in the context of the distances in this problem, so we are left with our solution:
+One of the roots is negative, which doesn't make sense in the context of distances, so we are left with one solution:
 
 $$
 d=\frac{\sqrt{5}-1}{2} \approx 0.618.
