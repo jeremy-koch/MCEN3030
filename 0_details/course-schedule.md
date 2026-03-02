@@ -118,9 +118,9 @@
 :::{note}  Week 9: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-13 Mar
 :icon: false
 - Tuesday 10 Mar:
-    - Machine Learning Introduction
+    - Numerical Integration 
 - Thursday 12 Mar:
-    - Numerical Integration
+    - Machine Learning Introduction
 - **Friday, 13 Mar: homework due**
 :::
 
@@ -161,7 +161,7 @@
 
 :::{note}  Week 12: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6-10 Apr
 :icon: false
-- Tuesday 7 Apr: Midterm Practice
+- Tuesday 7 Apr: Midterm Prep
 - **Thursday, 9 Apr: MIDTERM 2 in class (tentative)**
 :::
 

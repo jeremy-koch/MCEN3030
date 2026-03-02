@@ -1,0 +1,14 @@
+note
+important
+hint
+seealso
+tip
+attention
+caution
+warning
+danger
+error
+
+:::{tip} Reminder
+changes the admonition title text
+:::
