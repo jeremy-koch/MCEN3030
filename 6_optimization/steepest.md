@@ -10,11 +10,7 @@ $$
 
 points in the direction that will most rapidly increase the function. It makes sense, then, to look in the direction of the gradient.
 
-Almost all of the algorithms we teach in this class are about achieving some goal systematically and with the least computational effort possible. We could take an incremental step in that direction, recalculate the gradient at the new point, take another incremental step in that direction, recalculate the gradient, ... . That is a strategy used in some applications, but we are going to do something that will converge more quickly: we are going to do a one dimensional search through a new variable $s$ that is something like a distance from our previous best guess for the maximum.
-:::{warning}
-$s$ is proportional to the distance from the previous guess, but it is not the actual distance.
-:::
-Once we find the max along that path, that is our new best guess for the maximum of $f(x_1,x_2,...)$, and we recalculate the gradient at that point and then perform a new search along that new path.
+Almost all of the algorithms we teach in this class are about achieving some goal systematically and with the least computational effort possible. We could take an incremental step in that direction, recalculate the gradient at the new point, take another incremental step in that direction, recalculate the gradient, ... . That is a strategy used in some applications, but we are going to do something that will converge more quickly: we are going to do a one dimensional search through a new variable $s$ that is something like a distance from our previous best guess for the maximum. (Note: $s$ is proportional to the distance from the previous guess, but it is not the actual distance.) Once we find the max along that path, that is our new best guess for the maximum of $f(x_1,x_2,...)$, and we recalculate the gradient at that point and then perform a new search along that new path.
 
 We will use [the Golden Search Method](golden.md) as our one-variable search algorithm.
 
@@ -76,7 +72,7 @@ We can then plug this function of one variable in to our [Golden Search](golden.
 0\. This is an iterative method, so we will again start with a seed as our "best guess".  
 1\. Evaluate the gradient at the current best guess and use the above equations to relate $x$ and $y$ to $s$ (via $(x_i,y_i)$ and the gradient components). We can then rewrite $f(x,y)$ as $f(s)$.  
 2\. Use the Golden Search Method to determine the maximum in the gradient direction. (See below for a discussion on the bounds.)  
-3\. When the max is located, in terms of $s$, again use the equations relating $x$ and $y$ to $s$ to determine our new "best guess".  
+3\. When the max is located, in terms of $s$, again use the equations relating $x$ and $y$ to $s$ to determine our new "best guess" $(x_{i+1},y_{i+1})$.  
 4\. Iterate until acceptably converged.
 
 
@@ -97,17 +93,34 @@ There are a few options. The first two will have you setting the lower bound of 
 
 ### Convergence
 
-As we find our way towards the maximum, the distance between consecutive "best guesses" will get smaller and smaller.
+As we find our way towards the maximum, the distance between consecutive "best guesses" will get smaller and smaller. Whenever the distance between them becomes acceptably small, we claim we have converged upon the maximum. Could be
 
+$$
+\left|x_{i+1} - x_{i}\right| + \left|y_{i+1} - y_{i}\right| < \text{con accept}
+$$
+
+or 
+
+$$
+\left|x_{i+1} - x_{i}\right| < \text{con accept and} \left|y_{i+1} - y_{i}\right| < \text{con accept}
+$$
+
+or
+
+$$
+\sqrt{(x_{i+1} - x_{i})^2 +(y_{i+1} - y_{i})^2}< \text{con accept}
+$$
+
+... depends on what you want to use!
 
 ### Numerical vs. Analytical Gradient
 
 It is possible to use either analytical expressions for the gradient, e.g. implemented as a series of anonymous functions, or a numerical version, as we did with [non-linear fitting](../5_fitting/nonlinear.md).
 
-Reminder how the numerical version would work: we'd pick a small step $h$ (maybe $10^{-8}$) to approximate the derivative:
+A reminder on how the numerical version would work: we'd pick a small step $h$ (maybe $10^{-8}$) to approximate the derivative:
 
 $$
-\frac{\partial f}{\partial x_i} = \approx \frac{f(...,x_i+h, ...)-f(...,x_i, ...)}{h}.
+\frac{\partial f}{\partial x_i} \approx \frac{f(...,x_i+h, ...)-f(...,x_i, ...)}{h}.
 $$
 
-We'd need to "perturb" each of the inputs by $h$, but then would have an estimate for the gradient and can proceed with the algorithm.
+We'd need to "perturb" each of the inputs by $h$, but then would have an estimate for the gradient in each direction and can proceed with the algorithm.
