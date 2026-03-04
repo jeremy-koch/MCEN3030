@@ -14,8 +14,7 @@
 - Tuesday 13 Jan:
     - [Programming intro](../1_prog-basics/coding-elements-overview.md)
 - Thursday 15 Jan: 
-    - Floats  
-    (Video on Canvas)
+    - Floats (Video on Canvas)
     - [Numerical Error](../2_foundations/error.md)
 :::
 
@@ -26,11 +25,9 @@
 :icon: false
 - Tuesday 20 Jan:
     - [Root-finding Methods Intro](../3_root-finding/_root-finding-intro.md)
-    - [The Bisection Method](../3_root-finding/bisection.md)  
-    (Video on Canvas)
+    - [The Bisection Method](../3_root-finding/bisection.md) (Video on Canvas)
 - Thursday 22 Jan:
-    - [The (1D) Newton-Raphson Method and Secant Method](../3_root-finding/1D-NR.md)  
-    (Video on Canvas)
+    - [The (1D) Newton-Raphson Method and Secant Method](../3_root-finding/1D-NR.md) (Video on Canvas)
 - **Friday, 23 Jan: homework due**
 :::
 
@@ -40,13 +37,11 @@
 :::{note}  Week 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26-30 Jan 
 :icon: false
 - Tuesday 27 Jan:
-    - [The 2D Newton-Raphson Method](../3_root-finding/NR-2D.md)
-    (Video on Canvas)
+    - [The 2D Newton-Raphson Method](../3_root-finding/NR-2D.md) (Video on Canvas)
     - [Cramer's Rule](../2_foundations/Cramer.md)
     - [Classes](../1_prog-basics/classes.md)
 - Thursday 29 Jan:
-    - [The LU Decomposition](../4_matrix/LU.md)
-    (Video on Canvas)
+    - [The LU Decomposition](../4_matrix/LU.md) (Video on Canvas)
     - [A note on the matrix inverse](../4_matrix/inverse.md)
 :::
 
@@ -57,8 +52,7 @@
 :::{note}  Week 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 - 6 Feb
 :icon: false
 - Tuesday 3 Feb:
-    - [The EigenValue Decomposition](../4_matrix/evd.md)
-    (Video on Canvas)
+    - [The EigenValue Decomposition](../4_matrix/evd.md) (Video on Canvas)
     - [The Singular-Value Decomposition](../4_matrix/svd.md)
 - Thursday 5 Feb:
     - Midterm Practice/Status Check
@@ -71,13 +65,11 @@
 :::{note}  Week 5: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-13 Feb
 :icon: false
 - Tuesday 10 Feb:
-    - [Linear fitting](../5_fitting/linear.md)
-    (Video on Canvas)
+    - [Linear fitting](../5_fitting/linear.md) (Video on Canvas)
 - Thursday 12 Feb:
-    - [Nonlinear fitting](../5_fitting/nonlinear.md)
-    (Video on Canvas)
+    - [Nonlinear fitting](../5_fitting/nonlinear.md) (Video on Canvas)
     - [The meaning of R^2](../5_fitting/meaningR2.md)
-    - [The Variance Inflation Factor](../5_fitting/vif.md) (optional)
+    - [The Variance Inflation Factor](../5_fitting/vif.md) (Optional)
 :::
 
 
@@ -106,8 +98,7 @@
 :::{note}  Week 8: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-6 Mar 
 :icon: false
 - Tuesday 3 Mar: 
-    - [The Golden Search Method](../6_optimization/golden.md)
-    (Video on Canvas)
+    - [The Golden Search Method](../6_optimization/golden.md) (Video on Canvas)
 - Thursday 5 Mar: 
     - Steepest Ascent
 :::
@@ -174,7 +165,6 @@
     - Boundary-Value Problems
 - Thursday, 16 Apr: 
     - The Shooting Method
-
 :::
 
 

@@ -64,8 +64,7 @@ project:
       - title: Optimization
         children:
           - file: 6_optimization/golden.md
-          # - file: 4_optimization/steepest.md
-          # - file: 4_optimization/zsummary.md
+          - file: 6_optimization/steepest.md
       - title: Differential Equations
         children:
           # - file: 5_ODEs/ODE-intro.md
