@@ -113,6 +113,12 @@ $$
 
 ... depends on what you want to use!
 
+Another, equivalent approach: What happens when the gradient goes to zero, $\nabla f = 0$? We have found our max! So we might use a condition like
+
+$$
+\left|\nabla f\right| < \text{con accept}.
+$$
+
 ### Numerical vs. Analytical Gradient
 
 It is possible to use either analytical expressions for the gradient, e.g. implemented as a series of anonymous functions, or a numerical version, as we did with [non-linear fitting](../5_fitting/nonlinear.md).
