@@ -65,6 +65,7 @@ project:
         children:
           - file: 6_optimization/golden.md
           - file: 6_optimization/steepest.md
+          - file: 6_optimization/SA_starter.md
       - title: Differential Equations
         children:
           # - file: 5_ODEs/ODE-intro.md
