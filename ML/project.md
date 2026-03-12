@@ -113,3 +113,17 @@ Lastly, with your tuned model, you will produce a feature importance plot.
 Your README will include the feature importance plot and some discussion about the results.
 :::
 
+## Hyperparameters
+
+Regarding the second version of the code, and specifically for a random forest, you are looking at things like: the number of trees (estimators) in the forest, the max depth, the minimum group size, and the maximum number of features for each tree. Additionally, there may be recommended tweaks to the data itself, e.g. for the robot error problem: changing the window size for a feature built on the previous $N$ data points.
+
+If it turns out that your first version was already pretty optimized, you can still generate a second version by modifying these things and checking the results. There is still an opportunity for discussion, but use the better version for the feature importance.
+
+
+## Toolboxes
+
+MATLAB will require the "Statistics and Machine Learning Toolbox". If you are working locally, you'll need to install it via Apps -> Get More Apps. Make sure it is the official MathWorks one. (It should be immediately available if you are working in MATLAB Online.) The toolbox allows you to do things without actually writing a lot of code, but there are a lot of things going on "under the hood". Maybe you can start with the app to get the feeling for it, but turn to code before too long. (You want your work to be replicable by a colleague on another machine, and a coding file is the best way to do that.)
+
+For Python, I recommend [scikit-learn](https://scikit-learn.org/stable/). (Install it with conda, not that website.) There are other packages out there, notably TensorFlow (the most serious one) and Pytorch. I could not get TensorFlow to work on my machine and have not tried Pytorch... you can have a try, but scikit-learn seems to be the most friendly.
+
+Julia has the [machine learning framework package](https://juliapackages.com/p/mlj). (Use Julia's package manager, but the website has the details.) That is probably what I recommend, though tools like [Flux](https://fluxml.ai/Flux.jl/stable/) and [Lux](https://lux.csail.mit.edu/stable/) are interesting and probably more powerful.

@@ -17,7 +17,7 @@ If you stick with free versions, it will be fine, but there are usage limits. Do
 
 ## A good first prompt
 
-Effective prompting provides context and asks for specifics. Starting with "I want to do a machine learning project" will be inefficient -- it is going to ask you incremental questions, maybe take you down the wrong path for a while, and waste a lot of time. Instead, be thoughtful in your creation of a detailed first prompt. Don't be scared of writing a paragraph or even two, it can handle it.
+Effective prompting provides context and asks for specifics. Starting with "I want to do a machine learning project" \<enter\> will be inefficient -- it is going to ask you incremental questions, maybe take you down the wrong path for a while, and waste a lot of time. Instead, be thoughtful in your creation of a detailed first prompt. Don't be scared of writing a paragraph or even two, it can handle it.
 
 Here is more-or-less what I would use in this project:
 > *I would like to do a machine learning project where the goal is to predict whether a fruit is an apple, peach, nectarine, plum, or kiwi based physical measurements. I have a spreadsheet with columns 'fruit', 'weight', 'avg_radius', 'eccentricity', and 'hardness_value'. There are approximately 4000 rows. I will ask for Python scikit-learn code soon, but first: Can we talk about the best way to model this data set?*
@@ -30,6 +30,7 @@ Notice:
 - I specified my programming language. (The LLMs will learn about you though and know that, e.g., you use Python.)
 - I strongly recommend asking it NOT to code at first. Instead, ask it to clarify details and explain what approach it recommends. It will save you time and will help you understand what is going on.
 
+I would discourage asking for too much in this initial prompt... don't ask for all the deliverables up-front. It will be too much for you to digest, there will be too many follow-up questions, and the LLM will insist on reworking everything with every tiny adjustment.
 
 ## The initial follow-up prompts
 
