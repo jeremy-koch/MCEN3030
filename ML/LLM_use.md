@@ -27,6 +27,7 @@ Notice:
 - I said the goal and a little background.
 - I described the data set. You are prohibited from uploading your data to an LLM and having it work for you, but trust me, giving it the labels like this is going to be enough.
 - It is usually a good idea to mention the size of the data set, as that might factor-in to the approach decision.
+- I specified my programming language. (The LLMs will learn about you though and know that, e.g., you use Python.)
 - I strongly recommend asking it NOT to code at first. Instead, ask it to clarify details and explain what approach it recommends. It will save you time and will help you understand what is going on.
 
 
@@ -34,11 +35,16 @@ Notice:
 
 You can ask clarifying questions. E.g.: Why random forest, why not neural nets? What is a random forest? What is a neural net? 
 
-Once it gives you code and you run it, it will probably throw some sort of error. The file is named differently (hopefully you can debug that one!), it finds a {abbr}`NaN (not a number)` in the data set and that breaks the model, etc. You can copy-and-paste those messages from your terminal/command window, but make sure you are grabbing the relevant bit: there are usually several lines in the error message, about how it couldn't do this because it couldn't do that because it couldn't do that. Determine which part of the "traceback" is relevant, and send that over to the LLM. It will take just a few minutes to get it smoothed-out, and before you know it you'll have some results.
+Once it gives you code and you run it, it will probably throw some sort of error. The file is named differently (hopefully you can debug that one!), it finds a {abbr}`NaN (not a number)` in the data set, etc. You can copy and paste those messages from your terminal/command window, but make sure you are grabbing the relevant bit: there are usually several lines in the error message, about how it couldn't do this because it couldn't do that because it couldn't do this. Determine which part of the "traceback" is relevant, and send that over to the LLM. 
+
+It will take just a few minutes to get all the errors smoothed-out, and before you know it you'll have some results.
 
 ## Iterating on the model
 
-It should produce some plain-text results in your terminal/command window, basically a summary of the validation step. The results will never be perfect, and maybe you will never be able to reasonably get above 80%. That is just what the data says -- real life is messy and noisy. But it would be important to acknowledge that if you are going to use the model to actually do something.
+It should produce some plain-text results in your terminal/command window, basically a summary of the validation step. The results will never be perfect, and maybe you will never be able to reasonably get above 80%. That is just what the data says -- real life is messy and noisy. 
+:::{important}
+It is important to acknowledge the limitations of your work so that your co-workers/clients understand the risks!
+:::
 
 You can paste the plain-text results (shouldn't be more than 10 lines) back into the LLM to initiate a discussion on how to iterate to improve upon the predictions. Maybe you need to adjust some of the [hyperparameters](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) like the maximum depth or maximum number of features per tree. You'll talk about this in your report.
 

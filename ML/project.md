@@ -102,7 +102,7 @@ The code may have a few bugs in it, as described [here](LLM_use.md#the-initial-f
 You will create a folder within your repository called ```code_1```. This is the first iteration of your model. Within your README, you should include your confusion matrix (an image) and some discussion. You might also include other metrics provided by the code in the discussion.
 :::
 
-You will iterate on the model as described [here](LLM_use.md#iterating-on-the-model). The goal is to wisely modify [hyperparameters](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning) or perhaps build new features to improve upon your predictions. When you (and the LLM) are satisfied...
+You will iterate on the model as described [here](LLM_use.md#iterating-on-the-model). The goal is to wisely modify [hyperparameters](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) or perhaps build new features to improve upon your predictions. When you (and the LLM) are satisfied...
 :::{note} Deliverable 4
 Include some discussion of these prompts, and the responses, in your README. Then,
 you will create a folder within your repository called ```code_2``` which includes your tuned model. Within your README, you should include your (improved) confusion matrix and some discussion about what changed between the models.
