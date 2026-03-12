@@ -69,7 +69,7 @@ project:
       - title: Machine Learning
         children:
           - ML/project.md
-          - LLM_use.md
+          - ML/LLM_use.md
       # - title: Differential Equations
       #   children:
           # - file: 5_ODEs/ODE-intro.md
