@@ -66,8 +66,12 @@ project:
           - file: 6_optimization/golden.md
           - file: 6_optimization/steepest.md
           - file: 6_optimization/SA_starter.md
-      - title: Differential Equations
+      - title: Machine Learning
         children:
+          - ML/project.md
+          - LLM_use.md
+      # - title: Differential Equations
+      #   children:
           # - file: 5_ODEs/ODE-intro.md
           # - file: 5_ODEs/eulers-method.md
           # - file: 5_ODEs/runge-kutta.md
