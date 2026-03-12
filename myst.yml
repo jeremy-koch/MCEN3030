@@ -68,8 +68,8 @@ project:
           - file: 6_optimization/SA_starter.md
       - title: Machine Learning
         children:
-          - ML/project.md
-          - ML/LLM_use.md
+          - file: ML/project.md
+          - file: ML/LLM_use.md
       # - title: Differential Equations
       #   children:
           # - file: 5_ODEs/ODE-intro.md
