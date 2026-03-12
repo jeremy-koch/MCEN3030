@@ -8,26 +8,26 @@ All data sets will come from the [UC Irvine Machine Learning Repository](https:/
 
 I am going to reference a hypothetical machine learning problem in which we try to predict whether a fruit is an apple, peach, nectarine, plum, blueberry, or kiwi based physical measurements.
 
-"Classification"
+Classification
 : Classification problems are about taking measurements or attributes and using those to predict the class of an output. If we pick a random fruit and measure: a weight of 192 grams, a radius of 5.1 cm, an eccentricity of 0.04, and a hardness of 1.8 whatever-the-units-of-hardness-are, our model might predict it's a plum.
 
-"Features"
+Features
 : These are the attributes the model is trained on... here, the basic measurements of weight, radius, eccentricity, and hardness are probably good features. We sometimes need to pre-process measurements to produce meaningful features: maybe we collected the day-to-day growth rate of our fruits, but didn't have the final radius explicitly in the data. The growth rate over time might be interesting in itself, but integrating the growth rate to determine the final radius is probably be a more direct predictor.
 
-"Confusion matrices"
+Confusion matrices
 : These help us to assess where our machine learning model is making incorrect predictions. It is common to randomly break a data set up into a portion for "training" and a portion for "validation". The confusion matrix summarizes the validation results, showing us e.g. that 21% of the plums were incorrectly identified as nectarines. In the fruit case, with 6 fruits, it would be a $6\times 6$ matrix.
 
 ```{figure} conf.png
 :alt: 
-:width: 300px
+:width: 500px
 :align: center
 
 A confusion matrix. This made-up data reveals that the model has a harder time discerning peaches, nectarines, and plums.
 ```
 
 
-"Feature Importance"
-: In the end we can ask about "feature importance": which feature is most predictive of the classification? This can be "global" or "item-level" importance -- e.g., in general, the hardness measurement is the best way to distinguish between fruits ("global"), unless it is a fruit with a small radius, in which case it is almost certainly a blueberry ("item-level").
+Feature Importance
+: In the end we can ask about feature importance: which feature is most predictive of the classification? This can be "global" or "item-level" importance -- e.g., in general, the hardness measurement is the best way to distinguish between fruits (global), unless it is a fruit with a small radius, in which case it is almost certainly a blueberry (item-level).
 
 
 All the topics below are classification problems with information about the sample features collected in a csv file. You will produce and interpret a confusion matrix and will assess the feature importance. You might even include this in your initial 
@@ -36,9 +36,8 @@ All the topics below are classification problems with information about the samp
 
 See [LLM use](LLM_use.md) for policies and recommendations on prompting.
 
-:::{dropdown} If you do not want to use an LLM...
-:open:
-If you are averse to using an LLM, let's talk.
+:::{note} 
+If you do not want to use an LLM... let's talk.
 :::
 
 
@@ -63,7 +62,7 @@ Hints:
 
 ### [Age Prediction of Abalone](https://archive.ics.uci.edu/dataset/1/abalone)
 
-Predict the age (number of rings) of sea snails based on their size and weight. One of the features in this data set is "shucked weight", which involves killing the snail. Ignoring that point, I think this project could be interpreted as a [nondestructive testing method](https://en.wikipedia.org/wiki/Nondestructive_testing): the "old" way of doing the measurement is time-consuming and destroys the snail, the new data-centric method might get us the same result. Maybe it will turn out that the most important features are length and diameter, meaning we don't need to kill it at all. Similar strategies could be implemented to see, e.g., how much lifetime is left in a product before it needs to be replaced.
+Predict the age (number of rings) of sea snails based on their size and weight. One of the features in this data set is "shucked weight", which involves killing the snail. Ignoring that point, I think this project could be interpreted as a [nondestructive testing method](https://en.wikipedia.org/wiki/Nondestructive_testing): the old way of doing the measurement is time-consuming and destroys the snail; the new data-centric method might get us the same result with no damage. Maybe it will turn out that the most important features are length and diameter, meaning we don't need to kill it at all! Similar strategies could be implemented to see, e.g., how much lifetime is left in a product before it needs to be replaced.
 
 Hints:
 - The data comes as a .data file, but it contains comma-separated values. You can open the file with a text editor and add a first row that includes the column names (see the .names file), and then manually change the file extension to .csv.
@@ -86,9 +85,7 @@ I was intentionally trying to avoid regression problems but there are enough tri
 You cannot upload your data set to an AI tool. You must describe the problem and data to the LLM in your own words and then implement the code on your own computer. See [LLM use](LLM_use.md) for a recommended first prompt.
 :::
 
-We will again be creating a GitHub repository, though this one you will build up from scratch. The main directory will have a README.md report, including all the details asked about below. You should cite the data set. There will be sub-folders that contain code, as described below.
-
-You will describe the problem to the LLM using the strategy described [here](LLM_use.md##a-good-first-prompt)
+We will again be creating a GitHub repository, though this one you will build up from scratch (in our GitHub Classroom -- I'll provide a link). The main directory will have a ```README.md``` report, including all the details asked about below. You should cite the data set. There will be sub-folders that contain code, as described below. You will describe the problem to the LLM using the strategy described [here](LLM_use.md#a-good-first-prompt)
 :::{note} Deliverable 1
 Your README will include this initial prompt.
 :::
@@ -100,14 +97,15 @@ You will summarize this discussion, describing the random forest method and why 
 
 Once you feel OK about the background, go ahead and ask for the code. Be specific: "OK, generate the python code that implements the random forest scheme we discussed. Can you confirm that the standard validation scheme is to randomly divide the data into training and validation, and then produce a confusion matrix?"
 
-The code may have a few bugs in it, as described [here](LLM_use.md##the-initial-follow-up-prompts). Work those out, and then...
+The code may have a few bugs in it, as described [here](LLM_use.md#the-initial-follow-up-prompts). Work those out, and then...
 :::{note} Deliverable 3
 You will create a folder within your repository called ```code_1```. This is the first iteration of your model. Within your README, you should include your confusion matrix (an image) and some discussion. You might also include other metrics provided by the code in the discussion.
 :::
 
-You will iterate on the model as described [here](LLM_use.md##iterating-on-the-model). The goal is to wisely modify [hyperparameters](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning) or perhaps build new features to improve upon your predictions. When you (and the LLM) are satisfied...
+You will iterate on the model as described [here](LLM_use.md#iterating-on-the-model). The goal is to wisely modify [hyperparameters](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning) or perhaps build new features to improve upon your predictions. When you (and the LLM) are satisfied...
 :::{note} Deliverable 4
-You will create a folder within your repository called ```code_2``` which includes your tuned model. Within your README, you should include your (improved) confusion matrix and some discussion about what changed between the models.
+Include some discussion of these prompts, and the responses, in your README. Then,
+you will create a folder within your repository called ```code_2``` which includes your tuned model. Within your README, you should include your (improved) confusion matrix and some discussion about what changed between the models.
 :::
 
 Lastly, with your tuned model, you will produce a feature importance plot.
