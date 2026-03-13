@@ -163,10 +163,9 @@
 :icon: false
 - Tuesday, 14 Apr: 
     - Boundary-Value Problems
-- Thursday, 16 Apr: 
+- Thursday, 16 Apr:
     - The Shooting Method
 - **Friday, 17 Apr: project due**
-    - 
 :::
 
 
