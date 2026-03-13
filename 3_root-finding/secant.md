@@ -43,10 +43,3 @@ Secant Method with seeds 0 and 1.9, again for $f(x) = exp(x)-3.91$. The initial 
 :::{tip}
 Trace these paths and make sure you understand how the points are related by this algorithm.
 :::
-
-
-```tikz
-\usetikzlibrary{arrows,shapes}
-\begin{tikzpicture}
-\draw (0,0) grid (2,2);
-\end{tikzpicture}
