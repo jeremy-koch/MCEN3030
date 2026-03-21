@@ -70,6 +70,10 @@ project:
         children:
           - file: ML/project.md
           - file: ML/LLM_use.md
+      - title: Monte Carlo Methods
+        children:
+          - file: 7_monte-carlo/monte-carlo.md
+          - file: 7_monte-carlo/prob-dists.md
       # - title: Differential Equations
       #   children:
           # - file: 5_ODEs/ODE-intro.md

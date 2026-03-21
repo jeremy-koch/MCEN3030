@@ -100,7 +100,7 @@
 - Tuesday 3 Mar: 
     - [The Golden Search Method](../6_optimization/golden.md) (Video on Canvas)
 - Thursday 5 Mar: 
-    - Steepest Ascent
+    - [Steepest Ascent](../6_optimization/steepest.md) (Video on Canvas)
 :::
 
 
@@ -109,9 +109,9 @@
 :::{note}  Week 9: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-13 Mar
 :icon: false
 - Tuesday 10 Mar:
-    - Numerical Integration 
+    - Numerical Integration (Video on Canvas)
 - Thursday 12 Mar:
-    - Machine Learning Introduction
+    - [Machine Learning Project Intro](../ML/project.md)
 - **Friday, 13 Mar: homework due**
 :::
 
@@ -130,7 +130,7 @@
 :::{note}  Week 10: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23-27 Mar 
 :icon: false
 - Tuesday 24 Mar:
-    - Monte Carlo Methods
+    - [Monte Carlo Methods](../7_monte-carlo/monte-carlo.md) (Video on Canvas)
 - Thursday 26 Mar:
     - Ordinary Differential Equations
 :::
