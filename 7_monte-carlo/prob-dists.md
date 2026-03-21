@@ -6,7 +6,7 @@
 
 ### [Bernoulli](https://en.wikipedia.org/wiki/Bernoulli_distribution)
 
-Probability of a single event, with a Boolean result. Engineering example: a system experiences occasional power surges somewhat above limit of a fuse. What is the probability that the fuse blows?
+Probability of a single event, with a Boolean result. Engineering example: a system experiences occasional small power surges slightly above limit of a fuse. Will the fuse blow?
 
 ### [Binomial](https://en.wikipedia.org/wiki/Binomial_distribution)
 
@@ -24,7 +24,7 @@ The probability of having a certain number of events occur within a certain amou
 
 ### [Uniform](https://en.wikipedia.org/wiki/Continuous_uniform_distribution)
 
-Equal probability within bounds. A machinist is tasked with producing a shaft with diameter between 1.1 and 1.2 cm... the distribution of the results might be uniform between those limits.
+Equal probability within bounds. A machinist is tasked with producing a shaft with diameter between 1.1 and 1.2 cm... the distribution of the acceptable shafts might then be uniform between those limits.
 
 
 ### [Normal (Gaussian)](https://en.wikipedia.org/wiki/Normal_distribution)
@@ -37,7 +37,7 @@ The distance/time between events. A phenomenon occurs at a certain rate. One jus
 
 ### [Weibull](https://en.wikipedia.org/wiki/Weibull_distribution)
 
-Useful for time-to-failure. 
+Useful for time-to-failure.
 
 
 ### [Log-normal](https://en.wikipedia.org/wiki/Log-normal_distribution)
@@ -48,7 +48,6 @@ Multiplicative processes, e.g.: many small cracks converge to become big cracks.
 
 Accumulation. Probability of the time until a certain number of events occur, or the total amount of something over time.
 
-
 ### There are more!
 
 Beta, Pareto, Negative Binomial, ...
@@ -58,16 +57,13 @@ Beta, Pareto, Negative Binomial, ...
 
 ::::{tab-set}
 :::{tab-item} MATLAB
-Details on [discrete distributions](https://www.mathworks.com/help/stats/discrete-distributions.html?s_tid=CRUX_lftnav) and [continuous distributions](https://www.mathworks.com/help/stats/continuous-distributions.html?s_tid=CRUX_lftnav) are linked. Might require the Statistics and Machine Learning Toolbox, but then you can access the probability density function (pdf, probability of a given value), cumulative distribution function (cdf, probability below a given value), and obtain a random number from the distribution (rnd) in a similar fashion for each.
+Details on [discrete distributions](https://www.mathworks.com/help/stats/discrete-distributions.html?s_tid=CRUX_lftnav) and [continuous distributions](https://www.mathworks.com/help/stats/continuous-distributions.html?s_tid=CRUX_lftnav) are linked. Might require the Statistics and Machine Learning Toolbox, but then you can access the probability density function (pdf, probability of a given value), cumulative distribution function (cdf, probability below a given value), and obtain a random number from the distribution (rnd) in a similar fashion for each. E.g.:
 ```matlab
 y = wblpdf(x,lambda,k);
-y = wblcdf(x,lambda,k);
+z = wblcdf(x,lambda,k);
 r = wblrnd(lambda,k,N,1);
 ```
-For uniform and normal distributions, I just use [```rand```](https://www.mathworks.com/help/matlab/ref/double.rand.html) and [```randn```](https://www.mathworks.com/help/matlab/ref/double.randn.html). This uniform distribution is from 0 to 1 and the average of this normal distribution is zero, but you can change those with algebra: e.g., a random number from a uniform distribution between 5 and 10 would be:
-```matlab
-5+5*rand()
-```
+For uniform and normal distributions, I just use [```rand```](https://www.mathworks.com/help/matlab/ref/double.rand.html) and [```randn```](https://www.mathworks.com/help/matlab/ref/double.randn.html). This uniform distribution is from 0 to 1 and the average of this normal distribution is zero, but you can change those with algebra: e.g., a random number from a uniform distribution between 5 and 10 would be ```5+5*rand()```.
 :::
 
 
