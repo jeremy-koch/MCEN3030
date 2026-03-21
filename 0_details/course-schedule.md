@@ -133,6 +133,7 @@
     - [Monte Carlo Methods](../7_monte-carlo/monte-carlo.md) (Video on Canvas)
 - Thursday 26 Mar:
     - Ordinary Differential Equations
+    - Coupled Equations
 :::
 
 
@@ -141,7 +142,7 @@
 :::{note}  Week 11: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 Mar-3 Apr
 :icon: false
 - Tuesday 31 Mar:
-    - Coupled Equations
+    - The Shooting Method
 - Thursday 2 Apr:
     - TBD
 - **Friday, 3 Apr: homework due**
@@ -164,7 +165,7 @@
 - Tuesday, 14 Apr: 
     - Boundary-Value Problems
 - Thursday, 16 Apr:
-    - The Shooting Method
+    - Partial Differential Equations
 - **Friday, 17 Apr: project due**
 :::
 
@@ -173,9 +174,9 @@
 :::{note}  Week 14: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20-24 Apr
 :icon: false
 - Tuesday 21 Apr:
-    - Partial Differential Equations
-- Thursday 23 Apr:
     - Partial Differential Equations 2
+- Thursday 23 Apr:
+    - TBD
 - **Friday, 24 Apr: homework due**
 :::
 
