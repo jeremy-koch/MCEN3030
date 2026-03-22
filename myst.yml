@@ -74,15 +74,11 @@ project:
         children:
           - file: 7_monte-carlo/monte-carlo.md
           - file: 7_monte-carlo/prob-dists.md
-      # - title: Differential Equations
-      #   children:
-          # - file: 5_ODEs/ODE-intro.md
-          # - file: 5_ODEs/eulers-method.md
-          # - file: 5_ODEs/runge-kutta.md
-          # - file: 5_ODEs/coupled.md
-          # - file: 5_ODEs/PDE-intro.md
-          # - file: 5_ODEs/the-heat-equation.md
-          # - file: 5_ODEs/zsummary.md
+      - title: Ordinary Differential Equations
+        children:
+          - file: 8_ODEs/eulers-method.md
+          - file: 8_ODEs/runge-kutta.md
+          - file: 8_ODEs/coupled-eqns.md
       - title: Appendix/Some More Readings
         children: 
           - file: 9_readings/success.md
