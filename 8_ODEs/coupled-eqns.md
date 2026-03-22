@@ -1,12 +1,71 @@
 # Coupled and Higher-Order Equations
 
+The time-stepping process can be applied to coupled equations of the form
+
+$$
+\begin{align}
+\frac{dx}{dt} &= f(t,x,y,z)\\
+\frac{dy}{dt} &= g(t,x,y,z)\\
+\frac{dz}{dt} &= h(t,x,y,z)
+\end{align}
+$$
+
+(with initial conditions $x_0,y_0,z_0$). In our calculation of $x_{i+1}$ we will need to evaluate $f(t_i,x_i,y_i,z_i)$, and similar for $y$ and $z$. No problem! 
+
+$$
+\begin{align}
+x_{i+1}=x_i + \Delta t\left(\frac{k_{1x} + 2k_{2x} + 2k_{3x} + k_{4x}}{6} \right)\\
+y_{i+1}=y_i + \Delta t\left(\frac{k_{1y} + 2k_{2y} + 2k_{3y} + k_{4y}}{6} \right)\\
+z_{i+1}=z_i + \Delta t\left(\frac{k_{1z} + 2k_{2z} + 2k_{3z} + k_{4z}}{6} \right)
+\end{align}
+$$
+
+where
+
+$$
+\begin{align}
+k_{1x} &= f(t_i , x_i , y_i , z_i )\\
+k_{1y} &= g(t_i , x_i , y_i , z_i )\\
+k_{1z} &= h(t_i , x_i , y_i , z_i )
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+k_{2x} &= f(t_i+\tfrac{1}{2}\Delta t , x_i+\tfrac{1}{2}\Delta t\cdot k_{1x}, y_i+\tfrac{1}{2}\Delta t\cdot k_{1y}, z_i+\tfrac{1}{2}\Delta t\cdot k_{1z} )\\
+k_{2y} &= g(t_i+\tfrac{1}{2}\Delta t , x_i+\tfrac{1}{2}\Delta t\cdot k_{1x}, y_i+\tfrac{1}{2}\Delta t\cdot k_{1y}, z_i+\tfrac{1}{2}\Delta t\cdot k_{1z} )\\
+k_{2z} &= h(t_i+\tfrac{1}{2}\Delta t , x_i+\tfrac{1}{2}\Delta t\cdot k_{1x}, y_i+\tfrac{1}{2}\Delta t\cdot k_{1y}, z_i+\tfrac{1}{2}\Delta t\cdot k_{1z} )
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+k_{3x} &= f(t_i+\tfrac{1}{2}\Delta t , x_i+\tfrac{1}{2}\Delta t\cdot k_{2x} , y_i+\tfrac{1}{2}\Delta t\cdot k_{2y} , z_i+\tfrac{1}{2}\Delta t\cdot k_{2z})\\
+k_{3y} &= g(t_i+\tfrac{1}{2}\Delta t , x_i+\tfrac{1}{2}\Delta t\cdot k_{2x} , y_i+\tfrac{1}{2}\Delta t\cdot k_{2y} , z_i+\tfrac{1}{2}\Delta t\cdot k_{2z})\\
+k_{3z} &= h(t_i+\tfrac{1}{2}\Delta t , x_i+\tfrac{1}{2}\Delta t\cdot k_{2x} , y_i+\tfrac{1}{2}\Delta t\cdot k_{2y} , z_i+\tfrac{1}{2}\Delta t\cdot k_{2z})
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+k_{4x} &= f( t_i+\Delta t , x_i+\Delta t\cdot k_{3x} , y_i+\Delta t\cdot k_{3y} , z_i+\Delta t\cdot k_{3z})\\
+k_{4y} &= g( t_i+\Delta t , x_i+\Delta t\cdot k_{3x} , y_i+\Delta t\cdot k_{3y} , z_i+\Delta t\cdot k_{3z})\\
+k_{4z} &= h( t_i+\Delta t , x_i+\Delta t\cdot k_{3x} , y_i+\Delta t\cdot k_{3y} , z_i+\Delta t\cdot k_{3z}).
+\end{align}
+$$
+
+Seems like a lot, but we are going to handle these as arrays, and so the [code we write](RK4-starter.md) will actually be quite succinct!
 
 
+### Mathematical chaos
 
-### Quick aside on mathematical chaos
-
-
-
+You may be interested to read about [the Lorenz System](https://en.wikipedia.org/wiki/Lorenz_system) whose analysis ignited the field of [mathematical chaos](https://en.wikipedia.org/wiki/Chaos_theory). These nonlinear equations are not solveable analytically but are easily handled numerically (and are indeed a classic example of RK4 applied to coupled equations).
 
 
 ## Higher-Order Equations
@@ -15,18 +74,18 @@ Any higher-order differential equation can be reduced to a set of coupled first-
 
 ### Example 1
 
-This is a nonlinear differential equation with a known forcing function $G(t)$. Write the equation such that the highest derivative is by itself
+A nonlinear differential equation with a known forcing function $G(t)$, where we've written the equation such that the highest derivative is by itself:
 
 $$
-\frac{d^2 x}{dt^2} = \mu (1-x^2)\frac{dx}{dt}- x - G(t)
+\frac{d^2 x}{dt^2} = \mu (1-x^2)\frac{dx}{dt}- x - G(t).
 $$
 
-and then define a new variable, $u(t) = dx/dt$. We then have two first-order equations:
+Define a new variable, $u(t) = dx/dt$, and we then have two first-order equations:
 
 $$
 \begin{align}
 \frac{dx}{dt} &= u\\
-\frac{du}{dt} &= \mu (1-x^2)u- x - G(t)
+\frac{du}{dt} &= \mu (1-x^2)u- x - G(t).
 \end{align}
 $$
 
@@ -34,7 +93,7 @@ $$
 The left-hand side of these equations are just a single first-order derivative. There are no derivatives on the right-hand side of these equations: where we saw $dx/dt$, we replaced it with $u$.
 :::
 
-Because the original equation was second order, we needed two initial conditions: $x(0)=x_0$ and $x'(0)=u_0$. 
+Because the original equation was second order, we needed two initial conditions: $x(0)=x_0$ and $x'(0)=u_0$. Now those become the initial conditions of the two first-order equations: $x(0)=x_0$ and $u(0)=u_0$.
 
 ### Example 2
 
@@ -44,7 +103,7 @@ $$
 f''' = -\tfrac{1}{2} f\cdot f''
 $$
 
-Now we will need to define two new variables: $g=f'$ and $h=g'=f''$. We then arrive at a system with three equations:
+We will need to define two new variables: $g=f'$ and $h=g'=f''$. We then arrive at a system with three equations:
 
 $$
 \begin{align}
@@ -60,26 +119,4 @@ Single derivatives on the left-hand side, no derivatives on the right-hand side.
 
 ## Implementing in your program
 
-We wish to write a generic program that can take in coupled equations and produce the numerical solution. Here is how we might do it:
-
-::::{tab-set}
-:::{tab-item} MATLAB
-```matlab
-
-[x,t]=RK4(f)
-```
-:::
-:::{tab-item} Python
-```python
-
-???
-```
-:::
-:::{tab-item} Julia
-```julia
-
-???
-```
-:::
-
-::::
+See [RK4 starter](RK4-starter.md).
