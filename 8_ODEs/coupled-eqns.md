@@ -104,16 +104,16 @@ The left-hand side of both of these equations is just a single first-order deriv
 This equation comes up in boundary layer theory. One of the boundary conditions is at infinity, so we won't be able to solve it until we learn the Shooting Method, but we can set it up. I'll use primes $'$ to denote derivatives.
 
 $$
-f''' = -\tfrac{1}{2} f\cdot f''
+x''' = -\tfrac{1}{2} x\cdot x''
 $$
 
-We will need to define two new variables: $g=f'$ and $h=g'=f''$. We then arrive at a system with three equations:
+We will need to define two new variables: $y=x'$ and $z=y'=x''$. We then arrive at a system with three equations:
 
 $$
 \begin{align}
-f' &= g\\
-g' &= h\\
-h' &= -\tfrac{1}{2} f\cdot h
+x' &= y\\
+y' &= z\\
+z' &= -\tfrac{1}{2} x\cdot z
 \end{align}
 $$
 

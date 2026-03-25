@@ -63,6 +63,7 @@ grad_y = lambda x: np.array([
 
 # and somewhere within your function you should have
 h = lambda s: f(x_max + s*grad_f(x_max))
+```
 :::
 
 
