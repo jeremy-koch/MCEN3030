@@ -14,7 +14,7 @@ $$
 \begin{align*}
 &\ddot{y}+\tfrac{1}{10}\dot{y}+\sin(y)=0\\
 &~~~~y(0)=\phantom{-}3\\
-&~~~~y(L)=-2
+&~~~~y(L)=-2.
 \end{align*}
 $$
 
@@ -33,7 +33,7 @@ we are stuck -- we don't have an initial condition $z(0)$, so how can we time-st
 
 ## The Shooting Method
 
-The answer is to use the Shooting Method. The idea: we "take aim" by guessing the unknown initial condition and "shoot" using RK4. If we miss the target, the other boundary condition, we adjust our aim. Repeat until we are acceptably close. We will then know what hypothetical initial condition would get us to the right boundary condition, and can use RK4 to get the associated curve.
+The answer is to use the Shooting Method. The idea: we "take aim" by guessing the unknown initial condition and "shoot" using RK4. If we miss the target, the other boundary condition, we adjust our aim. Repeat until we are acceptably close. We will then know what hypothetical initial condition would get us to the correct boundary condition, and can use RK4 one last time to get the correct curve.
 
 Perhaps the trickiest part is: How do we adjust our aim/update our guess for the initial condition? We will use [the Secant Method](../3_root-finding/secant.md).
 
@@ -57,7 +57,7 @@ As it pertains to the secant method:
 - Recall that we need to provide two seeds. Let's call them $z_\text{0,1}$ and $z_\text{0,2}$.
 - They can be sent through separate RK4 calculations. We are interested in the values at the endpoint, $y_\text{calc,1}(L)$ and $y_\text{calc,2}(L)$. 
 - We can calculate two values of error, $\text{err}_1 = y_\text{calc,1}(L)-y_\text{given}(L)$ and $\text{err}_2 = y_\text{calc,2}(L)-y_\text{given}(L)$.
-- If $\text{err}_2$ is unacceptably large, we will iterate to get a better guess for $z_0$. The iterative scheme is
+- If $\left|\text{err}_2\right|$ is unacceptably large, we will iterate to get a better guess for $z_0$. The iterative scheme is
 
 $$
 z_{0,3}= z_{0,2} - \text{err}_2 \frac{\left(z_{0,2}-z_{0,1}\right)}{\left(\text{err}_2-\text{err}_1\right)}
@@ -78,10 +78,10 @@ We can call RK4 once before the loop, then just once inside the loop (with $\tex
 :::{warning}
 Be careful with how you organize and label things -- the example on this page was a differential equation for $y(x)$ and we invented a $z(x)$. RK4 is stated in terms of $x(t)$ with $f(t,x)$. As we stack programs on top of each other and apply them in new applications, it can get tricky!
 
-It is difficult to write a general shooting method function as each problem has different missing information. For this reason, the homework problem is just a script. 
+It is difficult to write a general shooting method function as each problem has different missing information. E.g., we might have been given boundary conditions $\dot{y}(0)$ and $y(L)$, or $y(0)$ and $\dot{y}(L)$. For this reason, the homework problem is just a script. 
 :::
 
 
 :::{seealso}
-It is possible to have two "missing" initial conditions as well! In such a case we can do a Secant Method version of [2D Newton-Raphson](../3_root-finding/NR-1D.md).
+It is possible to have two+ "missing" initial conditions as well! In such a case we can do a Secant Method version of [2+D Newton-Raphson](../3_root-finding/NR-1D.md).
 :::
