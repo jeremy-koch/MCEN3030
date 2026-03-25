@@ -80,6 +80,7 @@ project:
           - file: 8_ODEs/runge-kutta.md
           - file: 8_ODEs/coupled-eqns.md
           - file: 8_ODEs/RK4-starter.md
+          - file: 8_ODEs/shooting-method.md
       - title: Appendix/Some More Readings
         children: 
           - file: 9_readings/success.md
