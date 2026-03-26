@@ -37,7 +37,7 @@ The answer is to use the Shooting Method. The idea: we "take aim" by guessing th
 
 Perhaps the trickiest part is: How do we adjust our aim/update our guess for the initial condition? We will use [the Secant Method](../3_root-finding/secant.md).
 
-### Shooting with the Secant Method
+### Adjusting aim with the Secant Method
 
 Recall that the Secant Method is a root-finding algorithm... we are trying to find the $x$ such that $f(x)=0$. But what is $f$ and what is $x$? (Think about it for a second before reading on.)
 
