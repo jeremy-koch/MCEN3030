@@ -23,7 +23,7 @@ After [converting this to two coupled first-order equations](coupled-eqns.md):
 $$
 \begin{align*}
 & \dot{y} = z\\
-&\dot{z}=-\tfrac{1}{10}\dot{y}-\sin(y)\\
+&\dot{z}=-\tfrac{1}{10}z-\sin(y)\\
 &~~~~y(0)=\phantom{-}3\\
 &~~~~y(L)=-2 ~~~~~\text{(!?)}
 \end{align*}
