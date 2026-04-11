@@ -45,13 +45,13 @@ $$
 \end{align*}
 $$
 
-To be clear: the "coefficients" are functions of $x$. We can rewrite this equation to be something kind of general
+To be clear: the "coefficients" are functions of $x$. We can rewrite this equation to be something kind-of general
 
 $$
 a(x_i)y_{i-1}+b(x_i)y_{i}+c(x_i) y_{i+1} = f(x_i).
 $$
 
-(We'll see why this is a great idea soon.) What is the meaning of this equation? It is a succinct way of writing a collection of equations
+(Below we'll see why generalizing to $a(x_i)$, etc., is a great idea.) What is the meaning of this equation? It is a succinct way of writing a collection of equations
 
 $$
 \begin{align*}
@@ -65,9 +65,9 @@ $$
 
 that is, a system of equations to solve for the temperature values at each node: $i=2\rightarrow N-1$ (where we get to decide how many nodes there are based on the step size $\Delta x$).
 
-### Handling oundary conditions
+### Handling the boundary conditions
 
-It is important to understad that we cannot use this difference equation for $i=1$ and $i=N$. Those equations would be
+It is important to understand that we cannot use this difference equation for $i=1$ and $i=N$. Those equations would be
 
 $$
 \begin{align*}
@@ -76,7 +76,7 @@ a(x_N)y_{N-1} + b(x_N)y_{N} + c(x_N)y_{N+1} &= f(x_N) ~??
 \end{align*}
 $$
 
-The problematic terms are $y_0$ and $y_{N+1}$: we only have nodes from $i=1\rightarrow N$, so how can we reference the value of $y$ at the zeroth and $(N+1)\text{th}$ node? So... the differencing scheme only gives us equations for $i=2,3,..., N-1$, yet we have $N$ unknown values of $y_i$. $N-2$ equations, $N$ unknowns?!
+How can we reference the value of $y$ at the zeroth and $(N+1)\text{th}$ node when we have discretized the geometry from node $1$ to $N$? The differencing scheme only gives us equations for $i=2,3,..., N-1$. So we have $N-2$ equations, $N$ unknowns?!
 
 We are going to get two more equations by considering the two boundary conditions. The first one is at the first node, i.e. where $x=0$:
 
@@ -93,7 +93,6 @@ $$
 With these two equations, we now have completed the set and have $N$ equations and $N$ unknowns. Framing as a matrix with $N=6$, we can collect the difference equations and boundary equations into
 
 \begin{equation*}
-\mathbf{A'}\equiv
 \begin{bmatrix}
 1 & 0 & 0 & 0 & 0 & 0 \\
 a(x_2) & b(x_2) & c(x_2) & 0 & 0 & 0 \\
@@ -116,21 +115,21 @@ If we call this system $\mathbf{A}\mathbf{y} = \mathbf{b}$, the solution is $\ma
 
 ## Implementing in your code
 
-Our system is a "tri-diagonal matrix", meaning that, aside from the three longest diagonals, the entries are all zero. We can use this fact, along with our description of $a(x_i)$, $b(x_i)$, $c(x_i)$, and $f(x_i)$, to build up a matrix with relatively few commands. 
+Our system is a "tri-diagonal matrix", meaning that, aside from the three longest diagonals, the entries are all zero. We can use this fact, along with our description of $a(x_i)$, $b(x_i)$, and $c(x_i)$, to build up a matrix with relatively few commands. 
 
 ### Using $a(x_i)$, etc.
 
 We can implement $a(x_i)$, $b(x_i)$, $c(x_i)$, and $f(x_i)$ anonymous functions in our code, and then call those functions using a vector of $x_i$ values. We then will have one-dimensional arrays for the $a$, $b$, and $c$ diagonals, and the forcing function $f$, at least for the interior points.
 
 :::{caution}
-We only want to use the interior points, $x_2\rightarrow x_{N-1}$. So create your $a$ values by inputting just ```x(2:N-1)```.
+We only want to use the interior points, $x_2\rightarrow x_{N-1}$. So create your $a$ values by with a function call like ```a_vals = a(x(2:N-1))```.
 :::
 
 ### Creating a diagonal matrix
 
-We will use these one-dimensional arrays to create the tri-diagonal matrix via a built-in matrix construction command. These commands are mentioned in the [coding elements overview pages](./1_prog-basics/coding-elements-overview.md) but I'll repeat them here and put them into context.
+We will use these one-dimensional arrays to create the tri-diagonal matrix via a built-in matrix construction command. These commands are mentioned in the [coding elements overview pages](../1_prog-basics/coding-elements-overview.md) but I'll repeat them here to put them into context.
 
-After creating arrays ```a_vals``` (for values of $a(x_i)$), etc., the construction of the matrix can be done in one line. Note that the boundary conditions are being included!
+After creating arrays ```a_vals``` (for values of $a(x_i)$), etc., the construction of the matrix can be done in one line. Note that the boundary conditions are being included (and might need to be adjusted depending on the problem statement, e.g. if $y'(0)=4$).
 
 ::::{tab-set}
 :::{tab-item} MATLAB
