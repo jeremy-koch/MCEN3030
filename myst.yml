@@ -81,6 +81,7 @@ project:
           - file: 8_ODEs/coupled-eqns.md
           - file: 8_ODEs/RK4-starter.md
           - file: 8_ODEs/shooting-method.md
+          - file: 8_ODEs/BVPs.md
       - title: Appendix/Some More Readings
         children: 
           - file: 9_readings/success.md
