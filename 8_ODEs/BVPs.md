@@ -14,15 +14,15 @@ $$
 \end{align*}
 $$
 
-where our goal is to get a numerical description of $y(x)$ between $x=0$ and $1$. (This is a crazy differential equation... I hope you watched the video and saw an easier one first!)
+where our goal is to get a numerical description of $y(x)$ between $x=0$ and $1$. (This is a crazy differential equation... I hope you watched the video to see an easier one first!)
 
 :::{note}
-This is still a linear differential equation -- the "output" variable $y$ and it's derivatives appear without powers, are not inside a cosine or anything like that, and do not multiply each other (i.e. no $y y'$).
+This is still a linear differential equation. The "output" variable $y$ and it's derivatives appear without powers, are not inside a cosine or anything like that, and do not multiply each other (i.e. no $y y'$).
 :::
 
 ### Discretize the domain and the derivative(s)
 
-We will discretize the domain with spacing $\Delta x$, and then rewrite the derivatives to be numerical versions with "central differencing". Note that, to avoid bias, we will go from $i-1 \rightarrow i+1$ on the first derivative, and the spacing there is $2\Delta t$. The differential equation becomes:
+We will discretize the domain with spacing $\Delta x$, and then rewrite the derivatives to be numerical versions with "central differencing". Note that, to avoid bias, the first derivative will include $i-1 \rightarrow i+1$, and so the spacing is $2\Delta t$. The differential equation becomes:
 
 $$
 \left(\frac{y_{i-1}-2y_i + y_{i+1}}{(\Delta x)^2}\right)-\frac{1}{x_i+1}\left(\frac{y_{i+1}-y_{i-1}}{2\Delta x}\right) -\cos(x_i)y_i = x_i
@@ -45,18 +45,76 @@ $$
 \end{align*}
 $$
 
-To be clear: the "coefficients" are functions of $x$: we can rewrite this equation to be
+To be clear: the "coefficients" are functions of $x$. We can rewrite this equation to be something kind of general
 
 $$
-a(x)y_{i-1}+b(x)y_{i}+c(x) y_{i+1} = f(x)
+a(x_i)y_{i-1}+b(x_i)y_{i}+c(x_i) y_{i+1} = f(x_i).
 $$
 
-This is a good strategy when coding! For example, you can define an anonymous function
+(We'll see why this is a great idea soon.) What is the meaning of this equation? It is a succinct way of writing a collection of equations
 
 $$
-a(x)=\frac{1}{(\Delta x)^2}+\frac{1}{2\Delta x (x+1)}
+\begin{align*}
+a(x_2)y_1 + b(x_2)y_2 + c(x_2)y_3 &= f(x_2)\\
+a(x_3)y_2 + b(x_3)y_3 + c(x_3)y_4 &= f(x_3)\\
+a(x_4)y_3 + b(x_4)y_4 + c(x_4)y_5 &= f(x_4)\\
+a(x_5)y_4 + b(x_5)y_5 + c(x_5)y_6 &= f(x_5)\\
+... + ... + ... &= ...
+\end{align*}
 $$
 
+that is, a system of equations to solve for the temperature values at each node: $i=2\rightarrow N-1$ (where we get to decide how many nodes there are based on the step size $\Delta x$).
+
+### Handling oundary conditions
+
+It is important to understad that we cannot use this difference equation for $i=1$ and $i=N$. Those equations would be
+
+$$
+\begin{align*}
+a(x_1)y_0 + b(x_1)y_1 + c(x_2)y_3 &= f(x_2) ~??\\
+a(x_N)y_{N-1} + b(x_N)y_{N} + c(x_N)y_{N+1} &= f(x_N) ~??
+\end{align*}
+$$
+
+The problematic terms are $y_0$ and $y_{N+1}$: we only have nodes from $i=1\rightarrow N$, so how can we reference the value of $y$ at the zeroth and $(N+1)\text{th}$ node? So... the differencing scheme only gives us equations for $i=2,3,..., N-1$, yet we have $N$ unknown values of $y_i$. $N-2$ equations, $N$ unknowns?!
+
+We are going to get two more equations by considering the two boundary conditions. The first one is at the first node, i.e. where $x=0$:
+
+$$
+y(0)=1 \implies y_1 = 1.
+$$
+
+The second (in this problem) is related to the derivative at the node corresponding to $x=L$, i.e. the $N^\text{th}$ node. We again will use a numerical approximation of the derivative, this time a "backwards-differencing" version that just considers the $N$ and $N-1$ nodes:
+
+$$
+y'(L) = 5 \implies \frac{y_{N}-y_{N-1}}{\Delta x } = 5 \implies -y_{N-1}+y_{N} = 5\Delta x.
+$$
+
+With these two equations, we now have completed the set and have $N$ equations and $N$ unknowns. Framing as a matrix with $N=10$, we can collect the difference equations and boundary equations into
+
+\begin{equation*}
+\mathbf{A'}\equiv
+\begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+a(x_2) & b(x_2) & c(x_2) & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & a(x_3) & b(x_3) & c(x_3) & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & a(x_4) & b(x_4) & c(x_4) & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & a(x_5) & b(x_5) & c(x_5) & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & a(x_6) & b(x_6) & c(x_6) & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & a(x_7) & b(x_7) & c(x_7) & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & a(x_8) & b(x_8) & c(x_8) & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & a(x_9) & b(x_9) & c(x_9) \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+y_1\\ y_2\\ y_3\\ y_4\\ y_5\\ y_6\\ y_7\\ y_8\\ y_9\\ y_10 
+\end{bmatrix}
+\begin{bmatrix}
+1\\ f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\\f(x_6)\\f(x_7)\\f(x_8)\\f(x_9)\\ 5\Delta x
+\end{bmatrix}
+\end{equation*}
+
+If we call this system $\mathbf{A}\mathbf{y} = \mathbf{b}$, the solution is $\mathbf{y} =\mathbf{A}^{-1}\mathbf{b}$. We know the value of $x_i$ associated with each value of $y_i$, and so we have a numerical solution to the problem!
 
 
-Working on it...
+## Implementing in your code
