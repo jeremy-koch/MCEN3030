@@ -71,7 +71,7 @@ It is important to understad that we cannot use this difference equation for $i=
 
 $$
 \begin{align*}
-a(x_1)y_0 + b(x_1)y_1 + c(x_2)y_3 &= f(x_2) ~??\\
+a(x_1)y_0 + b(x_1)y_1 + c(x_1)y_2 &= f(x_1) ~??\\
 a(x_N)y_{N-1} + b(x_N)y_{N} + c(x_N)y_{N+1} &= f(x_N) ~??
 \end{align*}
 $$
@@ -90,27 +90,24 @@ $$
 y'(L) = 5 \implies \frac{y_{N}-y_{N-1}}{\Delta x } = 5 \implies -y_{N-1}+y_{N} = 5\Delta x.
 $$
 
-With these two equations, we now have completed the set and have $N$ equations and $N$ unknowns. Framing as a matrix with $N=10$, we can collect the difference equations and boundary equations into
+With these two equations, we now have completed the set and have $N$ equations and $N$ unknowns. Framing as a matrix with $N=6$, we can collect the difference equations and boundary equations into
 
 \begin{equation*}
 \mathbf{A'}\equiv
 \begin{bmatrix}
-1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-a(x_2) & b(x_2) & c(x_2) & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & a(x_3) & b(x_3) & c(x_3) & 0 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & a(x_4) & b(x_4) & c(x_4) & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & a(x_5) & b(x_5) & c(x_5) & 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & a(x_6) & b(x_6) & c(x_6) & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & a(x_7) & b(x_7) & c(x_7) & 0 & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & a(x_8) & b(x_8) & c(x_8) & 0 \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & a(x_9) & b(x_9) & c(x_9) \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+a(x_2) & b(x_2) & c(x_2) & 0 & 0 & 0 \\
+0 & a(x_3) & b(x_3) & c(x_3) & 0 & 0 \\
+0 & 0 & a(x_4) & b(x_4) & c(x_4) & 0 \\
+0 & 0 & 0 & a(x_5) & b(x_5) & c(x_5) \\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 1
 \end{bmatrix}
 \begin{bmatrix}
-y_1\\ y_2\\ y_3\\ y_4\\ y_5\\ y_6\\ y_7\\ y_8\\ y_9\\ y_10 
+y_1\\ y_2\\ y_3\\ y_4\\ y_5\\ y_6
 \end{bmatrix}
+=
 \begin{bmatrix}
-1\\ f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\\f(x_6)\\f(x_7)\\f(x_8)\\f(x_9)\\ 5\Delta x
+1\\ f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\\5\Delta x
 \end{bmatrix}
 \end{equation*}
 
@@ -118,3 +115,45 @@ If we call this system $\mathbf{A}\mathbf{y} = \mathbf{b}$, the solution is $\ma
 
 
 ## Implementing in your code
+
+Our system is a "tri-diagonal matrix", meaning that, aside from the three longest diagonals, the entries are all zero. We can use this fact, along with our description of $a(x_i)$, $b(x_i)$, $c(x_i)$, and $f(x_i)$, to build up a matrix with relatively few commands. 
+
+### Using $a(x_i)$, etc.
+
+We can implement $a(x_i)$, $b(x_i)$, $c(x_i)$, and $f(x_i)$ anonymous functions in our code, and then call those functions using a vector of $x_i$ values. We then will have one-dimensional arrays for the $a$, $b$, and $c$ diagonals, and the forcing function $f$, at least for the interior points.
+
+:::{caution}
+We only want to use the interior points, $x_2\rightarrow x_{N-1}$. So create your $a$ values by inputting just ```x(2:N-1)```.
+:::
+
+### Creating a diagonal matrix
+
+We will use these one-dimensional arrays to create the tri-diagonal matrix via a built-in matrix construction command. These commands are mentioned in the [coding elements overview pages](./1_prog-basics/coding-elements-overview.md) but I'll repeat them here and put them into context.
+
+After creating arrays ```a_vals``` (for values of $a(x_i)$), etc., the construction of the matrix can be done in one line. Note that the boundary conditions are being included!
+
+::::{tab-set}
+:::{tab-item} MATLAB
+```matlab
+A=diag([1,b_vals, 1],0)+diag([a_vals, -1],-1)+diag([0,c_vals],1);
+```
+:::
+
+
+:::{tab-item} Python
+```python
+A = np.diag(np.r_[1, b_vals, 1], 0) + np.diag(np.r_[a_vals, -1], -1) + np.diag(np.r_[0, c_vals], 1)
+```
+:::
+
+
+:::{tab-item} Julia
+```julia
+using LinearAlgebra
+
+A = Tridiagonal([a_vals; -1], [1; b_vals; 1], [0; c_vals])
+```
+:::
+::::
+
+Then just create the forcing function from ```f_vals``` and the boundary condition information, and you are pretty much done!
