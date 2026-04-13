@@ -77,6 +77,9 @@ a(x_N)y_{N-1} + b(x_N)y_{N} + c(x_N)y_{N+1} &= f(x_N) ~??
 $$
 
 How can we reference the value of $y$ at the zeroth and $(N+1)\text{th}$ node when we have discretized the geometry from node $1$ to $N$? The differencing scheme only gives us equations for $i=2,3,..., N-1$. So we have $N-2$ equations, $N$ unknowns?!
+:::{aside}
+There is another way to handle the edges called the "ghost point method" where indeed one uses hypothetical/ghost points outside the domain to enforce the boundary conditions. We will stick to this easier formulation where the edge points of our discretized domain are set by boundary conditions.
+:::
 
 We are going to get two more equations by considering the two boundary conditions. The first one is at the first node, i.e. where $x=0$:
 
