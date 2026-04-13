@@ -1,6 +1,6 @@
 # Matrix Method for BVPs
 
-Let's describe another option for solving a boundary-value problem (BVP) -- a matrix method. This method can only be applied to linear differential equations ([the Shooting Method](shooting-method.md) works for nonlinear problems, e.g. the [boundary layer equation problem](coupled-eqns.md)). However, it does not require seeds/iterations, and assuming it is well-posed.
+Let's describe another option for solving a boundary-value problem (BVP) -- a matrix method. This method can only be applied to linear differential equations ([the Shooting Method](shooting-method.md) works for nonlinear problems, e.g. the [boundary layer equation problem](coupled-eqns.md)). However, it does not require seeds/iterations, and assuming it is well-posed, it creates the solution after one matrix inversion.
 
 
 ## Describe with an example
