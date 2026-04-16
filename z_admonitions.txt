@@ -14,6 +14,3 @@ changes the admonition title text
 :::
 
 
-### Extra credit opportunity
-
-You may propose and complete a second machine learning project. The first required one is worth 5% of your overall grade, the second is worth 1% bonus for the same requirements, more work because you have to propose the topic. If you complete a third project, it is worth 0.000000000000000000000001% bonus and my [round-off error](../2_foundations/error.md) in the overall grade calculation kicks in at 4 or 5 digits.

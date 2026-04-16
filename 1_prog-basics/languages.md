@@ -87,7 +87,7 @@ print(S)
 :::
 
 
-:::{tab-item} python
+:::{tab-item} Python
 
 Reasons to choose Python:
 - For everyone it is free.
@@ -98,7 +98,7 @@ Reasons to choose Python:
 
 
 Reasons to NOT choose Python:
-- It has become widely used by engineers and scientists (see for example [TrackPy](http://soft-matter.github.io/trackpy/)), but at its core it was not invented for engineers. NumPy/SciPy/matplotlib have been thoroughly developed, but it just less appealing to have to deal with ```np.sin(x)``` instead of just ```sin(x)```. Here is how to get a matrix inverse: ```np.linalg.inv(matrix_a)```.Raising to a power is ```**``` instead of ```^```. Ugh. (Yes, I know you can ```from numpy import sin``` or even ```from numpy import *``` but that is rarely done.)
+- It has become widely used by engineers and scientists (see for example [TrackPy](http://soft-matter.github.io/trackpy/)), but at its core it was not invented for engineers. NumPy/SciPy/matplotlib have been thoroughly developed, but it just less appealing to have to deal with ```np.sin(x)``` instead of just ```sin(x)```. Here is how to get a matrix inverse: ```np.linalg.inv(matrix_a)```. Raising to a power is ```**``` instead of ```^```. Ugh. (Yes, I know you can ```from numpy import sin``` or even ```from numpy import *``` but that is rarely done.)
 - Indexing starts with 0, which might annoy you enough to look elsewhere.
 - The install process, including package management, is not overwhelming, but it is extra steps that may have to occur in the command window/terminal.
 :::{aside}
@@ -126,9 +126,9 @@ print(S)
 
 :::{tab-item} Julia
 Reasons to choose Julia:
-- For everyone it is free (open source).
+- For everyone it is free.
 - It is a language developed for scientists and engineers. The code looks like math.
-- It is a small, seemingly advanced user base of scientists and engineers, but they seem wise and helpful.
+- It has a small, seemingly advanced user base of scientists and engineers, but they seem wise and helpful.
 - Indexing starts with 1.
 - Among these three languages, it is the most serious computational science language, as in: people on the cutting edge of computational research are choosing it.
 
@@ -138,12 +138,16 @@ Reasons to NOT choose Julia:
 - It is not clear if Julia will continue to grow or if it will fade away -- you might become an expert in something that no one cares about in 10 years.
 - We will likely not have need to use the truly powerful aspects of Julia, e.g. multiple dispatch.
 - It seems that Julia sometimes goes out of its way to name things differently than MATLAB/Python. In MATLAB: ```linspace(0,10,101)``` makes an array with 101 elements. In Python+NumPy it is ```np.linspace(0,10,101)```. In Julia it is ```LinRange(0,10,101)```... OK Julia. This is not a reason not to choose Julia on its own, but if you are talking to MATLAB/Python people it is a little annoyance.
-- Julia makes some decisions for computational efficiency that can maybe be frustrating to a less-experienced user. For example: you'll see in the code snipped below that an extra step is necessary because variable "scope" is limited within loops. I am sure there are deep reasons for this.
+- Julia makes some decisions for computational efficiency that can maybe be frustrating to a less-experienced user. For example, you'll see in the code snippet below (assuming that it's a script) that a clarification must be made: variable "scope" is limited within loops by default, and so we must warn Julia that ```S``` is actually a ```global``` variable. I am sure there are deep reasons for this, but it can be annoying.
 
 Example code:
 ```julia
-
-
+k = 2
+N = 50
+S = 0.0
+for n in 1:N
+    global S += 1/n^k  # Explicitly tell Julia to use the global S
+end
 ```
 :::
 
