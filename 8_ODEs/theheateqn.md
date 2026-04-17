@@ -29,7 +29,7 @@ u_{i+1,j}= u_{i,j} +\frac{\alpha \Delta t}{(\Delta x)^2} \left(u_{i,j+1}-2u_{i,j
 $$
 
 :::{caution}
-There are limitations on the allowable values of $\alpha \Delta t/(\Delta x)^2 if we want a stable solution (which we do!). See below.
+There are limitations on the allowable values of $\alpha \Delta t/(\Delta x)^2$ if we want a stable solution (which we do!). See below.
 :::
 
 This equation should be reminiscent of [RK4](runge-kutta.md): we use information at our current time step, $i$, to figure out information at our next time step, $i+1$. We just have the added complication that we are not just referencing the $j$ node's value at $i$, we have to consider the neighbors' values as well: the value of $u_{i+1,j}$ depends on $u_{i,j}$ and $u_{i,j-1}$ and $u_{i,j+1}$.
