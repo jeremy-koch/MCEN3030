@@ -92,12 +92,17 @@ $$
 
 ### Neumann boundary condition
 
-the boundary condition $u'(t,0)=W$ would simply have: $a_0(t)=0$, $b_0(t)=1$, $c_0(t)=W$. Thus:
+The boundary condition $u'(t,0)=W$ would simply have: $a_0(t)=0$, $b_0(t)=1$, $c_0(t)=W$. Thus:
+
+$$
+u_{i+1,1}=-W\Delta x+u_{i+1,2}.
+$$
+
+And a special case: the "adiabatic boundary" condition, $W=0$:
 
 $$
 u_{i+1,1}=u_{i+1,2}.
 $$
-
 
 
 ## Stability
