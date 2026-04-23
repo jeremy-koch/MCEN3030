@@ -57,7 +57,7 @@ $$
 
 ## Converting differential equations into coupled equations for RK4
 
-Turn the following into anonymous functions in terms of $x(1)$, $x(2)$, $x(3)$, $x(4)$, ... . Remember Python/Julia use square brackets, and Python starts from [0]. Worked examples on the [coupled equations page](./8_ODEs/coupled-eqns.md).
+Turn the following into anonymous functions in terms of $x(1)$, $x(2)$, $x(3)$, $x(4)$, ... . Remember Python/Julia use square brackets, and Python starts from [0]. Worked examples on the [coupled equations page](../8_ODEs/coupled-eqns.md).
 
 
 ### Ex 1:

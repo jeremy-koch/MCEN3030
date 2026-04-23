@@ -142,9 +142,9 @@
 :::{note}  Week 11: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 Mar-3 Apr
 :icon: false
 - Tuesday 31 Mar:
-    - The Shooting Method
+    - [The Shooting Method](../8_ODEs/shooting-method.md) (Video on Canvas)
 - Thursday 2 Apr:
-    - TBD
+    - More discussion on the Shooting Method
 - **Friday, 3 Apr: homework due**
 :::
 
@@ -163,9 +163,9 @@
 :::{note}  Week 13: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13-17 Apr   
 :icon: false
 - Tuesday, 14 Apr: 
-    - Boundary-Value Problems
+    - [Boundary-Value Problems](../8_ODEs/BVPs.md) (Video on Canvas)
 - Thursday, 16 Apr:
-    - Partial Differential Equations
+    - [Machine Learning Project](../ML/project.md) Work Day
 - **Friday, 17 Apr: project due**
 :::
 
@@ -174,9 +174,9 @@
 :::{note}  Week 14: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20-24 Apr
 :icon: false
 - Tuesday 21 Apr:
-    - Partial Differential Equations 2
+    - [Partial Differential Equations](../8_ODEs/theheateqn.md) (Video on Canvas)
 - Thursday 23 Apr:
-    - TBD
+    - Questions about the exam
 - **Friday, 24 Apr: homework due**
 :::
 
