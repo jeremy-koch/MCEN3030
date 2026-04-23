@@ -2,7 +2,7 @@
 
 ## Modeling equations
 
-Turn the following into anonymous functions of $x$ and $p=[p(1),p(2)]$. I'll do one example:
+Turn the following into anonymous functions of $x$ and $p$. I'll do one example:
 
 $$
 f(t) = A \exp(-bt)
@@ -57,7 +57,7 @@ $$
 
 ## Converting differential equations into coupled equations for RK4
 
-Turn the following into anonymous functions in terms of $x(1)$, $x(2)$, $x(3)$, $x(4)$, ... . Remember Python/Julia use square brackets, and Python starts from [0]. Examples on the [coupled equations page](./8_ODEs/coupled-eqns.md).
+Turn the following into anonymous functions in terms of $x(1)$, $x(2)$, $x(3)$, $x(4)$, ... . Remember Python/Julia use square brackets, and Python starts from [0]. Worked examples on the [coupled equations page](./8_ODEs/coupled-eqns.md).
 
 
 ### Ex 1:
@@ -93,7 +93,7 @@ $$
 (We did this one in class on 23 Apr, but you can retry it here.)
 
 $$
-\dddot{y}+5 \ddot{y}y -3 \dot{y} = \cos(t)
+y'''+5 y''y -3 y' = \cos(t)
 $$
 
 ## Discretizing Equations
